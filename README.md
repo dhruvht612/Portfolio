@@ -70,3 +70,6 @@ To view the portfolio locally:
 git clone https://github.com/dhruvthakar/your-repo-name.git
 cd your-repo-name
 open index.html
+
+
+

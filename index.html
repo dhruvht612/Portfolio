@@ -715,160 +715,304 @@
 
   
 <!-- =========================== COURSES SECTION =========================== -->
-<!-- Highlights relevant university courses taken with descriptions and tags -->
+<!-- =========================== COURSES SECTION =========================== -->
 <section id="courses" class="py-16 px-6 bg-gray-900">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-extrabold text-center mb-12 text-red-400 tracking-wide flex items-center justify-center gap-3">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-      d="M12 20l-4-2m0-6l4 2 4-2m-4 6l4-2m0-6V4m-8 6V4m4 4h.01" />
-  </svg>
-  Courses
-</h2>
+    <h2 class="text-3xl font-extrabold text-center mb-10 text-red-400 tracking-wide flex items-center justify-center gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 20l-4-2m0-6l4 2 4-2m-4 6l4-2m0-6V4m-8 6V4m4 4h.01" />
+      </svg>
+      Courses
+    </h2>
 
+    <!-- FILTER BUTTONS -->
+    <div id="course-filters" class="flex flex-wrap justify-center gap-3 mb-12">
+      <button class="course-filter-btn active bg-red-500 text-white px-4 py-2 rounded text-sm" data-filter="all">All</button>
+      <button class="course-filter-btn bg-gray-700 text-white px-4 py-2 rounded text-sm" data-filter="programming">Programming</button>
+      <button class="course-filter-btn bg-gray-700 text-white px-4 py-2 rounded text-sm" data-filter="math">Math</button>
+      <button class="course-filter-btn bg-gray-700 text-white px-4 py-2 rounded text-sm" data-filter="science">Science</button>
+      <button class="course-filter-btn bg-gray-700 text-white px-4 py-2 rounded text-sm" data-filter="core">Core</button>
+      <button class="course-filter-btn bg-gray-700 text-white px-4 py-2 rounded text-sm" data-filter="business">Business</button>
+      <button class="course-filter-btn bg-gray-700 text-white px-4 py-2 rounded text-sm" data-filter="soft-skills">Soft Skills</button>
+    </div>
 
-    <!-- Grid layout for responsive course cards -->
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-
-      <!-- ================= Programming Courses ================= -->
-
+    <!-- COURSE CARDS -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" id="course-cards">
       <!-- Programming Workshop I -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <!-- Course title and icon -->
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-code text-green-400 mr-2"></i> Programming Workshop I
-        </h3>
-        <!-- Description -->
-        <p class="text-gray-300 text-sm mb-3">Introduced C++ fundamentals, control structures, and basic algorithms.</p>
-        <!-- Tag -->
-        <span class="bg-green-700 text-green-200 text-xs px-2 py-1 rounded-full font-semibold">Programming</span>
-      </div>
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="programming core">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-code text-green-400"></i> Programming Workshop I
+    </h3>
+    <span class="bg-green-700 text-green-200 text-xs px-2 py-1 rounded-full font-semibold">Fall 2024</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Introduced C++ fundamentals, control structures, and algorithmic logic.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>C++ syntax & control flow</li>
+    <li>Basic algorithms</li>
+    <li>Debugging and IDE usage</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-green-700 text-green-200 text-xs px-2 py-1 rounded-full font-semibold">Programming</span>
+    <span class="bg-blue-700 text-blue-200 text-xs px-2 py-1 rounded-full font-semibold">C++</span>
+  </div>
+</div>
 
-      <!-- Programming Workshop II -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-code text-green-400 mr-2"></i> Programming Workshop II
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Expanded C++ knowledge with modular design, recursion, and problem solving.</p>
-        <span class="bg-green-700 text-green-200 text-xs px-2 py-1 rounded-full font-semibold">Programming</span>
-      </div>
+<!-- Programming Workshop II -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="programming core">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-code text-green-400"></i> Programming Workshop II
+    </h3>
+    <span class="bg-green-700 text-green-200 text-xs px-2 py-1 rounded-full font-semibold">Winter 2025</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Expanded C++ knowledge with modular design, recursion, and intermediate projects.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Modular functions and scope</li>
+    <li>Recursion and parameter use</li>
+    <li>Problem decomposition</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-green-700 text-green-200 text-xs px-2 py-1 rounded-full font-semibold">Programming</span>
+    <span class="bg-blue-700 text-blue-200 text-xs px-2 py-1 rounded-full font-semibold">C++</span>
+  </div>
+</div>
 
-      <!-- ================= Math Courses ================= -->
+<!-- Calculus I -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="math">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-calculator text-yellow-400"></i> Calculus I
+    </h3>
+    <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Fall 2024</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Covered limits, derivatives, and applications of differential calculus.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Limit laws</li>
+    <li>Differentiation techniques</li>
+    <li>Graphing and optimization</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Math</span>
+  </div>
+</div>
 
-      <!-- Calculus I -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-calculator text-yellow-400 mr-2"></i> Calculus I
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Covered limits, derivatives, and applications of differential calculus.</p>
-        <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Math</span>
-      </div>
+<!-- Calculus II -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="math">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-calculator text-yellow-400"></i> Calculus II
+    </h3>
+    <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Winter 2025</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Explored integration techniques, series, and multivariable calculus basics.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Definite and improper integrals</li>
+    <li>Series and sequences</li>
+    <li>Partial derivatives</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Math</span>
+  </div>
+</div>
 
-      <!-- Calculus II -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-calculator text-yellow-400 mr-2"></i> Calculus II
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Explored integration techniques, series, and multivariable calculus basics.</p>
-        <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Math</span>
-      </div>
+<!-- Linear Algebra -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="math">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-th text-green-300"></i> Linear Algebra
+    </h3>
+    <span class="bg-green-700 text-green-200 text-xs px-2 py-1 rounded-full font-semibold">Winter 2026</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Matrix operations, vector spaces, eigenvalues, and linear transformations.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Row reduction & matrix inverse</li>
+    <li>Determinants and subspaces</li>
+    <li>Eigenvalues and diagonalization</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-green-700 text-green-200 text-xs px-2 py-1 rounded-full font-semibold">Math</span>
+  </div>
+</div>
 
-      <!-- Linear Algebra -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-th text-green-300 mr-2"></i> Linear Algebra
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Matrix operations, vector spaces, eigenvalues, and linear transformations.</p>
-        <span class="bg-green-700 text-green-200 text-xs px-2 py-1 rounded-full font-semibold">Math</span>
-      </div>
+<!-- Discrete Mathematics -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="math core">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-project-diagram text-purple-300"></i> Discrete Mathematics
+    </h3>
+    <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Fall 2025</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Logic, set theory, combinatorics, graph theory, and proofs.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Logic & truth tables</li>
+    <li>Graph theory basics</li>
+    <li>Mathematical induction</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Math</span>
+  </div>
+</div>
 
-      <!-- Discrete Mathematics -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-project-diagram text-purple-300 mr-2"></i> Discrete Mathematics
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Logic, set theory, combinatorics, graph theory, and proofs.</p>
-        <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Math</span>
-      </div>
+<!-- Stats & Probability -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="math science">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-chart-bar text-yellow-300"></i> Stats & Probability for Scientists
+    </h3>
+    <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Summer 2025</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Probability theory, data distributions, and statistical inference for science students.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Probability & combinations</li>
+    <li>Normal distributions</li>
+    <li>Hypothesis testing</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Math</span>
+    <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Science</span>
+  </div>
+</div>
 
-      <!-- Statistics & Probability -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-chart-bar text-yellow-300 mr-2"></i> Stats & Probability for Scientists
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Probability theory, data distributions, and statistical inference for science students.</p>
-        <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Data Science</span>
-      </div>
+<!-- Physics I -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="science">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-atom text-purple-400"></i> Physics I
+    </h3>
+    <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Fall 2024</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Studied motion, forces, energy, and momentum through Newtonian mechanics.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Kinematics and vectors</li>
+    <li>Newton’s Laws</li>
+    <li>Energy conservation</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Science</span>
+  </div>
+</div>
 
-      <!-- ================= Science Courses ================= -->
+<!-- Physics II -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="science">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-atom text-purple-400"></i> Physics II
+    </h3>
+    <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Winter 2025</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Covered electricity, magnetism, circuits, and electromagnetic waves.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Electrostatics & current</li>
+    <li>Magnetic fields</li>
+    <li>RC circuits and waves</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Science</span>
+  </div>
+</div>
 
-      <!-- Physics I -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-atom text-purple-400 mr-2"></i> Physics I
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Studied motion, forces, energy, and momentum through Newtonian mechanics.</p>
-        <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Science</span>
-      </div>
+<!-- Environmental Science -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="science">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-leaf text-green-400"></i> Environmental Science
+    </h3>
+    <span class="bg-green-600 text-green-100 text-xs px-2 py-1 rounded-full font-semibold">Summer 2025</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Studied ecosystems, sustainability, and environmental challenges.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Biomes and biodiversity</li>
+    <li>Pollution & climate</li>
+    <li>Conservation & policy</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-green-600 text-green-100 text-xs px-2 py-1 rounded-full font-semibold">Science</span>
+  </div>
+</div>
 
-      <!-- Physics II -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-atom text-purple-400 mr-2"></i> Physics II
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Covered electricity, magnetism, circuits, and electromagnetic waves.</p>
-        <span class="bg-purple-700 text-purple-200 text-xs px-2 py-1 rounded-full font-semibold">Science</span>
-      </div>
+<!-- Computer Architecture -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="core">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-microchip text-teal-400"></i> Computer Architecture
+    </h3>
+    <span class="bg-indigo-700 text-indigo-200 text-xs px-2 py-1 rounded-full font-semibold">Winter 2025</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Explored CPU design, memory systems, and low-level assembly programming.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Instruction sets</li>
+    <li>Registers & memory</li>
+    <li>Assembly programming</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-blue-700 text-blue-200 text-xs px-2 py-1 rounded-full font-semibold">Core</span>
+  </div>
+</div>
 
-      <!-- Environmental Science -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-leaf text-green-400 mr-2"></i> Environmental Science
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Studied ecosystems, sustainability, and environmental challenges.</p>
-        <span class="bg-green-600 text-green-100 text-xs px-2 py-1 rounded-full font-semibold">Science</span>
-      </div>
+<!-- Technical Communication -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="soft-skills">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-comments text-pink-400"></i> Technical Communication
+    </h3>
+    <span class="bg-pink-700 text-pink-200 text-xs px-2 py-1 rounded-full font-semibold">Fall 2024</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Practiced professional writing and presentations tailored to technical fields.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Report structure</li>
+    <li>Presentation design</li>
+    <li>Documentation skills</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-pink-700 text-pink-200 text-xs px-2 py-1 rounded-full font-semibold">Soft Skills</span>
+  </div>
+</div>
 
-      <!-- ================= Other Courses ================= -->
+<!-- Management of an Enterprise -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="business">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-network-wired text-indigo-400"></i> Management of an Enterprise
+    </h3>
+    <span class="bg-indigo-700 text-indigo-200 text-xs px-2 py-1 rounded-full font-semibold">Winter 2025</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Learned business strategies, operations, and resource management basics.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Team leadership</li>
+    <li>Strategic planning</li>
+    <li>Resource allocation</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-indigo-700 text-indigo-200 text-xs px-2 py-1 rounded-full font-semibold">Business</span>
+  </div>
+</div>
 
-      <!-- Computer Architecture -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-microchip text-teal-400 mr-2"></i> Computer Architecture
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Explored CPU design, memory systems, and low-level assembly programming.</p>
-        <span class="bg-blue-700 text-blue-200 text-xs px-2 py-1 rounded-full font-semibold">Core</span>
-      </div>
+<!-- Intro to Computer Science -->
+<div class="course-card bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition" data-category="core programming">
+  <div class="flex justify-between items-start mb-2">
+    <h3 class="text-xl font-semibold text-white flex items-center gap-2">
+      <i class="fas fa-laptop text-cyan-400"></i> Intro to Computer Science
+    </h3>
+    <span class="bg-cyan-700 text-cyan-200 text-xs px-2 py-1 rounded-full font-semibold">Fall 2024</span>
+  </div>
+  <p class="text-gray-300 text-sm mb-3">Explored foundational CS concepts and built programs using Python.</p>
+  <ul class="list-disc list-inside text-sm text-gray-400 mb-3">
+    <li>Basic programming logic</li>
+    <li>Data types and conditionals</li>
+    <li>Intro to Python syntax</li>
+  </ul>
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-cyan-700 text-cyan-200 text-xs px-2 py-1 rounded-full font-semibold">Core</span>
+    <span class="bg-yellow-700 text-yellow-200 text-xs px-2 py-1 rounded-full font-semibold">Python</span>
+  </div>
+</div>
 
-      <!-- Technical Communication -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-comments text-pink-400 mr-2"></i> Technical Communication
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Practiced professional writing and presentations tailored to technical fields.</p>
-        <span class="bg-pink-700 text-pink-200 text-xs px-2 py-1 rounded-full font-semibold">Soft Skills</span>
-      </div>
-
-      <!-- Management of an Enterprise -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-network-wired text-indigo-400 mr-2"></i> Management of an Enterprise
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Learned business strategies, operations, and resource management basics.</p>
-        <span class="bg-indigo-700 text-indigo-200 text-xs px-2 py-1 rounded-full font-semibold">Business</span>
-      </div>
-
-      <!-- Intro to Computer Science -->
-      <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold text-white mb-2 flex items-center">
-          <i class="fas fa-laptop text-cyan-400 mr-2"></i> Intro to Computer Science
-        </h3>
-        <p class="text-gray-300 text-sm mb-3">Explored foundational CS concepts and built programs using Python.</p>
-        <span class="bg-cyan-700 text-cyan-200 text-xs px-2 py-1 rounded-full font-semibold">Core</span>
-      </div>
     </div>
   </div>
 </section>
+
 
 
 

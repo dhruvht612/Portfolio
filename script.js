@@ -14,6 +14,8 @@ function debounce(func, wait = 20, immediate = true) {
   };
 }
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('menu-btn');
   const nav = document.getElementById('nav-links');
@@ -68,4 +70,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Attach scroll event with debounce
   document.addEventListener('scroll', debounce(highlightActiveLink, 50));
+});
+
+// COURSES FILTERING FUNCTIONALITY
+document.addEventListener("DOMContentLoaded", () => {
+  const courseButtons = document.querySelectorAll('.course-filter-btn');
+  const courseCards = document.querySelectorAll('.course-card');
+
+  courseButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      // Update active button styling
+      courseButtons.forEach(b => {
+        b.classList.remove('active', 'bg-red-500');
+        b.classList.add('bg-gray-700');
+      });
+      btn.classList.add('active', 'bg-red-500');
+      btn.classList.remove('bg-gray-700');
+
+      // Filter cards
+      courseCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category.includes(filter)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
 });

@@ -1552,21 +1552,22 @@
 
 <!-- =========================== FOOTER SECTION =========================== -->
 <!-- Includes about info, quick nav links, contact info, and copyright -->
-<footer class="bg-gray-900 text-gray-300 py-10 px-6">
+<footer class="bg-gray-900 text-gray-300 py-10 px-6 sm:px-12 lg:px-20">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
     <!-- About -->
     <div>
       <h3 class="text-red-400 text-xl font-semibold mb-4">About Me</h3>
       <p class="text-gray-400 leading-relaxed">
-        Passionate software developer specializing in web technologies. Always eager to learn and build impactful projects.
+        Passionate software developer specializing in web technologies. Always eager to learn and build impactful
+        projects.
       </p>
     </div>
 
     <!-- Quick Links -->
     <div>
       <h3 class="text-red-400 text-xl font-semibold mb-4">Quick Links</h3>
-      <ul>
+      <ul class="space-y-1">
         <li><a href="#hero" class="hover:text-teal-300 transition">Home</a></li>
         <li><a href="#skills" class="hover:text-teal-300 transition">Skills</a></li>
         <li><a href="#projects" class="hover:text-teal-300 transition">Projects</a></li>
@@ -1577,20 +1578,34 @@
     <!-- Contact & Social -->
     <div>
       <h3 class="text-red-400 text-xl font-semibold mb-4">Contact & Social</h3>
-      <p class="mb-2"><i class="fas fa-envelope mr-2 text-teal-400"></i> thakardhruvh@gmail.com</p>
-      <p class="mb-4"><i class="fas fa-phone mr-2 text-teal-400"></i> +1 (647) 919 2941</p>
-      <div class="flex space-x-6 text-teal-400 text-2xl">
-        <a href="https://linkedin.com/in/dhruv-thakar-ba46aa296" target="_blank" class="hover:text-teal-300 transition" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
+      <p class="mb-2">
+        <i class="fas fa-envelope mr-2 text-teal-400"></i>
+        <a href="mailto:thakardhruvh@gmail.com" class="hover:text-teal-300">thakardhruvh@gmail.com</a>
+      </p>
+      <p class="mb-4">
+        <i class="fas fa-phone mr-2 text-teal-400"></i>
+        <a href="tel:+16479192941" class="hover:text-teal-300">+1 (647) 919 2941</a>
+      </p>
+      <div class="flex space-x-6 text-2xl">
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/dhruv-thakar-ba46aa296" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <i class="fab fa-linkedin transition-transform hover:scale-110" style="color: #0077B5;"></i>
         </a>
-        <a href="https://github.com/dhruvthakar" target="_blank" class="hover:text-teal-300 transition" aria-label="GitHub">
-          <i class="fab fa-github"></i>
+
+        <!-- GitHub -->
+        <a href="https://github.com/dhruvthakar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github transition-transform hover:scale-110" style="color: #332e2e;"></i>
         </a>
-        <a href="https://twitter.com/dhruvthakar" target="_blank" class="hover:text-teal-300 transition" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
+
+        <!-- Twitter -->
+        <a href="https://twitter.com/dhruvthakar" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <i class="fab fa-twitter transition-transform hover:scale-110" style="color: #1DA1F2;"></i>
         </a>
-        <a href="https://instagram.com/dhruvthakar" target="_blank" class="hover:text-teal-300 transition" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/dhruvthakar" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fab fa-instagram transition-transform hover:scale-110" style="color: #E1306C;"></i>
         </a>
       </div>
     </div>
@@ -1600,6 +1615,8 @@
     &copy; 2025 Dhruv Thakar. All rights reserved.
   </div>
 </footer>
+
+
 
 </body>
 </html>

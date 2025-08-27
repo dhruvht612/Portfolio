@@ -1,7 +1,7 @@
 # File Tree: Portfolio
 
 Generated on: 8/22/2025, 2:38:26 AM
-Root path: `c:\Users\thaka\OneDrive\Desktop\Portfolio`
+
 
 ```
 ├── 📁 .git/ 🚫 (auto-hidden)

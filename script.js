@@ -109,4 +109,17 @@ const navLinks = document.getElementById('nav-links');
   navLinks.classList.toggle('hidden');
 });
 
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  const content = document.getElementById("main-content");
+
+  preloader.classList.add("opacity-0", "transition-opacity", "duration-500");
+
+  setTimeout(() => {
+    preloader.style.display = "none";
+    content.classList.remove("hidden");
+  }, 500);
+});
+
+
 

@@ -1,22 +1,31 @@
 import express from "express";
 import path from "path";
-import bodyParser from "body-parser";
+import { fileURLToPath } from "url";
 
 const app = express();
 const PORT = 3000;
 
-// Middleware
-app.use(bodyParser.json());
-app.use(express.static("public")); // put index.html, script.js, etc. inside /public
+// Fix __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Example backend route (Contact form)
+// Middleware
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "public"))); // Serve your index.html & script.js from /public
+
+// Example API route (contact form)
 app.post("/api/contact", (req, res) => {
   const { name, email, message } = req.body;
   console.log("Contact form submitted:", name, email, message);
   res.json({ success: true, message: "Thanks for reaching out!" });
 });
 
+// Catch-all route (in case of React routing, or to handle /)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });

@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public"))); // Serve your index.html & script.js from /public
+app.use(express.static(path.join(__dirname, "public"))); // Serve static files
 
 // Example API route (contact form)
 app.post("/api/contact", (req, res) => {
@@ -20,8 +20,8 @@ app.post("/api/contact", (req, res) => {
   res.json({ success: true, message: "Thanks for reaching out!" });
 });
 
-// Catch-all route (in case of React routing, or to handle /)
-app.get("*", (req, res) => {
+// Catch-all fallback (Express 5 safe)
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 

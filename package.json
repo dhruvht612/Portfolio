@@ -2,7 +2,8 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
-    "mongoose": "^8.18.2"
+    "mongoose": "^8.18.2",
+    "nodemailer": "^7.0.6"
   },
   "name": "@dhruvht612/portfolio",
   "version": "1.0.0",

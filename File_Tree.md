@@ -1,6 +1,6 @@
 # File Tree: Portfolio
 
-Generated on: 9/21/2025, 10:32:36 PM
+Generated on: 9/22/2025, 12:05:44 PM
 Root path: `c:\Users\thaka\OneDrive\Desktop\Portfolio`
 
 ```
@@ -19,13 +19,13 @@ Root path: `c:\Users\thaka\OneDrive\Desktop\Portfolio`
 │   ├── 🖼️ ontariotechu_logo.jpeg
 │   ├── 🖼️ ontariotechu_logo.png
 │   ├── 🖼️ profile.png
+│   ├── 📕 resume.pdf
 │   └── 📄 script.js
 ├── 📝 File_Tree.md
 ├── 📖 README.md
 ├── 📄 index.js
 ├── 📄 package-lock.json
 ├── 📄 package.json
-├── 📕 resume.pdf
 └── 🎨 style.css
 ```
 

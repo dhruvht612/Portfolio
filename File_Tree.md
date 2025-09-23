@@ -1,31 +1,34 @@
 # File Tree: Portfolio
 
-Generated on: 9/22/2025, 12:05:44 PM
+Generated on: 9/23/2025, 1:13:24 PM
 Root path: `c:\Users\thaka\OneDrive\Desktop\Portfolio`
 
 ```
 ├── 📁 .git/ 🚫 (auto-hidden)
 ├── 📁 .vscode/ 🚫 (auto-hidden)
+├── 📁 models/
+│   └── 📄 Message.js
 ├── 📁 node_modules/ 🚫 (auto-hidden)
 ├── 📁 public/
-│   ├── 🖼️ Forage_logo.jpeg
-│   ├── 🖼️ HackerRank_logo.png
-│   ├── 🖼️ fletcher's_meadow.png
-│   ├── 🖼️ fletcher's_meadow_logo.png
-│   ├── 🖼️ google_logo.jpg
-│   ├── 🌐 index.html
-│   ├── 🖼️ logo.png
-│   ├── 🖼️ oneroadmap_logo.jpeg
-│   ├── 🖼️ ontariotechu_logo.jpeg
-│   ├── 🖼️ ontariotechu_logo.png
-│   ├── 🖼️ profile.png
-│   ├── 📕 resume.pdf
-│   └── 📄 script.js
+├── 📄 .envs
 ├── 📝 File_Tree.md
+├── 🖼️ Forage_logo.jpeg
+├── 🖼️ HackerRank_logo.png
 ├── 📖 README.md
+├── 🖼️ fletcher's_meadow.png
+├── 🖼️ fletcher's_meadow_logo.png
+├── 🖼️ google_logo.jpg
+├── 🌐 index.html
 ├── 📄 index.js
+├── 🖼️ logo.png
+├── 🖼️ oneroadmap_logo.jpeg
+├── 🖼️ ontariotechu_logo.jpeg
+├── 🖼️ ontariotechu_logo.png
 ├── 📄 package-lock.json
 ├── 📄 package.json
+├── 🖼️ profile.png
+├── 📕 resume.pdf
+├── 📄 script.js
 └── 🎨 style.css
 ```
 

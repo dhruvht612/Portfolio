@@ -1,4 +1,0 @@
-MONGO_URI=mongodb://localhost:27017/portfolio
-EMAIL_USER=thakardhruvh@gmail.com
-EMAIL_PASS=Dingdong007
-PORT=3000

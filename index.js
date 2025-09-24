@@ -7,6 +7,7 @@ import nodemailer from "nodemailer";
 import Message from "./models/Message.js";
 
 dotenv.config(); // load .env file
+console.log("DEBUG: MONGO_URI =", process.env.MONGO_URI);
 
 const app = express();
 const PORT = process.env.PORT || 3000;

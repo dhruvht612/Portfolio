@@ -18,7 +18,9 @@ const __dirname = path.dirname(__filename);
 
 // Middleware
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+
+// ✅ Change static folder from "public" → project root ("Portfolio")
+app.use(express.static(__dirname));
 
 // Connect to MongoDB
 mongoose
@@ -40,7 +42,7 @@ app.post("/api/contact", async (req, res) => {
 
     // Send email notification
     const transporter = nodemailer.createTransport({
-      service: "gmail", // or "outlook", "yahoo", etc.
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -64,9 +66,9 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-// Fallback: serve index.html for unknown routes
+// ✅ Fallback: now serves "index.html" from root folder (Portfolio)
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Start server

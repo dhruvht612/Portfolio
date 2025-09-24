@@ -75,6 +75,8 @@ a clean, professional design.
 -   **🤝 Volunteering** -- Community contributions\
 -   **📣 Clubs** -- University organizations involvement\
 -   **💼 Projects** -- Featured projects with filters\
+-   **💼 Certifications** -- Certification credentials/certificates\
+-   **💼 Extracurriculars** -- Job sims/internships\
 -   **🧠 Skills** -- Technical and soft skills\
 -   **📘 Courses** -- Completed and relevant coursework\
 -   **📆 Timeline** -- Academic and personal milestones\

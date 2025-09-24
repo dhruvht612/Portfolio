@@ -7,8 +7,13 @@ CSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?&style=for-the-badge
 [![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)\
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)\
 [![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](https://expressjs.com/)\
-[![Font
-Awesome](https://img.shields.io/badge/Font%20Awesome-Icons-blue?style=for-the-badge&logo=fontawesome)](https://fontawesome.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)  
+[![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge)](https://mongoosejs.com/)  
+[![dotenv](https://img.shields.io/badge/dotenv-000000?style=for-the-badge)](https://github.com/motdotla/dotenv)  
+[![Nodemailer](https://img.shields.io/badge/Nodemailer-009B77?style=for-the-badge)](https://nodemailer.com/)  
+[![node-fetch](https://img.shields.io/badge/node--fetch-333333?style=for-the-badge)](https://github.com/node-fetch/node-fetch)  
+[![body-parser](https://img.shields.io/badge/body--parser-6DB33F?style=for-the-badge)](https://github.com/expressjs/body-parser)  
+
 
 > A modern, responsive portfolio website to showcase my work, skills,
 > and academic background as a Computer Science student at Ontario Tech

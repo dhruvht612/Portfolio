@@ -2207,7 +2207,19 @@
       </a>
     </div>
   </footer>
-
+  
+  <!-- Chatbot Widget -->
+  <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
+    <button id="chat-toggle" class="bg-red-500 text-white p-3 rounded-full shadow-lg text-xl">💬</button>
+  
+    <div id="chat-box" class="hidden w-80 h-96 bg-gray-900 border border-gray-700 rounded-xl shadow-xl flex flex-col">
+      <div id="chat-messages" class="flex-1 overflow-y-auto p-3 text-sm space-y-2"></div>
+      <div class="flex border-t border-gray-700">
+        <input id="chat-input" type="text" placeholder="Type..." class="flex-1 p-2 bg-gray-800 text-white outline-none" />
+        <button id="chat-send" class="bg-red-500 px-4">➤</button>
+      </div>
+    </div>
   </div>
+
 </body>
 </html>

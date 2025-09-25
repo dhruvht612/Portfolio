@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
 import Message from "./models/Message.js";
+import OpenAI from "openai";
 
 dotenv.config(); // load .env file
 console.log("DEBUG: MONGO_URI =", process.env.MONGO_URI);
@@ -19,7 +20,7 @@ const __dirname = path.dirname(__filename);
 // Middleware
 app.use(express.json());
 
-// ✅ Change static folder from "public" → project root ("Portfolio")
+// ✅ Serve static files (your portfolio front-end)
 app.use(express.static(__dirname));
 
 // Connect to MongoDB
@@ -31,7 +32,7 @@ mongoose
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB error:", err));
 
-// Contact form route
+// ================= CONTACT FORM API =================
 app.post("/api/contact", async (req, res) => {
   try {
     const { name, email, message } = req.body;
@@ -66,7 +67,33 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-// ✅ Fallback: now serves "index.html" from root folder (Portfolio)
+// ================= CHATBOT API =================
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+app.post("/api/chat", async (req, res) => {
+  try {
+    const { message } = req.body;
+
+    const response = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are Dhruv Thakar's portfolio assistant. Answer questions about Dhruv's skills, projects, education, and background in a professional but friendly tone. If asked about contact, direct users to the Contact section.",
+        },
+        { role: "user", content: message },
+      ],
+    });
+
+    res.json({ reply: response.choices[0].message.content });
+  } catch (err) {
+    console.error("❌ Chatbot error:", err);
+    res.status(500).json({ reply: "⚠️ Sorry, something went wrong." });
+  }
+});
+
+// ✅ Fallback: serves "index.html" for any unknown route
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });

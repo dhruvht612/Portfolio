@@ -140,5 +140,56 @@ document
     alert(result.message);
   });
 
+// ================= CHATBOT WIDGET =================
+const toggleBtn = document.getElementById("chat-toggle");
+const chatBox = document.getElementById("chat-box");
+const chatMessages = document.getElementById("chat-messages");
+const chatInput = document.getElementById("chat-input");
+const chatSend = document.getElementById("chat-send");
+
+// Toggle chat box open/close
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    chatBox.classList.toggle("hidden");
+  });
+}
+
+// Send message to backend
+async function sendMessage() {
+  const msg = chatInput.value.trim();
+  if (!msg) return;
+
+  // Show user message
+  chatMessages.innerHTML += `<div><b>You:</b> ${msg}</div>`;
+  chatInput.value = "";
+
+  try {
+    // Call backend API
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: msg }),
+    });
+
+    const data = await res.json();
+
+    // Show bot reply
+    chatMessages.innerHTML += `<div class="text-green-400"><b>Bot:</b> ${data.reply}</div>`;
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  } catch (err) {
+    console.error("Chat error:", err);
+    chatMessages.innerHTML += `<div class="text-red-400"><b>Bot:</b> ⚠️ Error connecting to server</div>`;
+  }
+}
+
+// Event listeners
+if (chatSend) chatSend.addEventListener("click", sendMessage);
+if (chatInput) {
+  chatInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") sendMessage();
+  });
+}
+
+
 
 

@@ -67,6 +67,7 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
+
 // ================= CHATBOT API =================
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 

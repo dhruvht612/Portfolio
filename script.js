@@ -190,6 +190,50 @@ if (chatInput) {
   });
 }
 
+// ================= WEATHER WIDGET =================
+const apiKey = "YOUR_API_KEY"; // Replace with your OpenWeatherMap API key
 
+async function loadWeather(lat, lon) {
+  try {
+    const res = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+    );
+    const data = await res.json();
 
+    document.getElementById("weather-city").textContent = data.name;
+    document.getElementById("weather-temp").textContent = `${data.main.temp}°C`;
+    document.getElementById("weather-desc").textContent =
+      data.weather[0].description;
 
+    const icon = document.getElementById("weather-icon");
+    icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    icon.classList.remove("hidden");
+  } catch (err) {
+    console.error("Weather error:", err);
+    document.getElementById("weather-city").textContent =
+      "Unable to load weather";
+  }
+}
+
+// ================= GET USER LOCATION =================
+function getLocationAndWeather() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        loadWeather(lat, lon);
+      },
+      (error) => {
+        console.warn("Geolocation blocked or failed, fallback to Toronto");
+        // fallback to Toronto
+        loadWeather(43.65107, -79.347015);
+      }
+    );
+  } else {
+    console.warn("Geolocation not supported, fallback to Toronto");
+    loadWeather(43.65107, -79.347015);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", getLocationAndWeather);

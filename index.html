@@ -298,6 +298,288 @@
     </div>
   </section>
 
+  <!-- =========================== PROJECTS SECTION =========================== -->
+  <section id="projects" class="py-16 px-6 bg-gray-900">
+    <h2
+      class="text-3xl font-extrabold text-center mb-12 text-red-400 tracking-wide flex items-center justify-center gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
+      </svg>
+      Projects
+    </h2>
+  
+    <!-- Filter Buttons -->
+    <div id="filter-buttons" class="flex flex-wrap justify-center gap-4 mb-10">
+      <button class="filter-btn active bg-red-500 text-white px-4 py-2 rounded flex items-center gap-2" data-filter="all">
+        <i class="fas fa-layer-group"></i> All
+      </button>
+      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+        data-filter="html">
+        <i class="fab fa-html5 text-orange-400"></i> HTML
+      </button>
+      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+        data-filter="css">
+        <i class="fab fa-css3-alt text-blue-400"></i> CSS
+      </button>
+      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+        data-filter="javascript">
+        <i class="fab fa-js-square text-yellow-300"></i> JavaScript
+      </button>
+      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+        data-filter="java">
+        <i class="fab fa-java text-red-300"></i> Java
+      </button>
+      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+        data-filter="c++">
+        <i class="fas fa-code text-purple-300"></i> C++ 
+      </button>
+      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+        data-filter="arduino">
+        <i class="fas fa-microchip text-green-400"></i> Arduino
+      </button>
+      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+        data-filter="circuit">
+        <i class="fas fa-bolt text-pink-400"></i> Circuit
+      </button>
+      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+        data-filter="python">
+        <i class="fab fa-python text-yellow-400"></i> Python
+      </button>
+    </div>
+  
+  
+    <!-- Project Cards Grid -->
+    <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  
+      <!-- Project 1 -->
+      <!-- Common Algorithms Library -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="java algorithms" data-category="java algorithms">
+        <div class="mb-2 text-3xl text-purple-400"><i class="fas fa-cogs"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">Common Algorithms Library</h3>
+        <p class="text-gray-300 mb-2">A Java library of classic array-based algorithms built for reusability and
+          performance testing.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>Sorting: Selection, Insertion, Bubble</li>
+          <li>Searching: Linear, Binary</li>
+          <li>Shuffling, Reversing, Merging</li>
+        </ul>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">Java</span>
+          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">Algorithms</span>
+          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Data Structures</span>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="java">
+        <div class="mb-2 text-3xl text-blue-400"><i class="fas fa-mobile-alt"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">iPhonePhone – Java OOP</h3>
+        <p class="text-gray-300 mb-2">Simulates an iPhone using Java classes showcasing encapsulation and method
+          overriding.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>App install/uninstall</li>
+          <li>Battery & flashlight control</li>
+          <li>Airplane mode simulation</li>
+        </ul>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">Java</span>
+          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">OOP</span>
+        </div>
+      </div>
+  
+      <!-- Project 3 -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="java">
+        <div class="mb-2 text-3xl text-green-400"><i class="fas fa-calculator"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">Numeric Data GUI</h3>
+        <p class="text-gray-300 mb-2">Interactive GUI to perform math operations using Java Swing.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>Prime & square detection</li>
+          <li>Factorial, sum, reverse digits</li>
+          <li>Trigonometric functions</li>
+        </ul>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">Java</span>
+          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">Swing</span>
+          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">GUI</span>
+        </div>
+      </div>
+  
+      <!-- Project 4 -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="html css javascript" data-category="html css javascript">
+        <div class="mb-2 text-3xl text-pink-400"><i class="fas fa-user-circle"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">Personal Portfolio Website</h3>
+        <p class="text-gray-300 mb-2">Responsive personal portfolio built with HTML, Tailwind CSS, and JavaScript.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>Showcases projects, skills, timeline, and contact info</li>
+          <li>Uses Tailwind CSS for styling</li>
+          <li>Responsive and interactive design</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 mb-2">
+          <span class="bg-orange-700 text-orange-200 px-2 py-1 rounded text-xs font-semibold">HTML</span>
+          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">CSS</span>
+          <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
+        </div>
+      </div>
+  
+      <!-- Project 5 -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="javascript css">
+        <div class="mb-2 text-3xl text-yellow-300"><i class="fas fa-square-root-alt"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">Calculator</h3>
+        <p class="text-gray-300 mb-2">A feature-rich calculator built with Bootstrap and JavaScript supporting
+          trigonometric functions, square roots, and input history.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>Clean Tailwind layout</li>
+          <li>Trigonometry & square root support</li>
+          <li>History tracking</li>
+          <li>Keyboard input support</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 mb-2">
+          <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
+          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">CSS</span>
+        </div>
+      </div>
+  
+      <!-- Project 6 -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="html javascript">
+        <div class="mb-2 text-3xl text-blue-400"><i class="fas fa-address-book"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">Contact Manager App</h3>
+        <p class="text-gray-300 mb-2">A CRUD-based web app that allows users to manage contact details—create, edit,
+          delete, and search contacts.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>Local storage or backend support</li>
+          <li>Responsive UI with form validation</li>
+          <li>Search and filter functionality</li>
+          <li>Clean and intuitive interface</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 mb-2">
+          <span class="bg-orange-700 text-orange-200 px-2 py-1 rounded text-xs font-semibold">HTML</span>
+          <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
+        </div>
+      </div>
+  
+      <!-- Project 7: Airline Reservation System -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="python oop console">
+        <div class="mb-2 text-3xl text-sky-400"><i class="fas fa-plane"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">Airline Reservation System</h3>
+        <p class="text-gray-300 mb-2">A console-based airline reservation system built in Python using OOP principles.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>Book & cancel tickets with automatic seat assignment</li>
+          <li>Waitlist management for full flights</li>
+          <li>Print formatted boarding passes</li>
+          <li>Track available & occupied seats</li>
+        </ul>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-green-700 text-green-200 px-2 py-1 rounded text-xs font-semibold">Python</span>
+          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">OOP</span>
+          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Console App</span>
+        </div>
+      </div>
+  
+      <!-- Project 8: File Compression Tool -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="java algorithms compression">
+        <div class="mb-2 text-3xl text-indigo-400"><i class="fas fa-file-archive"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">File Compression Tool (Huffman Coding)</h3>
+        <p class="text-gray-300 mb-2">A file compression and decompression tool in Java using Huffman Coding.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>Compress & decompress text files</li>
+          <li>Implements Huffman Coding algorithm</li>
+          <li>Uses binary trees, hash maps & priority queues</li>
+          <li>OOP with clear class structure (Compressor, Decompressor, HuffmanTree)</li>
+        </ul>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">Java</span>
+          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">Algorithms</span>
+          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">Huffman Coding</span>
+        </div>
+      </div>
+  
+      <!-- Project 9: Computer Science Quiz -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="python quiz console">
+        <div class="mb-2 text-3xl text-teal-400"><i class="fas fa-question-circle"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">Computer Science Quiz</h3>
+        <p class="text-gray-300 mb-2">An interactive multiple-choice quiz built in Python, testing core CS knowledge.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>5 multiple-choice computer science questions</li>
+          <li>Instant feedback after each answer (✅ / ❌)</li>
+          <li>Final score with performance evaluation</li>
+          <li>Lightweight, console-based, no extra libraries</li>
+        </ul>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-green-700 text-green-200 px-2 py-1 rounded text-xs font-semibold">Python</span>
+          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">Quiz App</span>
+          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Console</span>
+        </div>
+      </div>
+  
+      <!-- Project 10: Police Strobe-Style LED Flasher -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="electronics circuit">
+        <div class="mb-2 text-3xl text-red-400"><i class="fas fa-lightbulb"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">Police Strobe-Style LED Flasher Circuit</h3>
+        <p class="text-gray-300 mb-2">An electronics project using dual 555 timers to simulate alternating red & blue
+          police
+          strobe lights.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>Dual 555 astable multivibrator configuration</li>
+          <li>Alternating red/blue LED strobe effect</li>
+          <li>Hands-on intro to timing control & multivibrators</li>
+          <li>Applications: demos, props, traffic simulations</li>
+        </ul>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-pink-700 text-pink-200 px-2 py-1 rounded text-xs font-semibold">Electronics</span>
+          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">555 Timer</span>
+          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">LED Control</span>
+          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Circuit Design</span>
+        </div>
+      </div>
+  
+      <!-- Project 11: Sumo Bot Development & Competition -->
+      <div
+        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        data-category="robotics embedded">
+        <div class="mb-2 text-3xl text-orange-400"><i class="fas fa-robot"></i></div>
+        <h3 class="text-xl font-semibold mb-2 text-white">Sumo Bot Development & Competition</h3>
+        <p class="text-gray-300 mb-2">An autonomous sumo robot built to detect, track, and push opponents out of an arena
+          using strategic programming and robust mechanical design.</p>
+        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
+          <li>Autonomous opponent detection & tracking</li>
+          <li>Embedded programming with Arduino (C++/Python)</li>
+          <li>Sensor integration & decision-making logic</li>
+          <li>Mechanical design for durability & performance</li>
+        </ul>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">Robotics</span>
+          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">Arduino</span>
+          <span class="bg-green-700 text-green-200 px-2 py-1 rounded text-xs font-semibold">C++</span>
+          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">Python</span>
+          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Embedded Systems</span>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+
 
   <!-- =========================== EDUCATION SECTION =========================== -->
   <!-- (education content unchanged) -->
@@ -672,280 +954,11 @@
     </div>
   </section>
 
-  <!-- ================= WEATHER SECTION ================= -->
-  
-
 
   
 
 
-  <!-- =========================== PROJECTS SECTION =========================== -->
-  <section id="projects" class="py-16 px-6 bg-gray-900">
-    <h2
-      class="text-3xl font-extrabold text-center mb-12 text-red-400 tracking-wide flex items-center justify-center gap-3">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
-      </svg>
-      Projects
-    </h2>
-
-    <!-- Filter Buttons -->
-    <div id="filter-buttons" class="flex flex-wrap justify-center gap-4 mb-10">
-      <button class="filter-btn active bg-red-500 text-white px-4 py-2 rounded flex items-center gap-2"
-        data-filter="all">
-        <i class="fas fa-layer-group"></i> All
-      </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
-        data-filter="html">
-        <i class="fab fa-html5 text-orange-400"></i> HTML
-      </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
-        data-filter="css">
-        <i class="fab fa-css3-alt text-blue-400"></i> CSS
-      </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
-        data-filter="javascript">
-        <i class="fab fa-js-square text-yellow-300"></i> JavaScript
-      </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
-        data-filter="java">
-        <i class="fab fa-java text-red-300"></i> Java
-      </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
-        data-filter="c++">
-        <i class="fas fa-code text-purple-300"></i> C++
-      </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
-        data-filter="arduino">
-        <i class="fas fa-microchip text-green-400"></i> Arduino
-      </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
-        data-filter="circuit">
-        <i class="fas fa-bolt text-pink-400"></i> Circuit
-      </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
-        data-filter="python">
-        <i class="fab fa-python text-yellow-400"></i> Python
-      </button>
-    </div>
-
-
-    <!-- Project Cards Grid -->
-    <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
-      <!-- Project 1 -->
-      <!-- Common Algorithms Library -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1" data-category="java algorithms"
-        data-category="java algorithms">
-        <div class="mb-2 text-3xl text-purple-400"><i class="fas fa-cogs"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Common Algorithms Library</h3>
-        <p class="text-gray-300 mb-2">A Java library of classic array-based algorithms built for reusability and
-          performance testing.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Sorting: Selection, Insertion, Bubble</li>
-          <li>Searching: Linear, Binary</li>
-          <li>Shuffling, Reversing, Merging</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">Java</span>
-          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">Algorithms</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Data Structures</span>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1" data-category="java">
-        <div class="mb-2 text-3xl text-blue-400"><i class="fas fa-mobile-alt"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">iPhonePhone – Java OOP</h3>
-        <p class="text-gray-300 mb-2">Simulates an iPhone using Java classes showcasing encapsulation and method
-          overriding.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>App install/uninstall</li>
-          <li>Battery & flashlight control</li>
-          <li>Airplane mode simulation</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">Java</span>
-          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">OOP</span>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1" data-category="java">
-        <div class="mb-2 text-3xl text-green-400"><i class="fas fa-calculator"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Numeric Data GUI</h3>
-        <p class="text-gray-300 mb-2">Interactive GUI to perform math operations using Java Swing.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Prime & square detection</li>
-          <li>Factorial, sum, reverse digits</li>
-          <li>Trigonometric functions</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">Java</span>
-          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">Swing</span>
-          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">GUI</span>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1" data-category="html css javascript"
-        data-category="html css javascript">
-        <div class="mb-2 text-3xl text-pink-400"><i class="fas fa-user-circle"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Personal Portfolio Website</h3>
-        <p class="text-gray-300 mb-2">Responsive personal portfolio built with HTML, Tailwind CSS, and JavaScript.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Showcases projects, skills, timeline, and contact info</li>
-          <li>Uses Tailwind CSS for styling</li>
-          <li>Responsive and interactive design</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 mb-2">
-          <span class="bg-orange-700 text-orange-200 px-2 py-1 rounded text-xs font-semibold">HTML</span>
-          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">CSS</span>
-          <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
-        data-category="javascript css">
-        <div class="mb-2 text-3xl text-yellow-300"><i class="fas fa-square-root-alt"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Calculator</h3>
-        <p class="text-gray-300 mb-2">A feature-rich calculator built with Bootstrap and JavaScript supporting
-          trigonometric functions, square roots, and input history.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Clean Tailwind layout</li>
-          <li>Trigonometry & square root support</li>
-          <li>History tracking</li>
-          <li>Keyboard input support</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 mb-2">
-          <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
-          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">CSS</span>
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
-        data-category="html javascript">
-        <div class="mb-2 text-3xl text-blue-400"><i class="fas fa-address-book"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Contact Manager App</h3>
-        <p class="text-gray-300 mb-2">A CRUD-based web app that allows users to manage contact details—create, edit,
-          delete, and search contacts.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Local storage or backend support</li>
-          <li>Responsive UI with form validation</li>
-          <li>Search and filter functionality</li>
-          <li>Clean and intuitive interface</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 mb-2">
-          <span class="bg-orange-700 text-orange-200 px-2 py-1 rounded text-xs font-semibold">HTML</span>
-          <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
-        </div>
-      </div>
-
-      <!-- Project 7: Airline Reservation System -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
-        data-category="python oop console">
-        <div class="mb-2 text-3xl text-sky-400"><i class="fas fa-plane"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Airline Reservation System</h3>
-        <p class="text-gray-300 mb-2">A console-based airline reservation system built in Python using OOP principles.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Book & cancel tickets with automatic seat assignment</li>
-          <li>Waitlist management for full flights</li>
-          <li>Print formatted boarding passes</li>
-          <li>Track available & occupied seats</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-green-700 text-green-200 px-2 py-1 rounded text-xs font-semibold">Python</span>
-          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">OOP</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Console App</span>
-        </div>
-      </div>
-      
-      <!-- Project 8: File Compression Tool -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
-        data-category="java algorithms compression">
-        <div class="mb-2 text-3xl text-indigo-400"><i class="fas fa-file-archive"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">File Compression Tool (Huffman Coding)</h3>
-        <p class="text-gray-300 mb-2">A file compression and decompression tool in Java using Huffman Coding.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Compress & decompress text files</li>
-          <li>Implements Huffman Coding algorithm</li>
-          <li>Uses binary trees, hash maps & priority queues</li>
-          <li>OOP with clear class structure (Compressor, Decompressor, HuffmanTree)</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">Java</span>
-          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">Algorithms</span>
-          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">Huffman Coding</span>
-        </div>
-      </div>
-
-      <!-- Project 9: Computer Science Quiz -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
-        data-category="python quiz console">
-        <div class="mb-2 text-3xl text-teal-400"><i class="fas fa-question-circle"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Computer Science Quiz</h3>
-        <p class="text-gray-300 mb-2">An interactive multiple-choice quiz built in Python, testing core CS knowledge.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>5 multiple-choice computer science questions</li>
-          <li>Instant feedback after each answer (✅ / ❌)</li>
-          <li>Final score with performance evaluation</li>
-          <li>Lightweight, console-based, no extra libraries</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-green-700 text-green-200 px-2 py-1 rounded text-xs font-semibold">Python</span>
-          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">Quiz App</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Console</span>
-        </div>
-      </div>
-
-      <!-- Project 10: Police Strobe-Style LED Flasher -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
-        data-category="electronics circuit">
-        <div class="mb-2 text-3xl text-red-400"><i class="fas fa-lightbulb"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Police Strobe-Style LED Flasher Circuit</h3>
-        <p class="text-gray-300 mb-2">An electronics project using dual 555 timers to simulate alternating red & blue police
-          strobe lights.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Dual 555 astable multivibrator configuration</li>
-          <li>Alternating red/blue LED strobe effect</li>
-          <li>Hands-on intro to timing control & multivibrators</li>
-          <li>Applications: demos, props, traffic simulations</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-pink-700 text-pink-200 px-2 py-1 rounded text-xs font-semibold">Electronics</span>
-          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">555 Timer</span>
-          <span class="bg-red-700 text-red-200 px-2 py-1 rounded text-xs font-semibold">LED Control</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Circuit Design</span>
-        </div>
-      </div>
-
-      <!-- Project 11: Sumo Bot Development & Competition -->
-      <div class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
-        data-category="robotics embedded">
-        <div class="mb-2 text-3xl text-orange-400"><i class="fas fa-robot"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Sumo Bot Development & Competition</h3>
-        <p class="text-gray-300 mb-2">An autonomous sumo robot built to detect, track, and push opponents out of an arena
-          using strategic programming and robust mechanical design.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Autonomous opponent detection & tracking</li>
-          <li>Embedded programming with Arduino (C++/Python)</li>
-          <li>Sensor integration & decision-making logic</li>
-          <li>Mechanical design for durability & performance</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">Robotics</span>
-          <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">Arduino</span>
-          <span class="bg-green-700 text-green-200 px-2 py-1 rounded text-xs font-semibold">C++</span>
-          <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">Python</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Embedded Systems</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
+  
 
   <!-- =========================== CERTIFICATIONS SECTION =========================== -->
   <section id="certifications" class="py-16 bg-gray-900 text-white">
@@ -1332,6 +1345,7 @@
       </div>
     </div>
   </section>
+
 
   <section id="contact" class="py-16 px-6 bg-gray-900 fade-in-up">
     <div class="max-w-3xl mx-auto text-center">

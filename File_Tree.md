@@ -1,6 +1,6 @@
 # File Tree: Portfolio
 
-Generated on: 9/23/2025, 1:13:24 PM
+Generated on: 10/9/2025, 4:38:17 PM
 Root path: `c:\Users\thaka\OneDrive\Desktop\Portfolio`
 
 ```
@@ -9,8 +9,7 @@ Root path: `c:\Users\thaka\OneDrive\Desktop\Portfolio`
 ├── 📁 models/
 │   └── 📄 Message.js
 ├── 📁 node_modules/ 🚫 (auto-hidden)
-├── 📁 public/
-├── 📄 .envs
+├── 🔒 .env 🚫 (auto-hidden)
 ├── 📝 File_Tree.md
 ├── 🖼️ Forage_logo.jpeg
 ├── 🖼️ HackerRank_logo.png
@@ -29,7 +28,8 @@ Root path: `c:\Users\thaka\OneDrive\Desktop\Portfolio`
 ├── 🖼️ profile.png
 ├── 📕 resume.pdf
 ├── 📄 script.js
-└── 🎨 style.css
+├── 🎨 style.css
+└── 📄 testContact.js
 ```
 
 ---

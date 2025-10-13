@@ -19,284 +19,132 @@
 
   <div id="main-content" class="hidden">
   <!-- =========================== HEADER =========================== -->
-  <header
-    class="sticky top-0 z-50 bg-gray-800 bg-opacity-60 backdrop-blur-lg border-b border-gray-700 shadow-md text-white transition-all duration-300">
-
+  <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-700 shadow-md text-white">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  
       <!-- Logo & Name -->
-      <h1 class="text-2xl font-bold uppercase tracking-wider flex items-center gap-2">
+      <a href="#home" class="flex items-center gap-2 text-2xl font-bold uppercase tracking-wider">
         <img src="logo.png" alt="Logo" class="w-8 h-8 rounded-full hidden sm:inline-block" />
         Dhruv Thakar
-      </h1>
-
+      </a>
+  
       <!-- Mobile Menu Button -->
       <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
       </button>
-
+  
       <!-- Navigation Links -->
       <ul id="nav-links"
-        class="hidden md:flex flex-col md:flex-row gap-4 md:gap-6 text-sm md:text-base font-medium tracking-wide absolute md:static top-full left-0 w-full md:w-auto bg-gray-900 md:bg-transparent p-6 md:p-0 transition-all duration-300 z-50 items-center md:items-center">
-
-        <li><a href="#home" class="nav-link hover:text-red-400 transition-colors">Home</a></li>
-
-        <!-- Dropdown Menus -->
-        <li class="relative group">
-          <button class="nav-link flex items-center gap-1 hover:text-red-400 transition-colors focus:outline-none">
-            About Me <i class="fas fa-chevron-down text-sm mt-1"></i>
-          </button>
-          <ul
-            class="absolute left-0 mt-2 w-52 bg-gray-800 text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transform scale-95 group-hover:scale-100 transition-all duration-200 z-50">
-            <li><a href="#about" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Who I Am</a>
-            </li>
-            <li><a href="#education"
-                class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Education</a>
-            </li>
-            <li><a href="#goals" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Goals</a></li>
-          </ul>
-        </li>
-
-        <li class="relative group">
-          <button class="nav-link flex items-center gap-1 hover:text-red-400 transition-colors focus:outline-none">
-            Work & Skills <i class="fas fa-chevron-down text-sm mt-1"></i>
-          </button>
-          <ul
-            class="absolute left-0 mt-2 w-52 bg-gray-800 text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transform scale-95 group-hover:scale-100 transition-all duration-200 z-50">
-            <li><a href="#projects" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Projects</a>
-            </li>
-            <li><a href="#skills" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Skills</a>
-            </li>
-            <li><a href="#courses" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Courses</a>
-              <li><a href="#certifications" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Certification</a>
-                <li><a href="#extracurriculars" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Extracurriculars</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="relative group">
-          <button class="nav-link flex items-center gap-1 hover:text-red-400 transition-colors focus:outline-none">
-            Experiences <i class="fas fa-chevron-down text-sm mt-1"></i>
-          </button>
-          <ul
-            class="absolute left-0 mt-2 w-48 bg-gray-800 text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transform scale-95 group-hover:scale-100 transition-all duration-200 z-50">
-            <li><a href="#volunteering"class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Volunteering</a></li>
-            <li><a href="#clubs" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Clubs</a></li>
-            <li><a href="#hackathons" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Hackathons & Competitions</a></li>
-          </ul>
-        </li>
-
-        <li class="relative group">
-          <button class="nav-link flex items-center gap-1 hover:text-red-400 transition-colors focus:outline-none">
-            Progress <i class="fas fa-chevron-down text-sm mt-1"></i>
-          </button>
-          <ul
-            class="absolute left-0 mt-2 w-48 bg-gray-800 text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transform scale-95 group-hover:scale-100 transition-all duration-200 z-50">
-            <li><a href="#timeline" class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Timeline</a>
-            </li>
-            <li><a href="#learning-growth"
-                class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Learning & Growth</a></li>
-            <li><a href="#technical-blog"
-                class="block px-4 py-2 hover:bg-red-400 hover:text-gray-900 transition">Technical Blog</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#contact" class="nav-link hover:text-red-400 transition-colors">Contact Me</a></li>
-
+        class="hidden md:flex flex-col md:flex-row gap-6 text-sm md:text-base font-medium tracking-wide absolute md:static top-full left-0 w-full md:w-auto bg-gray-900 md:bg-transparent p-6 md:p-0 transition-all duration-300 z-50 items-center">
+  
+        <li><a href="#home" class="hover:text-red-400 transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-red-400 transition-colors">About</a></li>
+        <li><a href="#projects" class="hover:text-red-400 transition-colors">Projects</a></li>
+        <li><a href="#skills" class="hover:text-red-400 transition-colors">Skills</a></li>
+        <li><a href="#education" class="hover:text-red-400 transition-colors">Education</a></li>
+        <li><a href="#contact" class="hover:text-red-400 transition-colors">Contact</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- =========================== HOME SECTION =========================== -->
-  <!-- (home content unchanged) -->
-  <section id="home"
-    class="animate-gradient-x bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white min-h-screen flex flex-col justify-center items-center px-6 text-center relative overflow-hidden">
-    <!-- Animated Background (SVG circles for subtle effect) -->
-    <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" aria-hidden="true">
-      <circle cx="20%" cy="30%" r="80" fill="#ef4444" fill-opacity="0.07" />
-      <circle cx="80%" cy="70%" r="60" fill="#22d3ee" fill-opacity="0.07" />
-      <circle cx="50%" cy="90%" r="40" fill="#f59e42" fill-opacity="0.07" />
-    </svg>
-    <div class="max-w-3xl animate-fade-in relative z-10">
-      <!-- Profile Image -->
-      <img src="profile.png" alt="Dhruv Thakar"
-        class="mx-auto w-32 h-32 rounded-full mb-6 shadow-lg border-4 border-red-400" />
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Welcome to My Portfolio</h1>
-      <p class="text-xl mb-2">
-        Hi, I'm <span class="text-red-400 font-semibold">Dhruv Thakar</span>
-      </p>
-      <p class="text-lg text-gray-300 mb-6">Developer • Maker • Student</p>
-      <span id="typing" class="text-red-300 text-xl font-mono"></span>
-      <a href="#about"
-        class="inline-block bg-red-400 hover:bg-red-500 text-gray-900 font-medium px-6 py-3 rounded shadow-lg transition transform hover:scale-105 mt-6">
-        Learn More About Me <i class="fas fa-arrow-down ml-2 animate-bounce"></i>
-      </a>
-      <div class="flex gap-6 mt-8 justify-center text-2xl">
-        <a href="https://github.com/dhruvthakar" target="_blank"
-          class="hover:text-red-400 transition-transform transform hover:scale-125" title="GitHub"><i
-            class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/dhruv-thakar-ba46aa296" target="_blank"
-          class="hover:text-red-400 transition-transform transform hover:scale-125" title="LinkedIn"><i
-            class="fab fa-linkedin"></i></a>
-        <a href="mailto:thakardhruvh@gmail.com"
-          class="hover:text-red-400 transition-transform transform hover:scale-125" title="Email"><i
-            class="fas fa-envelope"></i></a>
-      </div>
-      <!-- Scroll Down Indicator -->
-      <div class="mt-10 flex justify-center">
-        <a href="#about" class="animate-bounce text-red-400 text-3xl"><i class="fas fa-chevron-down"></i></a>
-      </div>
-    </div>
-  </section>
 
-  <!-- =========================== ABOUT SECTION =========================== -->
-  <!-- (about content unchanged) -->
+<!-- =========================== HOME SECTION =========================== -->
+<section id="home"
+  class="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white px-6 text-center relative overflow-hidden">
+
+  <!-- Subtle Gradient Accent -->
+  <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 opacity-95"></div>
+
+  <!-- Main Content -->
+  <div class="max-w-3xl relative z-10">
+    <!-- Profile -->
+    <img src="profile.png" alt="Dhruv Thakar"
+      class="mx-auto w-36 h-36 rounded-full mb-6 shadow-lg border-4 border-red-400" />
+
+    <!-- Intro -->
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-3">Dhruv Thakar</h1>
+    <p class="text-xl text-red-400 font-medium mb-4">Computer Science Student · Developer · Innovator</p>
+    <p class="text-gray-300 max-w-xl mx-auto mb-6">
+      Passionate about building intelligent, efficient, and meaningful tech solutions.
+      Turning ideas into reality through code, creativity, and collaboration.
+    </p>
+
+    <!-- CTA -->
+    <a href="#projects"
+      class="inline-block bg-red-500 hover:bg-red-400 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-md transition-transform hover:scale-105">
+      View My Projects <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+
+    <!-- Social Links -->
+    <div class="flex justify-center gap-6 mt-8 text-2xl">
+      <a href="https://github.com/dhruvthakar" target="_blank" class="text-gray-400 hover:text-red-400 transition"><i
+          class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/dhruv-thakar-ba46aa296" target="_blank"
+        class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:thakardhruvh@gmail.com" class="text-gray-400 hover:text-yellow-400 transition"><i
+          class="fas fa-envelope"></i></a>
+      <a href="https://www.instagram.com/dhruvthakar" target="_blank"
+        class="text-gray-400 hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</section>
+
+
   <section id="about" class="py-20 px-6 bg-gray-900 text-white">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <!-- Profile Image & Resume -->
-      <div class="flex flex-col items-center md:items-start animate-fade-in">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+  
+      <!-- Profile Image -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
         <img src="profile.png" alt="Dhruv Thakar"
-          class="w-64 h-64 rounded-2xl object-cover shadow-lg border-4 border-red-400 bg-gray-900 mb-6 transition-transform duration-500 hover:scale-105" />
+          class="w-56 h-56 rounded-2xl object-cover shadow-lg border-4 border-red-400 mb-6 transition-transform duration-300 hover:scale-105" />
         <a href="resume.pdf" target="_blank"
-          class="mt-4 inline-block bg-gradient-to-r from-red-400 to-pink-400 text-gray-900 font-semibold px-6 py-3 rounded shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
-          <i class="fas fa-file-pdf mr-2"></i>Download My Resume
+          class="bg-red-500 hover:bg-red-400 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-md transition-transform hover:scale-105">
+          <i class="fas fa-file-pdf mr-2"></i> Resume
         </a>
-        <!-- Fun Fact Card -->
-        <div class="mt-8 bg-gray-800 p-4 rounded-lg shadow text-center animate-fade-in-up">
-          <h3 class="text-lg font-semibold text-red-400 mb-2">Fun Fact</h3>
-          <p class="text-gray-300 text-sm">I once built a robot that could solve a maze using only light sensors and
-            Arduino!</p>
-        </div>
       </div>
-      <!-- About Content -->
-      <div class="animate-fade-in-up">
-        <h2 class="text-4xl font-bold mb-4 text-red-400">About Me</h2>
-        <p class="text-gray-300 mb-4 leading-relaxed">A Computer Science student at Ontario Tech University with a
-          strong foundation in computing and problem-solving.</p>
-        <p class="text-gray-400 mb-4">I'm passionate about turning ideas into practical tech solutions — from writing
-          clean, efficient code to building hardware-based projects with Arduino and circuitry.</p>
-        <p class="text-gray-400 mb-4">Outside academics, I volunteer, compete in hackathons, and love sharing knowledge
-          with others. Always learning, always building.</p>
-        <!-- Skills Badges -->
-        <h3 class="text-xl font-semibold mb-2 text-red-400">Skills</h3>
-        <div class="flex flex-wrap gap-3 mb-4">
-          <!-- Web Languages -->
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fab fa-html5 text-red-400"></i>HTML
-          </span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fab fa-css3-alt text-blue-400"></i>CSS
-          </span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fab fa-js text-yellow-400"></i>JavaScript
-          </span>
-
-          <!-- Programming Languages -->
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fab fa-python text-green-300"></i>Python
-          </span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fas fa-coffee text-orange-400"></i>Java
-          </span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fas fa-code text-blue-300"></i>C++
-          </span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fas fa-terminal text-cyan-400"></i>C
-          </span>
-
-          <!-- Hardware -->
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fas fa-microchip text-gray-400"></i>Arduino
-          </span>
-
-          <!-- Tools -->
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fab fa-git-alt text-red-400"></i>Git
-          </span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fab fa-github text-white"></i>GitHub
-          </span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fas fa-code text-indigo-400"></i>VS Code
-          </span>
-
-          <!-- Styling Framework -->
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-2">
-            <i class="fas fa-wind text-teal-300"></i>Tailwind CSS
-          </span>
+  
+      <!-- About Text -->
+      <div class="space-y-6">
+        <h2 class="text-4xl font-bold text-red-400 mb-4">About Me</h2>
+        <p class="text-gray-300 leading-relaxed">
+          I’m <span class="font-semibold text-white">Dhruv Thakar</span>, a Computer Science student at Ontario Tech
+          University passionate about software development, data-driven projects, and creative problem solving. I enjoy
+          building web and hardware solutions that blend functionality with innovation.
+        </p>
+        <p class="text-gray-400 leading-relaxed">
+          Beyond academics, I participate in hackathons, volunteer initiatives, and leadership roles — always learning and
+          collaborating to make an impact through technology.
+        </p>
+  
+        <!-- Core Skills Badges -->
+        <h3 class="text-xl font-semibold text-red-400">Core Skills</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fab fa-html5 text-red-400 mr-1"></i>HTML</span>
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fab fa-css3-alt text-blue-400 mr-1"></i>CSS</span>
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fab fa-js text-yellow-400 mr-1"></i>JavaScript</span>
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fab fa-python text-green-400 mr-1"></i>Python</span>
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fab fa-java text-orange-400 mr-1"></i>Java</span>
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fas fa-code text-blue-300 mr-1"></i>C++</span>
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fas fa-microchip text-gray-300 mr-1"></i>Arduino</span>
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fab fa-git-alt text-red-400 mr-1"></i>Git</span>
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fab fa-github text-white mr-1"></i>GitHub</span>
+          <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300"><i
+              class="fas fa-wind text-teal-300 mr-1"></i>Tailwind CSS</span>
         </div>
-
-
-        <!-- Quick Highlights -->
-        <div class="grid grid-cols-2 gap-4 mt-6">
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-md text-center transition-all duration-300 animate-fade-in">
-            <h3 class="text-xl font-semibold text-red-400">Languages</h3>
-            <p class="text-sm text-gray-300">Java, C++, Python, C</p>
-          </div>
-          <div
-            class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-md text-center transition-all duration-300 animate-fade-in">
-            <h3 class="text-xl font-semibold text-red-400">Tools</h3>
-            <p class="text-sm text-gray-300">VS Code, GitHub, Arduino</p>
-          </div>
-        </div>
-        <!-- Connect With Me -->
-        <div class="mt-10">
-          <h3 class="text-2xl font-semibold text-red-400 mb-6 text-center">Connect With Me</h3>
-          <div class="flex flex-wrap gap-6 justify-center text-2xl">
-
-            <!-- GitHub -->
-            <a href="https://github.com/dhruvthakar" target="_blank"
-              class="text-gray-300 hover:text-gray-500 transform hover:scale-110 transition duration-300 relative group"
-              aria-label="GitHub">
-              <i class="fab fa-github"></i>
-              <span
-                class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-gray-700 text-white rounded opacity-0 group-hover:opacity-100 transition">GitHub</span>
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/dhruv-thakar-ba46aa296" target="_blank"
-              class="text-blue-600 hover:text-blue-400 transform hover:scale-110 transition duration-300 relative group"
-              aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-              <span
-                class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-gray-700 text-white rounded opacity-0 group-hover:opacity-100 transition">LinkedIn</span>
-            </a>
-
-            <!-- Email -->
-            <a href="mailto:thakardhruvh@gmail.com"
-              class="text-yellow-400 hover:text-yellow-300 transform hover:scale-110 transition duration-300 relative group"
-              aria-label="Email">
-              <i class="fas fa-envelope"></i>
-              <span
-                class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-gray-700 text-white rounded opacity-0 group-hover:opacity-100 transition">Email</span>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/dhruvthakar" target="_blank"
-              class="text-pink-500 hover:text-pink-400 transform hover:scale-110 transition duration-300 relative group"
-              aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-              <span
-                class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs bg-gray-700 text-white rounded opacity-0 group-hover:opacity-100 transition">Instagram</span>
-            </a>
-
-          </div>
-        </div>
-
-        <!-- Weather Widget -->
-        <div class="mt-10 bg-gray-800 p-6 rounded-2xl shadow-lg text-center">
-          <h3 class="text-2xl font-bold mb-4 text-red-400">Live Weather</h3>
-          <p id="weather-city" class="text-lg"></p>
-          <p id="weather-temp" class="text-3xl font-semibold"></p>
-          <p id="weather-desc" class="italic text-gray-300"></p>
-          <img id="weather-icon" alt="Weather icon" class="mx-auto mt-3 hidden w-16 h-16" />
-        </div>
-
-
       </div>
     </div>
   </section>
+
+
 
   <!-- =========================== PROJECTS SECTION =========================== -->
   <section id="projects" class="py-16 px-6 bg-gray-900">
@@ -309,58 +157,84 @@
       Projects
     </h2>
   
-    <!-- Filter Buttons -->
-    <div id="filter-buttons" class="flex flex-wrap justify-center gap-4 mb-10">
-      <button class="filter-btn active bg-red-500 text-white px-4 py-2 rounded flex items-center gap-2" data-filter="all">
-        <i class="fas fa-layer-group"></i> All
+    <!-- =========================== FILTER BUTTONS =========================== -->
+    <div id="filter-buttons" class="flex flex-wrap justify-center gap-3 mb-12">
+      <button
+        class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-red-500 to-pink-500 shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105"
+        data-filter="all">
+        <i class="fas fa-layer-group mr-2"></i> All
       </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+    
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-red-400 hover:text-red-400 transition-all duration-300"
         data-filter="html">
-        <i class="fab fa-html5 text-orange-400"></i> HTML
+        <i class="fab fa-html5 text-orange-400 mr-2"></i> HTML
       </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+    
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-blue-400 hover:text-blue-400 transition-all duration-300"
         data-filter="css">
-        <i class="fab fa-css3-alt text-blue-400"></i> CSS
+        <i class="fab fa-css3-alt text-blue-400 mr-2"></i> CSS
       </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+    
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300"
         data-filter="javascript">
-        <i class="fab fa-js-square text-yellow-300"></i> JavaScript
+        <i class="fab fa-js text-yellow-300 mr-2"></i> JavaScript
       </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+    
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-red-300 hover:text-red-300 transition-all duration-300"
         data-filter="java">
-        <i class="fab fa-java text-red-300"></i> Java
+        <i class="fab fa-java text-red-300 mr-2"></i> Java
       </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+    
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-purple-400 hover:text-purple-400 transition-all duration-300"
         data-filter="c++">
-        <i class="fas fa-code text-purple-300"></i> C++ 
+        <i class="fas fa-code text-purple-300 mr-2"></i> C++
       </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+    
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-green-400 hover:text-green-400 transition-all duration-300"
         data-filter="arduino">
-        <i class="fas fa-microchip text-green-400"></i> Arduino
+        <i class="fas fa-microchip text-green-400 mr-2"></i> Arduino
       </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+    
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-pink-400 hover:text-pink-400 transition-all duration-300"
         data-filter="circuit">
-        <i class="fas fa-bolt text-pink-400"></i> Circuit
+        <i class="fas fa-bolt text-pink-400 mr-2"></i> Circuit
       </button>
-      <button class="filter-btn bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 flex items-center gap-2"
+    
+      <button
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300"
         data-filter="python">
-        <i class="fab fa-python text-yellow-400"></i> Python
+        <i class="fab fa-python text-yellow-400 mr-2"></i> Python
       </button>
     </div>
+    
+    <style>
+      .filter-btn.active {
+        background: linear-gradient(to right, #ef4444, #ec4899);
+        color: white !important;
+        box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+      }
+    </style>
+
   
   
     <!-- Project Cards Grid -->
     <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-  
-      <!-- Project 1 -->
-      <!-- Common Algorithms Library -->
+      <!-- Project 1: Common Algorithms Library -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
-        data-category="java algorithms" data-category="java algorithms">
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
+        data-category="java algorithms">
         <div class="mb-2 text-3xl text-purple-400"><i class="fas fa-cogs"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Common Algorithms Library</h3>
-        <p class="text-gray-300 mb-2">A Java library of classic array-based algorithms built for reusability and
-          performance testing.</p>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">Common
+          Algorithms Library</h3>
+        <p class="text-gray-300 mb-2">A Java library of classic array-based algorithms built for reusability and performance
+          testing.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>Sorting: Selection, Insertion, Bubble</li>
           <li>Searching: Linear, Binary</li>
@@ -372,15 +246,16 @@
           <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Data Structures</span>
         </div>
       </div>
-  
-      <!-- Project 2 -->
+      
+      <!-- Project 2: iPhonePhone – Java OOP -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="java">
         <div class="mb-2 text-3xl text-blue-400"><i class="fas fa-mobile-alt"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">iPhonePhone – Java OOP</h3>
-        <p class="text-gray-300 mb-2">Simulates an iPhone using Java classes showcasing encapsulation and method
-          overriding.</p>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
+          iPhonePhone – Java OOP</h3>
+        <p class="text-gray-300 mb-2">Simulates an iPhone using Java classes showcasing encapsulation and method overriding.
+        </p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>App install/uninstall</li>
           <li>Battery & flashlight control</li>
@@ -391,13 +266,14 @@
           <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">OOP</span>
         </div>
       </div>
-  
-      <!-- Project 3 -->
+      
+      <!-- Project 3: Numeric Data GUI -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="java">
         <div class="mb-2 text-3xl text-green-400"><i class="fas fa-calculator"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Numeric Data GUI</h3>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">Numeric
+          Data GUI</h3>
         <p class="text-gray-300 mb-2">Interactive GUI to perform math operations using Java Swing.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>Prime & square detection</li>
@@ -410,13 +286,14 @@
           <span class="bg-purple-700 text-purple-200 px-2 py-1 rounded text-xs font-semibold">GUI</span>
         </div>
       </div>
-  
-      <!-- Project 4 -->
+      
+      <!-- Project 4: Personal Portfolio Website -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
-        data-category="html css javascript" data-category="html css javascript">
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
+        data-category="html css javascript">
         <div class="mb-2 text-3xl text-pink-400"><i class="fas fa-user-circle"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Personal Portfolio Website</h3>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
+          Personal Portfolio Website</h3>
         <p class="text-gray-300 mb-2">Responsive personal portfolio built with HTML, Tailwind CSS, and JavaScript.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>Showcases projects, skills, timeline, and contact info</li>
@@ -429,15 +306,16 @@
           <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
         </div>
       </div>
-  
-      <!-- Project 5 -->
+      
+      <!-- Project 5: Calculator -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="javascript css">
         <div class="mb-2 text-3xl text-yellow-300"><i class="fas fa-square-root-alt"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Calculator</h3>
-        <p class="text-gray-300 mb-2">A feature-rich calculator built with Bootstrap and JavaScript supporting
-          trigonometric functions, square roots, and input history.</p>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
+          Calculator</h3>
+        <p class="text-gray-300 mb-2">A feature-rich calculator built with Bootstrap and JavaScript supporting trigonometric
+          functions, square roots, and input history.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>Clean Tailwind layout</li>
           <li>Trigonometry & square root support</li>
@@ -449,15 +327,16 @@
           <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">CSS</span>
         </div>
       </div>
-  
-      <!-- Project 6 -->
+      
+      <!-- Project 6: Contact Manager App -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="html javascript">
         <div class="mb-2 text-3xl text-blue-400"><i class="fas fa-address-book"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Contact Manager App</h3>
-        <p class="text-gray-300 mb-2">A CRUD-based web app that allows users to manage contact details—create, edit,
-          delete, and search contacts.</p>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">Contact
+          Manager App</h3>
+        <p class="text-gray-300 mb-2">A CRUD-based web app that allows users to manage contact details—create, edit, delete,
+          and search contacts.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>Local storage or backend support</li>
           <li>Responsive UI with form validation</li>
@@ -469,13 +348,14 @@
           <span class="bg-yellow-700 text-yellow-200 px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
         </div>
       </div>
-  
+      
       <!-- Project 7: Airline Reservation System -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="python oop console">
         <div class="mb-2 text-3xl text-sky-400"><i class="fas fa-plane"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Airline Reservation System</h3>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">Airline
+          Reservation System</h3>
         <p class="text-gray-300 mb-2">A console-based airline reservation system built in Python using OOP principles.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>Book & cancel tickets with automatic seat assignment</li>
@@ -489,13 +369,14 @@
           <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Console App</span>
         </div>
       </div>
-  
+      
       <!-- Project 8: File Compression Tool -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="java algorithms compression">
         <div class="mb-2 text-3xl text-indigo-400"><i class="fas fa-file-archive"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">File Compression Tool (Huffman Coding)</h3>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">File
+          Compression Tool (Huffman Coding)</h3>
         <p class="text-gray-300 mb-2">A file compression and decompression tool in Java using Huffman Coding.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>Compress & decompress text files</li>
@@ -509,13 +390,14 @@
           <span class="bg-blue-700 text-blue-200 px-2 py-1 rounded text-xs font-semibold">Huffman Coding</span>
         </div>
       </div>
-  
+      
       <!-- Project 9: Computer Science Quiz -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="python quiz console">
         <div class="mb-2 text-3xl text-teal-400"><i class="fas fa-question-circle"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Computer Science Quiz</h3>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
+          Computer Science Quiz</h3>
         <p class="text-gray-300 mb-2">An interactive multiple-choice quiz built in Python, testing core CS knowledge.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>5 multiple-choice computer science questions</li>
@@ -529,15 +411,15 @@
           <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Console</span>
         </div>
       </div>
-  
+      
       <!-- Project 10: Police Strobe-Style LED Flasher -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="electronics circuit">
         <div class="mb-2 text-3xl text-red-400"><i class="fas fa-lightbulb"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Police Strobe-Style LED Flasher Circuit</h3>
-        <p class="text-gray-300 mb-2">An electronics project using dual 555 timers to simulate alternating red & blue
-          police
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">Police
+          Strobe-Style LED Flasher Circuit</h3>
+        <p class="text-gray-300 mb-2">An electronics project using dual 555 timers to simulate alternating red & blue police
           strobe lights.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
           <li>Dual 555 astable multivibrator configuration</li>
@@ -552,13 +434,14 @@
           <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Circuit Design</span>
         </div>
       </div>
-  
+      
       <!-- Project 11: Sumo Bot Development & Competition -->
       <div
-        class="project-card bg-gray-800 rounded-xl p-6 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-1"
+        class="project-card relative bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-red-400 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="robotics embedded">
         <div class="mb-2 text-3xl text-orange-400"><i class="fas fa-robot"></i></div>
-        <h3 class="text-xl font-semibold mb-2 text-white">Sumo Bot Development & Competition</h3>
+        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">Sumo
+          Bot Development & Competition</h3>
         <p class="text-gray-300 mb-2">An autonomous sumo robot built to detect, track, and push opponents out of an arena
           using strategic programming and robust mechanical design.</p>
         <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
@@ -575,554 +458,233 @@
           <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Embedded Systems</span>
         </div>
       </div>
-  
+       
     </div>
   </section>
 
+  <!-- =========================== BEYOND THE CLASSROOM SECTION =========================== -->
+<section id="beyond" class="py-20 px-6 bg-gray-900 text-white">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Section Heading -->
+    <h2 class="text-4xl font-extrabold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-pink-400 tracking-wide flex items-center justify-center gap-4">
+      <i class="fas fa-bullseye text-red-400 text-3xl"></i> Beyond the Classroom
+    </h2>
 
+    <!-- Intro Paragraph -->
+    <p class="text-gray-300 text-center max-w-3xl mx-auto mb-14 leading-relaxed">
+      Outside of academics, I actively participate in student organizations and leadership initiatives that help me grow as a communicator, collaborator, and problem solver. 
+      I’m passionate about building communities, leading impactful events, and contributing to both the Ontario Tech and broader tech ecosystem.
+    </p>
 
-  <!-- =========================== EDUCATION SECTION =========================== -->
-  <!-- (education content unchanged) -->
-  <section id="education" class="py-24 px-6 bg-gray-900 text-white">
-    <div class="max-w-5xl mx-auto">
-      <h2
-        class="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-wide flex items-center justify-center gap-4">
-        <i class="fas fa-university text-red-400 text-3xl"></i>
-        Education
-      </h2>
+    <!-- Goals Section -->
+    <div class="grid gap-10 md:grid-cols-2 mb-20">
+      <!-- Short-Term Goals -->
+      <div class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105 duration-300">
+        <h3 class="text-red-300 text-2xl font-semibold mb-4 flex items-center gap-2">
+          <i class="fas fa-rocket text-red-400"></i> Short-Term Goals
+        </h3>
+        <ul class="list-disc list-inside text-gray-400 space-y-3 text-base leading-relaxed ml-2">
+          <li>Build and contribute to personal projects in web and app development.</li>
+          <li>Stay current with industry trends and emerging technologies.</li>
+          <li>Secure internship experience in software or research by 2026.</li>
+          <li>Continue developing skills in frameworks, design, and data handling.</li>
+        </ul>
+      </div>
 
-      <div
-        class="bg-gray-800/80 backdrop-blur-sm border border-gray-700 p-10 rounded-2xl shadow-xl transition hover:shadow-2xl hover:border-red-400 duration-300 flex flex-col md:flex-row gap-10 items-center md:items-start">
-        <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
-          class="w-28 h-28 rounded-xl object-contain border border-gray-600 bg-white p-2 shadow-md flex-shrink-0"
-          loading="lazy" />
-
-        <div class="w-full text-center md:text-left space-y-4">
-          <a href="https://ontariotechu.ca/" target="_blank" rel="noopener noreferrer" class="inline-block">
-            <h3 class="text-3xl font-bold text-white hover:text-red-400 transition duration-300">Ontario Tech University
-            </h3>
-          </a>
-          <div>
-            <p class="text-lg font-medium text-gray-300">BSc. in Computer Science</p>
-            <p class="text-sm text-gray-400 italic">Oshawa, Ontario, Canada</p>
-          </div>
-          <div class="flex items-center justify-center md:justify-start text-sm gap-6 text-gray-300">
-            <div class="flex items-center gap-2">
-              <i class="fas fa-calendar-alt text-red-400"></i>
-              <span><strong class="text-white">Expected Graduation:</strong> April 2028</span>
-            </div>
-          </div>
-
-          <div class="space-y-3 pt-4 text-left">
-            <!-- Year 1 -->
-            <details class="group bg-gray-900/50 rounded-lg" open>
-              <summary class="flex items-center justify-between p-4 font-semibold cursor-pointer list-none">
-                <span>First Year (2024 - 2025)</span>
-                <svg class="w-5 h-5 text-gray-400 transition-transform duration-300 group-open:rotate-90"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clip-rule="evenodd" />
-                </svg>
-              </summary>
-              <div class="p-4 border-t border-gray-700 space-y-4">
-                <h4 class="font-bold text-white mb-1">Topics & Skills Covered:</h4>
-                <p class="text-sm text-gray-400">Developed a strong foundation in software development using Python and
-                  C++. Learned fundamental programming constructs,
-                  basic algorithms, and object-oriented principles. Gained core knowledge in calculus, classical
-                  physics, and technical
-                  writing. Enhanced problem-solving, debugging, and logical thinking abilities.</p>
-
-                <div>
-                  <h4 class="font-semibold text-white">Fall Term:</h4>
-                  <ul class="list-disc list-inside text-gray-300 text-sm ml-4 space-y-1">
-                    <li>CSCI 1060U – Programming Workshop I <span class="italic text-gray-400">or</span> CSCI 1062U –
-                      Accelerated
-                      Programming Workshop</li>
-                    <li>CSCI 1030U – Introduction to Computer Science</li>
-                    <li>MATH 1000U – Introductory Calculus <span class="italic text-gray-400">or</span> MATH 1010U –
-                      Calculus I</li>
-                    <li>PHYS 1010U – Physics I <span class="italic text-gray-400">or</span> PHYS 1030U – Introductory
-                      Physics</li>
-                    <li>COMM 1050U – Technical Communications</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 class="font-semibold text-white">Winter Term:</h4>
-                  <ul class="list-disc list-inside text-gray-300 text-sm ml-4 space-y-1">
-                    <li>CSCI 1061U – Programming Workshop II <span class="italic text-gray-400">or</span> CSCI 1063U –
-                      Programming
-                      Project</li>
-                    <li>CSCI 2050U – Computer Architecture</li>
-                    <li>MATH 1020U – Calculus II</li>
-                    <li>PHYS 1020U – Physics II</li>
-                    <li>BUSI 1600U – Management of the Enterprise</li>
-                  </ul>
-                </div>
-
-                <p class="text-sm text-gray-400"><strong>Projects:</strong> Built beginner-level console applications
-                  such as
-                  calculators and games, and completed hands-on labs including Arduino-based motion sensor experiments.
-                </p>
-              </div>
-            </details>
-
-
-            <!-- Year 2 -->
-            <details class="group bg-gray-900/50 rounded-lg">
-              <summary class="flex items-center justify-between p-4 font-semibold cursor-pointer list-none">
-                <span>Second Year (2025 - 2026)</span>
-                <svg class="w-5 h-5 text-gray-400 transition-transform duration-300 group-open:rotate-90"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clip-rule="evenodd" />
-                </svg>
-              </summary>
-              <div class="p-4 border-t border-gray-700 space-y-3">
-                <p class="text-sm text-gray-400">Advanced understanding of data structures, software design principles,
-                  statistics, and linear algebra. Explored discrete
-                  math, object-oriented programming, scientific computing, and software development lifecycles.
-                  Introduced to
-                  entrepreneurship and astronomy, building interdisciplinary perspective and collaboration skills.</p>
-                <div>
-                  <h4 class="font-semibold text-white">Fall Term:</h4>
-                  <ul class="list-disc list-inside text-gray-300 text-sm ml-4 space-y-1">
-                    <li>CSCI 2000U – Scientific Data Analysis</li>
-                    <li>CSCI 2010U – Data Structures</li>
-                    <li>CSCI 2110U – Discrete Mathematics for Computer Scientists</li>
-                    <li>STAT 2010U – Statistics and Probability for Physical Science</li>
-                    <li>ENVS 1000U – Environmental Science <span class="italic text-gray-400">(Science Elective)</span>
-                    <li>PHYS 2900U – Astronomy I</li>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-white">Winter Term:</h4>
-                  <ul class="list-disc list-inside text-gray-300 text-sm ml-4 space-y-1">
-                    <li>CSCI 2020U – Software Systems Development and Integration</li>
-                    <li>CSCI 2040U – Software Design and Analysis</li>
-                    <li>CSCI 2072U – Computational Science I</li>
-                    <li>MATH 2050U – Linear Algebra</li>
-                    <li>PHYS 3900U – Astronomy II</li>
-                    <li>BUSI 1700U – Intro to Entrepreneurship</li>
-                  </ul>
-                </div>
-                <p class="text-sm text-gray-400"><strong>Projects:</strong> Anticipated development of full-stack
-                  software
-                  tools, algorithm design challenges, scientific modeling projects, and entrepreneurial prototyping as
-                  part of electives.</p>
-              </div>
-            </details>
-          </div>
-        </div>
+      <!-- Long-Term Goals -->
+      <div class="bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-transform hover:scale-105 duration-300">
+        <h3 class="text-pink-300 text-2xl font-semibold mb-4 flex items-center gap-2">
+          <i class="fas fa-graduation-cap text-pink-400"></i> Long-Term Goals
+        </h3>
+        <ul class="list-disc list-inside text-gray-400 space-y-3 text-base leading-relaxed ml-2">
+          <li>Contribute to innovative research and impactful real-world solutions.</li>
+          <li>Pursue advanced education or leadership roles in technology.</li>
+          <li>Mentor and inspire future computer scientists and developers.</li>
+          <li>Collaborate on projects that bridge technology and social impact.</li>
+        </ul>
       </div>
     </div>
-  </section>
 
-
-  <!-- =========================== GOALS SECTION =========================== -->
-  <!-- (goals content unchanged) -->
-  <section id="goals" class="py-20 px-6 bg-gray-900 text-white">
-    <div class="max-w-5xl mx-auto">
-      <!-- Section Heading -->
-      <h2
-        class="text-4xl font-extrabold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-pink-400 tracking-wide flex items-center justify-center gap-4">
-        <i class="fas fa-bullseye text-red-400 text-3xl"></i> My Goals
-      </h2>
-
-      <!-- Content Card -->
-      <div
-        class="bg-gradient-to-br from-gray-800 via-gray-850 to-gray-900 p-10 rounded-2xl shadow-xl animate-fade-in-up border border-gray-700">
-        <!-- Short-Term Goals -->
-        <div class="mb-10">
-          <h3 class="text-2xl font-bold text-red-300 flex items-center gap-2 mb-4">
-            <i class="fas fa-rocket text-red-400"></i> Short-Term Goals in Computer Science
-          </h3>
-          <ul class="list-disc list-inside text-gray-300 space-y-4 text-base leading-relaxed ml-4">
-            <li><span class="text-white font-medium">Build and contribute</span> to personal projects, especially in app
-              and game development, to strengthen programming skills and apply classroom knowledge creatively.</li>
-            <li><span class="text-white font-medium">Stay current</span> with industry trends by following tech blogs,
-              newsletters, and engaging with the dev community on LinkedIn and X (Twitter).</li>
-            <li><span class="text-white font-medium">Seek internship roles</span> for Fall 2025, Winter 2026, and Summer
-              2026 to gain hands-on experience in real-world development environments.</li>
-            <li><span class="text-white font-medium">Expand technical knowledge</span> through new tools, frameworks,
-              and project-based learning.</li>
-          </ul>
-        </div>
-
-        <!-- Divider -->
-        <div class="w-full h-0.5 bg-gradient-to-r from-red-500 via-pink-400 to-red-500 opacity-40 mb-10"></div>
-
-        <!-- Long-Term Goals -->
-        <div>
-          <h3 class="text-2xl font-bold text-pink-300 flex items-center gap-2 mb-4">
-            <i class="fas fa-graduation-cap text-pink-400"></i> Long-Term Goals in Computer Science
-          </h3>
-          <ul class="list-disc list-inside text-gray-300 space-y-4 text-base leading-relaxed ml-4">
-            <li><span class="text-white font-medium">Become a leading researcher</span> in a computer science subfield
-              by contributing original research and advancing theoretical knowledge.</li>
-            <li><span class="text-white font-medium">Pursue a Ph.D.</span> or research degree for deep academic training
-              and collaboration on high-impact projects.</li>
-            <li><span class="text-white font-medium">Contribute to the field</span> via publications, conferences, and
-              innovation-focused industry partnerships.</li>
-            <li><span class="text-white font-medium">Mentor and inspire</span> future computer scientists through
-              teaching, outreach, and academic involvement.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- =========================== VOLUNTEERING SECTION =========================== -->
-  <section id="volunteering" class="py-16 px-6 bg-gray-900">
-    <div class="max-w-5xl mx-auto">
-      <h2
-        class="text-3xl font-extrabold text-center mb-12 text-red-400 tracking-wide flex items-center justify-center gap-3">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.75a12.08 12.08 0 01-6.16-10.172L12 14z" />
-        </svg>
-        Volunteering
-      </h2>
+    <!-- Volunteering & Community Involvement -->
+    <div>
+      <h3 class="text-3xl font-extrabold text-center mb-12 text-red-400 tracking-wide flex items-center justify-center gap-3">
+        <i class="fas fa-hands-helping text-red-500"></i> Volunteering & Leadership
+      </h3>
 
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- CSCI Outreach Volunteer - Apr 2025 -->
-        <div
-          class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center">
-          <div class="mb-3 text-4xl text-red-400"><i class="fas fa-hands-helping"></i></div>
+
+        <!-- Ontario Tech Media Pass - Events Executive -->
+        <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center hover:scale-105 duration-300">
+          <div class="mb-3 text-4xl text-blue-400"><i class="fas fa-camera"></i></div>
           <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
             class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-          <h3 class="text-xl font-bold text-white mb-1">CSCI Outreach Volunteer</h3>
-          <p class="text-gray-400 italic mb-1">Ontario Tech University — Apr 2025 · 1 mo</p>
-          <p class="text-gray-300 font-semibold mb-2">Education</p>
-          <ul class="list-disc list-inside text-gray-400 text-left text-sm mb-2">
-            <li>Represented the Faculty of Science at the information booth, answering questions and offering insights
-              into student life.</li>
-            <li>Assisted in organizing and executing interactive CSCI sessions, including problem-solving and hands-on
-              paper airplane activities.</li>
-            <li>Facilitated audience engagement by coordinating microphone sharing during a live Q&A panel.</li>
-            <li>Participated in the student panel, offering authentic experiences and helpful advice to potential
-              students.</li>
-            <li>Contributed to both setup and teardown efforts to ensure smooth event flow.</li>
+          <h3 class="text-xl font-bold text-white mb-1">Events Executive — Ontario Tech Media Pass</h3>
+          <p class="text-gray-400 italic mb-1">Ontario Tech University — Sep 2025 · Present</p>
+          <ul class="list-disc list-inside text-gray-400 text-left text-sm">
+            <li>Collaborate with a media and events team to organize on-campus activities.</li>
+            <li>Coordinate event logistics, promotion, and student engagement.</li>
+            <li>Support photography, videography, and social media coverage.</li>
           </ul>
         </div>
 
-        <!-- CSCI Outreach Volunteer - Oct 2024 -->
-        <div
-          class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center">
-          <div class="mb-3 text-4xl text-red-400"><i class="fas fa-hands-helping"></i></div>
+        <!-- VP of Events - GDG Ontario Tech -->
+        <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center hover:scale-105 duration-300">
+          <div class="mb-3 text-4xl text-yellow-400"><i class="fab fa-google"></i></div>
           <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
             class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-          <h3 class="text-xl font-bold text-white mb-1">CSCI Outreach Volunteer</h3>
-          <p class="text-gray-400 italic mb-1">Ontario Tech University — Oct 2024 · 1 mo</p>
-          <p class="text-gray-300 font-semibold mb-2">Education</p>
-          <ul class="list-disc list-inside text-gray-400 text-left text-sm mb-2">
-            <li>Assisted at program-specific booths, providing helpful insights about student life and academic
-              experience.</li>
-            <li>Participated in organizing and guiding Lab Demo Tours, ensuring smooth transitions between locations and
-              clear communication of schedules.</li>
-            <li>Coordinated with faculty and staff to direct students to accurate resources and contacts.</li>
-            <li>Helped manage student sign-ups for demos and ensured attendees were on time and prepared.</li>
-            <li>Contributed to event setup, on-the-day logistics, and clean-up efforts.</li>
-            <li>Shared personal experiences to support student recruitment and engagement.</li>
+          <h3 class="text-xl font-bold text-white mb-1">Vice President of Events — GDG Ontario Tech</h3>
+          <p class="text-gray-400 italic mb-1">Ontario Tech University — Jun 2025 · Present</p>
+          <ul class="list-disc list-inside text-gray-400 text-left text-sm">
+            <li>Organize workshops and hackathons on AI, web dev, and cloud computing.</li>
+            <li>Collaborate with industry professionals and student developers.</li>
+            <li>Promote community engagement and inclusive tech learning opportunities.</li>
+          </ul>
+        </div>
+
+        <!-- Indian Student Association - External Affairs Executive -->
+        <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center hover:scale-105 duration-300">
+          <div class="mb-3 text-4xl text-orange-400"><i class="fas fa-users"></i></div>
+          <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
+            class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
+          <h3 class="text-xl font-bold text-white mb-1">External Affairs Executive — Indian Student Association</h3>
+          <p class="text-gray-400 italic mb-1">Ontario Tech University — Mar 2025 · Present</p>
+          <ul class="list-disc list-inside text-gray-400 text-left text-sm">
+            <li>Represent the association in cross-cultural collaborations and events.</li>
+            <li>Coordinate partnerships and external communications for ISA activities.</li>
+            <li>Contribute to promoting cultural inclusivity and student engagement.</li>
+          </ul>
+        </div>
+
+        <!-- University Representative - Atrangi Eventz -->
+        <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center hover:scale-105 duration-300">
+          <div class="mb-3 text-4xl text-pink-400"><i class="fas fa-music"></i></div>
+          <img src="atrangi_logo.png" alt="Atrangi Eventz Logo"
+            class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
+          <h3 class="text-xl font-bold text-white mb-1">University Representative — Atrangi Eventz</h3>
+          <p class="text-gray-400 italic mb-1">Brampton, Ontario · Sep 2025 · Present</p>
+          <ul class="list-disc list-inside text-gray-400 text-left text-sm">
+            <li>Promote cultural and social events within the university community.</li>
+            <li>Lead student engagement and marketing initiatives.</li>
+            <li>Assist in event coordination and creative campaigns.</li>
+          </ul>
+        </div>
+
+        <!-- OTSUFest Influencer -->
+        <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center hover:scale-105 duration-300">
+          <div class="mb-3 text-4xl text-purple-400"><i class="fas fa-bullhorn"></i></div>
+          <img src="ontariotechu_logo.png" alt="Ontario Tech Student Union Logo"
+            class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
+          <h3 class="text-xl font-bold text-white mb-1">OTSUFest Influencer</h3>
+          <p class="text-gray-400 italic mb-1">Ontario Tech Student Union — Aug 2025 · Present</p>
+          <ul class="list-disc list-inside text-gray-400 text-left text-sm">
+            <li>Promote OTSUFest through campus outreach and digital engagement.</li>
+            <li>Encourage student participation through social media and networking.</li>
+            <li>Support event visibility and community engagement efforts.</li>
           </ul>
         </div>
 
         <!-- HackHive Participant -->
-        <div
-          class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center">
+        <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center hover:scale-105 duration-300">
           <div class="mb-3 text-4xl text-yellow-400"><i class="fas fa-lightbulb"></i></div>
           <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
             class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
           <h3 class="text-xl font-bold text-white mb-1">HackHive Participant</h3>
-          <p class="text-gray-400 italic mb-1">Ontario Tech University — Feb 2025 · 1 mo</p>
-          <p class="text-gray-300 font-semibold mb-2">Innovation & AI</p>
-          <ul class="list-disc list-inside text-gray-400 text-left text-sm mb-2">
-            <li>Participated in the HackHive Hackathon, developing innovative solutions to advance precision agriculture
-              using AI and drone technology.</li>
-            <li>Contributed to a team project focused on optimizing farm operations through smart analytics and
-              real-time crop monitoring.</li>
-            <li>Developed a prototype drone system that analyzes soil health, water levels, pest detection, and
-              autonomously applies treatments based on AI-driven insights.</li>
+          <p class="text-gray-400 italic mb-1">Ontario Tech University — Feb 2025</p>
+          <ul class="list-disc list-inside text-gray-400 text-left text-sm">
+            <li>Developed an AI-based drone system for precision agriculture.</li>
+            <li>Collaborated on real-time monitoring and analytics solutions.</li>
+            <li>Enhanced teamwork and creative problem-solving skills.</li>
           </ul>
         </div>
 
-        <!-- Panelist at Fletcher's Meadow Secondary School -->
-        <div
-          class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center">
+        <!-- Panelist at Fletcher’s Meadow -->
+        <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center hover:scale-105 duration-300">
           <div class="mb-3 text-4xl text-green-400"><i class="fas fa-chalkboard-teacher"></i></div>
           <img src="fletcher's_meadow.png" alt="Fletcher's Meadow Secondary School Logo"
             class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-          <h3 class="text-xl font-bold text-white mb-1">Panelist</h3>
-          <p class="text-gray-400 italic mb-1">Fletcher's Meadow Secondary School — May 2025 · 1 mo</p>
-          <p class="text-gray-300 font-semibold mb-2">Education & Mentorship</p>
-          <ul class="list-disc list-inside text-gray-400 text-left text-sm mb-2">
-            <li>Invited as a panelist for the "Life After FMSS" event, speaking to Grade 11 and 12 students about
-              transitioning from high school to post-secondary education and workforce.</li>
-            <li>Shared insights on course planning, study habits, academic stress management, financial planning,
-              scholarships, and balancing commitments.</li>
-            <li>Strengthened public speaking, mentorship, and leadership skills while giving back to the community.</li>
+          <h3 class="text-xl font-bold text-white mb-1">Panelist — Life After FMSS</h3>
+          <p class="text-gray-400 italic mb-1">Fletcher’s Meadow Secondary School — May 2025</p>
+          <ul class="list-disc list-inside text-gray-400 text-left text-sm">
+            <li>Spoke to high school students about transitioning to post-secondary life.</li>
+            <li>Shared insights on study habits, time management, and academic planning.</li>
+            <li>Strengthened mentorship and public speaking experience.</li>
           </ul>
         </div>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- =========================== CLUBS SECTION =========================== -->
-  <section id="clubs" class="py-16 px-6 bg-gray-900">
-    <div class="max-w-5xl mx-auto">
+
+
+  <!-- =========================== EDUCATION SECTION =========================== -->
+  <section id="education" class="py-20 px-6 bg-gray-900 text-white">
+    <div class="max-w-5xl mx-auto text-center">
+  
+      <!-- Section Heading -->
       <h2
-        class="text-3xl font-extrabold text-center mb-12 text-red-400 tracking-wide flex items-center justify-center gap-3">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.75a12.08 12.08 0 01-6.16-10.172L12 14z" />
-        </svg>
-        Clubs
-      </h2>
-
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- OTU - Google Developer Group -->
-        <div
-          class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center">
-          <div class="mb-3 text-4xl text-blue-400"><i class="fab fa-google"></i></div>
-          <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
-            class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-          <h3 class="text-xl font-bold text-white mb-1">OTU - Google Developer Group</h3>
-          <p class="text-gray-400 italic mb-1">Jun 2025 - Present · 2 mos</p>
-          <p class="text-gray-300 mb-2">Active member participating in developer meetups, workshops, and collaborative
-            projects promoting Google technologies.</p>
-        </div>
-
-        <!-- Indian Student Association - External Affairs Executive -->
-        <div
-          class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center">
-          <div class="mb-3 text-4xl text-orange-400"><i class="fas fa-globe-asia"></i></div>
-          <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
-            class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-          <h3 class="text-xl font-bold text-white mb-1">Indian Student Association - External Affairs Executive</h3>
-          <p class="text-gray-400 italic mb-1">Mar 2025 - Present · 5 mos</p>
-          <p class="text-gray-300 mb-2">Managing external communications and events to promote cultural awareness and
-            engagement within the university community.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================== HACKATHONS & COMPETITIONS =========================== -->
-  <section id="hackathons" class="py-16 px-6 bg-gray-900">
-    <div class="max-w-5xl mx-auto">
-      <h2
-        class="text-3xl font-extrabold text-center mb-12 text-red-400 tracking-wide flex items-center justify-center gap-3">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M9 12l2 2l4-4m6 2a9 9 0 11-18 0a9 9 0 0118 0z" />
-        </svg>
-        Hackathons & Competitions
+        class="text-4xl font-extrabold mb-12 flex items-center justify-center gap-3 bg-gradient-to-r from-red-400 to-pink-400 text-transparent bg-clip-text">
+        <i class="fas fa-university text-red-400 text-3xl"></i> Education
       </h2>
   
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Education Card -->
+      <div
+        class="bg-gray-800/90 p-10 rounded-2xl shadow-xl border border-gray-700 hover:border-red-400 hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transition duration-300">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
   
-        <!-- HackHive -->
-        <div class="bg-gray-800 rounded-xl p-6 shadow hover:shadow-xl transition flex flex-col items-center text-center">
-          <div class="mb-3 text-4xl text-yellow-400"><i class="fas fa-lightbulb"></i></div>
+          <!-- Logo -->
           <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
-            class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-          <h3 class="text-xl font-bold text-white mb-1">HackHive 2025</h3>
-          <p class="text-gray-400 italic mb-1">Ontario Tech University — Feb 2025</p>
-          <p class="text-gray-300 font-semibold mb-2">Theme: AI & Precision Agriculture</p>
+            class="w-24 h-24 rounded-xl object-contain border border-gray-600 bg-white p-2 shadow-md" loading="lazy" />
   
-          <ul class="list-disc list-inside text-gray-400 text-left text-sm mb-2">
-            <li>Collaborated in a team to design a website prototype for an AI-powered drone system</li>
-            <li>Presented research findings through a clear, user-friendly website layout</li>
-            <li>Delivered a demo showcasing how technology can optimize farming operations</li>
-          </ul>
+          <!-- Content -->
+          <div class="text-left space-y-3">
+            <h3 class="text-2xl font-bold text-white">Ontario Tech University</h3>
+            <p class="text-lg font-medium text-gray-300">Bachelor of Science in Computer Science</p>
+            <p class="text-sm text-gray-400 italic">Oshawa, Ontario, Canada</p>
+            <p class="text-sm text-gray-300"><strong>Expected Graduation:</strong> April 2028</p>
   
-          <p class="mt-3 text-sm text-gray-400 italic">
-            Successfully completed within 24 hours and presented to judges as a working prototype.
-          </p>
+            <p class="text-gray-400 leading-relaxed pt-2">
+              Building a strong foundation in software development, data structures, and computational problem-solving.
+              Gaining hands-on experience through coding projects, hackathons, and collaborative coursework focused on
+              real-world applications.
+            </p>
+  
+            <!-- Tags -->
+            <div class="mt-4 flex flex-wrap gap-2 text-sm">
+              <span
+                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-red-400 hover:text-white transition">Software
+                Development</span>
+              <span
+                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-red-400 hover:text-white transition">Data
+                Structures</span>
+              <span
+                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-red-400 hover:text-white transition">Statistics</span>
+              <span
+                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-red-400 hover:text-white transition">OOP
+                (C++, Python)</span>
+              <span
+                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-red-400 hover:text-white transition">Web
+                Development</span>
+            </div>
+          </div>
+  
         </div>
-  
       </div>
+  
     </div>
   </section>
 
 
-  
 
-
-  
-
-  <!-- =========================== CERTIFICATIONS SECTION =========================== -->
-  <section id="certifications" class="py-16 bg-gray-900 text-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12 text-red-400">Certifications</h2>
-  
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
-  
-        <!-- Google Generative AI -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <h3 class="text-xl font-semibold text-red-400 mb-3 flex items-center gap-2">
-            <img src="google_logo.jpg" alt="Google Logo"
-              class="w-6 h-6">
-            Introduction to Generative AI
-          </h3>
-          <p class="text-gray-300 text-sm mb-2">Google — Issued Jun 2025</p>
-          <p class="text-xs text-gray-400 mb-3">
-            Generative AI Fundamentals · AI Models · Responsible AI Practices
-          </p>
-        </div>
-  
-        <!-- HackerRank Java -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <h3 class="text-xl font-semibold text-red-400 mb-3 flex items-center gap-2">
-            <img src="HackerRank_logo.png" alt="HackerRank Logo"
-              class="w-6 h-6">
-            Java (Basic)
-          </h3>
-          <p class="text-gray-300 text-sm mb-2">HackerRank — Issued Jul 2025</p>
-          <p class="text-xs text-gray-400 mb-3">
-            Classes and Objects · Data Structures · Inheritance · Exception Handling
-          </p>
-          <a href="#" target="_blank" class="text-red-400 hover:text-red-300 text-sm">Show Credential</a>
-        </div>
-  
-        <!-- HackerRank Python -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <h3 class="text-xl font-semibold text-red-400 mb-3 flex items-center gap-2">
-            <img src="HackerRank_logo.png" alt="Python Logo"
-              class="w-6 h-6">
-            Python (Basic)
-          </h3>
-          <p class="text-gray-300 text-sm mb-2">HackerRank — Issued Jul 2025</p>
-          <p class="text-xs text-gray-400 mb-3">
-            Scalar Types · Control Flow · Strings · Collections · Modularity · Classes
-          </p>
-          <a href="#" target="_blank" class="text-red-400 hover:text-cyan-300 text-sm">Show Credential</a>
-        </div>
-  
-        <!-- OneRoadmap Full Stack -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <h3 class="text-xl font-semibold text-red-400 mb-3 flex items-center gap-2">
-            <img src="oneroadmap_logo.jpegg" alt="OneRoadmap Logo"
-              class="w-6 h-6">
-            Full Stack Developer
-          </h3>
-          <p class="text-gray-300 text-sm mb-2">OneRoadmap — Issued Jul 2025</p>
-          <p class="text-xs text-gray-400 mb-3">
-            Verified Aug 5, 2025 · Certificate ID: <span class="text-red-400">CERT-553E3048</span>
-          </p>
-          <p class="text-xs text-gray-400 mb-3">
-            JavaScript Fundamentals · Functions · Arrays · Objects · DOM Manipulation · Debugging
-          </p>
-        </div>
-  
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================== EXTRACURRICULARS SECTION =========================== -->
-  <section id="extracurriculars" class="py-16 bg-gray-900 text-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12 text-red-400">
-      Extracurriculars
-      </h2>
-  
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-  
-        <!-- Datacom - Software Development -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <div class="flex items-center mb-3">
-            <img src="Forage_logo.jpeg" alt="Datacom Logo"
-              class="w-8 h-8 mr-3">
-            <h3 class="text-lg font-semibold text-red-400">Datacom - Software Development Job Simulation</h3>
-          </div>
-          <p class="text-gray-300 text-sm">Forage — Aug 2025</p>
-        </div>
-  
-        <!-- Accenture Nordics -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <div class="flex items-center mb-3">
-            <img src="Forage_logo.jpeg" alt="Accenture Logo"
-              class="w-8 h-8 mr-3">
-            <h3 class="text-lg font-semibold text-red-400">Software Engineering Job Simulation</h3>
-          </div>
-          <p class="text-gray-300 text-sm">Accenture Nordics (Forage) — Aug 2025</p>
-        </div>
-  
-        <!-- AWS APAC -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <div class="flex items-center mb-3">
-            <img src="Forage_logo.jpeg" alt="AWS Logo" class="w-8 h-8 mr-3">
-            <h3 class="text-lg font-semibold text-red-300">AWS APAC Solutions Architecture Virtual Experience</h3>
-          </div>
-          <p class="text-gray-300 text-sm">Forage — Aug 2025</p>
-        </div>
-  
-        <!-- Skyscanner -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <div class="flex items-center mb-3">
-            <img src="Forage_logo.jpeg" alt="Skyscanner Logo"
-              class="w-8 h-8 mr-3">
-            <h3 class="text-lg font-semibold text-red-400">Front-End Software Engineering Virtual Experience</h3>
-          </div>
-          <p class="text-gray-300 text-sm">Skyscanner (Forage) — Aug 2025</p>
-        </div>
-  
-        <!-- Electronic Arts -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <div class="flex items-center mb-3">
-            <img src="Forage_logo.jpeg" alt="EA Logo" class="w-8 h-8 mr-3">
-            <h3 class="text-lg font-semibold text-red-400">Software Engineering Virtual Experience Program</h3>
-          </div>
-          <p class="text-gray-300 text-sm">Electronic Arts (Forage) — Aug 2025</p>
-        </div>
-  
-        <!-- Datacom - Cloud -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <div class="flex items-center mb-3">
-            <img src="Forage_logo.jpeg" alt="Datacom Logo"
-              class="w-8 h-8 mr-3">
-            <h3 class="text-lg font-semibold text-red-400">Introduction to Cloud Job Simulation</h3>
-          </div>
-          <p class="text-gray-300 text-sm">Datacom (Forage) — Aug 2025</p>
-        </div>
-  
-        <!-- Walmart -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <div class="flex items-center mb-3">
-            <img src="Forage_logo.jpeg" alt="Walmart Logo"
-              class="w-8 h-8 mr-3">
-            <h3 class="text-lg font-semibold text-red-400">Advanced Software Engineering Virtual Experience</h3>
-          </div>
-          <p class="text-gray-300 text-sm">Walmart USA (Forage) — Aug 2025</p>
-        </div>
-  
-        <!-- Deloitte -->
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all">
-          <div class="flex items-center mb-3">
-            <img src="Forage_logo.jpeg" alt="Deloitte Logo"
-              class="w-8 h-8 mr-3">
-            <h3 class="text-lg font-semibold text-red-400">Technology Job Simulation</h3>
-          </div>
-          <p class="text-gray-300 text-sm">Deloitte Australia (Forage) — Sept 2025</p>
-        </div>
-  
-      </div>
-    </div>
-  </section>
-
+  <!-- =========================== SKILLS SECTION (CLEAN VERSION) =========================== -->
   <section id="skills" class="py-16 px-6 bg-gray-900">
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-7xl mx-auto text-center">
+  
+      <!-- Section Header -->
       <h2
-        class="text-3xl font-extrabold text-center mb-12 text-red-400 tracking-wide flex items-center justify-center gap-3">
+        class="text-3xl font-extrabold bg-gradient-to-r from-red-400 to-pink-500 text-transparent bg-clip-text mb-12 flex items-center justify-center gap-3">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24"
           stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1131,302 +693,130 @@
         Skills
       </h2>
   
-      <!-- Skills Grid -->
-      <div class="grid gap-y-12 gap-x-8 md:grid-cols-2 lg:grid-cols-3">
-  
-        <!-- Frontend -->
-        <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-green-400 text-lg font-semibold mb-5">
-            <i class="fas fa-code mr-3"></i> Frontend
-          </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fab fa-html5 mr-3 text-green-300"></i> HTML</li>
-            <li><i class="fab fa-css3-alt mr-3 text-green-300"></i> CSS</li>
-            <li><i class="fas fa-file-code mr-3 text-green-300"></i> Semantic Markup</li>
-            <li><i class="fas fa-paint-brush mr-3 text-green-300"></i> External Styling</li>
-            <li><i class="fas fa-mobile-alt mr-3 text-green-300"></i> Responsive Design <span
-                class="text-green-300 font-medium">(Intermediate)</span></li>
-            <li><i class="fas fa-universal-access mr-3 text-green-300"></i> Accessibility</li>
-            <li><i class="fas fa-laptop-code mr-3 text-green-300"></i> JavaScript <span
-                class="text-green-300 font-medium">(beginner)</span>
-            </li> 
-          </ul>
-        </div>
-  
-        <!-- Backend -->
-        <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-yellow-400 text-lg font-semibold mb-5">
-            <i class="fas fa-server mr-3"></i> Backend
-          </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fab fa-node-js mr-3 text-green-400"></i> Node.js</li>
-            <li><i class="fas fa-network-wired mr-3 text-green-400"></i> Express.js</li>
-            <li><i class="fas fa-database mr-3 text-green-400"></i> Mongoose</li>
-            <li><i class="fas fa-envelope mr-3 text-green-400"></i> Nodemailer</li>
-          </ul>
-        </div>
-  
-        <!-- Databases -->
-        <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-blue-400 text-lg font-semibold mb-5">
-            <i class="fas fa-database mr-3"></i> Databases<i class="fas fa-database mr-3"></i>
-          </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fas fa-database mr-3 text-blue-300"></i> MongoDB (Local & Atlas)</li>
-            <li><i class="fas fa-database mr-3 text-blue-300"></i> Mongoose ODM</li>
-          </ul>
-        </div>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
   
         <!-- Programming Languages -->
         <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-blue-400 text-lg font-semibold mb-5">
-            <i class="fas fa-laptop-code mr-3"></i> Programming Languages
+          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transform hover:scale-105 transition-all duration-300">
+          <h3
+            class="text-xl font-semibold mb-4 flex items-center gap-3 bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
+            <i class="fas fa-code"></i> Programming Languages
           </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fab fa-java mr-3 text-blue-300"></i> Java <span
-                class="text-blue-300 font-medium">(Advanced)</span></li>
-            <li><i class="fab fa-python mr-3 text-blue-300"></i> Python <span
-                class="text-blue-300 font-medium">(Advanced)</span></li>
-            <li><i class="fas fa-code mr-3 text-blue-300"></i> C++ <span
-                class="text-blue-300 font-medium">(Intermediate)</span></li>
-            <li><i class="fas fa-code mr-3 text-blue-300"></i> C <span class="text-blue-300 font-medium">(Beginner)</span>
-            </li>
-            <li><i class="fas fa-microchip mr-3 text-blue-300"></i> Assembly <span
-                class="text-blue-300 font-medium">(Beginner)</span></li>
-            <li><i class="fab fa-js mr-3 text-blue-300"></i> JavaScript <span
-                class="text-blue-300 font-medium">(Beginner)</span></li>
-          </ul>
+          <p class="text-gray-200">Java, Python, C++, C, JavaScript, Assembly</p>
         </div>
   
-        <!-- Electronics & Embedded Systems -->
+        <!-- Web Development -->
         <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-yellow-400 text-lg font-semibold mb-5">
-            <i class="fas fa-microchip mr-3"></i> Electronics & Embedded Systems
+          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transform hover:scale-105 transition-all duration-300">
+          <h3
+            class="text-xl font-semibold mb-4 flex items-center gap-3 bg-gradient-to-r from-green-400 to-teal-400 text-transparent bg-clip-text">
+            <i class="fas fa-laptop-code"></i> Web Development
           </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fas fa-microchip mr-3 text-yellow-300"></i> Arduino</li>
-            <li><i class="fas fa-microchip mr-3 text-yellow-300"></i> Embedded Systems</li>
-            <li><i class="fas fa-project-diagram mr-3 text-yellow-300"></i> Circuit Design & Wiring</li>
-            <li><i class="fas fa-charging-station mr-3 text-yellow-300"></i> Digital Circuit Design</li>
-            <li><i class="fas fa-tools mr-3 text-yellow-300"></i> PCB Manufacturing</li>
-            <li><i class="fas fa-network-wired mr-3 text-yellow-300"></i> Breadboarding Techniques</li>
-            <li><i class="fas fa-ruler-combined mr-3 text-yellow-300"></i> Sensor Integration</li>
-            <li><i class="fas fa-drafting-compass mr-3 text-yellow-300"></i> Schematic Interpretation</li>
-            <li><i class="fas fa-lightbulb mr-3 text-yellow-300"></i> LED Control</li>
-            <li><i class="fas fa-tools mr-3 text-yellow-300"></i> Electrical Troubleshooting</li>
-            <li><i class="fas fa-bolt mr-3 text-yellow-300"></i> Power Management</li>
-            <li><i class="fas fa-microchip mr-3 text-yellow-300"></i> Microcontroller Programming</li>
-          </ul>
+          <p class="text-gray-200">HTML, CSS, JavaScript, Node.js, Express.js, MongoDB</p>
         </div>
   
-        <!-- Programming Concepts -->
+        <!-- Frameworks & Tools -->
         <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-red-400 text-lg font-semibold mb-5">
-            <i class="fas fa-brain mr-3"></i> Programming Concepts
+          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transform hover:scale-105 transition-all duration-300">
+          <h3
+            class="text-xl font-semibold mb-4 flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
+            <i class="fas fa-wrench"></i> Frameworks & Tools
           </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fas fa-cogs mr-3 text-red-300"></i> Object-Oriented Programming (OOP)</li>
-            <li><i class="fas fa-lock mr-3 text-red-300"></i> Encapsulation & Getters/Setters</li>
-            <li><i class="fas fa-exchange-alt mr-3 text-red-300"></i> Method Overriding</li>
-            <li><i class="fas fa-redo mr-3 text-red-300"></i> Recursion & Control Structures</li>
-            <li><i class="fas fa-sort mr-3 text-red-300"></i> Sorting & Searching Algorithms</li>
-            <li><i class="fas fa-puzzle-piece mr-3 text-red-300"></i> Modular Programming</li>
-            <li><i class="fas fa-database mr-3 text-red-300"></i> Data Structures & Strings</li>
-            <li><i class="fas fa-lightbulb mr-3 text-red-300"></i> Algorithmic Thinking</li>
-            <li><i class="fas fa-network-wired mr-3 text-red-300"></i> Design Patterns</li>
-            <li><i class="fas fa-shield-alt mr-3 text-red-300"></i> Defensive Programming</li>
-          </ul>
+          <p class="text-gray-200">Git & GitHub, VS Code, npm, Postman, Netlify, Render</p>
         </div>
   
-        <!-- Software Development Practices -->
+        <!-- Software Practices -->
         <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-teal-400 text-lg font-semibold mb-5">
-            <i class="fas fa-tools mr-3"></i> Software Development Practices
+          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transform hover:scale-105 transition-all duration-300">
+          <h3
+            class="text-xl font-semibold mb-4 flex items-center gap-3 bg-gradient-to-r from-teal-400 to-cyan-400 text-transparent bg-clip-text">
+            <i class="fas fa-cogs"></i> Software Practices
           </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fas fa-paint-roller mr-3 text-teal-300"></i> UI/UX Basics & Design</li>
-            <li><i class="fas fa-cogs mr-3 text-teal-300"></i> Java Swing / Event Driven Programming</li>
-            <li><i class="fas fa-bug mr-3 text-teal-300"></i> Debugging & Exception Handling</li>
-            <li><i class="fas fa-file-alt mr-3 text-teal-300"></i> Documentation & Code Comments</li>
-            <li><i class="fas fa-vial mr-3 text-teal-300"></i> Iterative Testing & Optimization</li>
-            <li><i class="fas fa-code-branch mr-3 text-teal-300"></i> Version Control (Git Workflow)</li>
-            <li><i class="fas fa-project-diagram mr-3 text-teal-300"></i> Agile Methodologies & Scrum</li>
-            <li><i class="fas fa-lock mr-3 text-teal-300"></i> Secure Coding Practices</li>
-          </ul>
+          <p class="text-gray-200">OOP, Data Structures, Debugging, Agile, Version Control</p>
         </div>
   
-        <!-- Collaboration & Soft Skills -->
+        <!-- Embedded Systems -->
         <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-pink-400 text-lg font-semibold mb-5">
-            <i class="fas fa-users mr-3"></i> Collaboration & Soft Skills
+          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transform hover:scale-105 transition-all duration-300">
+          <h3
+            class="text-xl font-semibold mb-4 flex items-center gap-3 bg-gradient-to-r from-yellow-300 to-orange-300 text-transparent bg-clip-text">
+            <i class="fas fa-microchip"></i> Embedded Systems
           </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fas fa-handshake mr-3 text-pink-300"></i> Team Collaboration</li>
-            <li><i class="fas fa-comments mr-3 text-pink-300"></i> Peer Research & Technical Discussions</li>
-            <li><i class="fas fa-tasks mr-3 text-pink-300"></i> Project Management</li>
-            <li><i class="fas fa-chalkboard-teacher mr-3 text-pink-300"></i> Townhall Facilitation</li>
-            <li><i class="fas fa-lightbulb mr-3 text-pink-300"></i> Problem Solving & Critical Thinking</li>
-            <li><i class="fas fa-users-cog mr-3 text-pink-300"></i> Cross-Functional Teamwork</li>
-            <li><i class="fas fa-clock mr-3 text-pink-300"></i> Time Management</li>
-            <li><i class="fas fa-user-edit mr-3 text-pink-300"></i> Adaptability & Learning Agility</li>
-          </ul>
+          <p class="text-gray-200">Arduino, Circuit Design, Sensor Integration, PCB Design</p>
         </div>
   
-        <!-- Development & Deployment Tools -->
+        <!-- Soft Skills -->
         <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-cyan-400 text-lg font-semibold mb-5">
-            <i class="fas fa-wrench mr-3"></i> Development & Deployment
+          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] transform hover:scale-105 transition-all duration-300">
+          <h3
+            class="text-xl font-semibold mb-4 flex items-center gap-3 bg-gradient-to-r from-pink-400 to-red-400 text-transparent bg-clip-text">
+            <i class="fas fa-users"></i> Soft Skills
           </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fas fa-code mr-2 text-cyan-300"></i> Visual Studio Code</li>
-            <li><i class="fas fa-terminal mr-2 text-cyan-300"></i> NetBeans</li>
-            <li><i class="fas fa-laptop mr-2 text-cyan-300"></i> Replit</li>
-            <li><i class="fab fa-git-alt mr-2 text-cyan-300"></i> Git & GitHub</li>
-            <li><i class="fab fa-github mr-2 text-cyan-300"></i> GitHub Desktop</li>
-            <li><i class="fas fa-microchip mr-2 text-cyan-300"></i> Arduino</li>
-            <li><i class="fas fa-box mr-2 text-cyan-300"></i> npm</li>
-            <li><i class="fas fa-key mr-2 text-cyan-300"></i> dotenv</li>
-            <li><i class="fas fa-globe mr-2 text-cyan-300"></i> GitHub Pages</li>
-            <li><i class="fas fa-rocket mr-2 text-cyan-300"></i> Netlify / Vercel</li>
-            <li><i class="fas fa-cloud mr-2 text-cyan-300"></i> Render / Railway / Heroku</li>
-            <li><i class="fas fa-server mr-2 text-cyan-300"></i> Postman</li>
-            <li><i class="fas fa-database mr-2 text-cyan-300"></i> MongoDB Atlas</li>
-          </ul>
-        </div>
-  
-        <!-- Productivity & Data Tools -->
-        <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-cyan-400 text-lg font-semibold mb-5">
-            <i class="fas fa-database mr-3"></i> Productivity & Data
-          </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fas fa-file-alt mr-2 text-cyan-300"></i> G-Suite (Docs, Slides, Sheets)</li>
-            <li><i class="fas fa-file-word mr-2 text-cyan-300"></i> Microsoft Office (Word, PowerPoint, Excel)</li>
-            <li><i class="fas fa-project-diagram mr-2 text-cyan-300"></i> LaTeX / Overleaf</li>
-            <li><i class="fas fa-database mr-2 text-cyan-300"></i> SAS</li>
-            <li><i class="fas fa-book-open mr-2 text-cyan-300"></i> Jupyter Notebook</li>
-            <li><i class="fas fa-leaf mr-2 text-cyan-300"></i> Maple</li>
-          </ul>
-        </div>
-  
-        <!-- Languages & Communication -->
-        <div
-          class="bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-          <h3 class="flex items-center text-indigo-400 text-lg font-semibold mb-5">
-            <i class="fas fa-language mr-3"></i> Languages & Communication
-          </h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-200 text-base mb-6">
-            <li><i class="fas fa-comment-dots mr-3 text-indigo-300"></i> English (Fluent)</li>
-            <li><i class="fas fa-comment-dots mr-3 text-indigo-300"></i> French (Intermediate)</li>
-            <li><i class="fas fa-comment-dots mr-3 text-indigo-300"></i> Hindi (Fluent)</li>
-            <li><i class="fas fa-comment-dots mr-3 text-indigo-300"></i> Gujarati (Fluent)</li>
-            <li><i class="fas fa-comment-dots mr-3 text-indigo-300"></i> Punjabi (Conversational)</li>
-            <li><i class="fas fa-file-alt mr-3 text-indigo-300"></i> Technical Writing</li>
-            <li><i class="fas fa-microphone mr-3 text-indigo-300"></i> Public Speaking & Presentations</li>
-            <li><i class="fas fa-comments mr-3 text-indigo-300"></i> Active Listening</li>
-            <li><i class="fas fa-user-friends mr-3 text-indigo-300"></i> Interpersonal Communication</li>
-            <li><i class="fas fa-users mr-3 text-indigo-300"></i> Team Communication</li>
-            <li><i class="fas fa-chalkboard-teacher mr-3 text-indigo-300"></i> Teaching & Mentoring</li>
-            <li><i class="fas fa-globe mr-3 text-indigo-300"></i> Cross-Cultural Communication</li>
-            <li><i class="fas fa-lightbulb mr-3 text-indigo-300"></i> Creative Communication</li> 
-          </ul>
+          <p class="text-gray-200">Team Collaboration, Communication, Problem Solving, Adaptability</p>
         </div>
   
       </div>
     </div>
   </section>
+
+
 
 
   <section id="contact" class="py-16 px-6 bg-gray-900 fade-in-up">
     <div class="max-w-3xl mx-auto text-center">
-
-      <!-- Section Header (Fixed Alignment) -->
-      <div class="flex items-center justify-center gap-3 mb-12">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M21 10a9 9 0 11-18 0 9 9 0 0118 0zm-9 5v.01M12 10h.01" />
-        </svg>
-        <h2 class="text-3xl font-extrabold tracking-wide text-red-400 text-center">
-          Contact
-        </h2>
-      </div>
-
+  
+      <!-- Section Header -->
+      <h2
+        class="text-3xl font-extrabold tracking-wide bg-gradient-to-r from-red-400 to-pink-500 text-transparent bg-clip-text mb-12">
+        Contact
+      </h2>
+  
       <!-- Contact Form -->
       <form id="contact-form" action="mailto:thakardhruvh@gmail.com" method="POST" class="max-w-lg mx-auto space-y-6">
+  
         <!-- Name -->
         <div class="relative z-0 w-full group">
           <input type="text" name="name" id="name" required
-            class="block py-2.5 px-0 w-full text-white bg-transparent border-0 border-b-2 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-teal-400 peer"
+            class="block py-3 px-0 w-full text-white bg-gray-800 border-2 border-gray-700 rounded-lg focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all peer"
             placeholder=" " />
           <label for="name"
-            class="absolute text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-teal-400">
+            class="absolute left-3 top-3 text-gray-400 duration-300 transform -translate-y-0 scale-100 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-1 peer-focus:scale-90 peer-focus:text-red-400">
             Name
           </label>
         </div>
-
+  
         <!-- Email -->
         <div class="relative z-0 w-full group">
           <input type="email" name="email" id="email" required
-            class="block py-2.5 px-0 w-full text-white bg-transparent border-0 border-b-2 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-teal-400 peer"
+            class="block py-3 px-0 w-full text-white bg-gray-800 border-2 border-gray-700 rounded-lg focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all peer"
             placeholder=" " />
           <label for="email"
-            class="absolute text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-teal-400">
+            class="absolute left-3 top-3 text-gray-400 duration-300 transform -translate-y-0 scale-100 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-1 peer-focus:scale-90 peer-focus:text-red-400">
             Email
           </label>
         </div>
-
+  
         <!-- Message -->
         <div class="relative z-0 w-full group">
           <textarea name="message" id="message" rows="5" required
-            class="block py-2.5 px-0 w-full text-white bg-transparent border-0 border-b-2 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-teal-400 peer resize-none"
+            class="block py-3 px-0 w-full text-white bg-gray-800 border-2 border-gray-700 rounded-lg focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all peer resize-none"
             placeholder=" "></textarea>
           <label for="message"
-            class="absolute text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-teal-400">
+            class="absolute left-3 top-3 text-gray-400 duration-300 transform -translate-y-0 scale-100 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-1 peer-focus:scale-90 peer-focus:text-red-400">
             Message
           </label>
         </div>
-
+  
         <!-- Submit Button -->
         <button type="submit"
-          class="w-full py-3 bg-red-400 hover:bg-red-500 rounded-md font-semibold text-gray-900 transition-transform transform hover:scale-105 shadow-lg">
+          class="w-full py-3 bg-gradient-to-r from-red-400 to-pink-500 hover:from-red-500 hover:to-pink-600 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)]">
           Send Message
         </button>
       </form>
-
-      <!-- Social/contact icons -->
-      <div class="mt-10 flex justify-center gap-8 text-3xl text-teal-400">
-        <a href="mailto:thakardhruvh@gmail.com" aria-label="Email" class="hover:text-teal-300 transition">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://linkedin.com/in/thakar-dhruv" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-          class="hover:text-teal-300 transition">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/thakardhruv" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-          class="hover:text-teal-300 transition">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.instagram.com/thakar.dhruv" target="_blank" rel="noopener noreferrer"
-          aria-label="Instagram" class="hover:text-teal-300 transition">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="tel:+1234567890" aria-label="Phone" class="hover:text-teal-300 transition">
-          <i class="fas fa-phone"></i>
-        </a>
-      </div>
+  
     </div>
   </section>
+
 
   <!-- =========================== FOOTER =========================== -->
   <footer class="bg-gray-900 text-gray-300 py-10 mt-12">
@@ -1434,62 +824,75 @@
   
       <!-- Brand & Motto -->
       <div>
-        <h3 class="text-lg font-semibold text-cyan-400 mb-2">Dhruv Thakar</h3>
+        <h3 class="text-lg font-semibold mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+          Dhruv Thakar</h3>
         <p class="italic text-sm text-gray-400">"Building solutions, one line of code at a time."</p>
         <p class="text-xs text-gray-500 mt-2">© 2025 All Rights Reserved</p>
       </div>
   
       <!-- Quick Links -->
       <div>
-        <h3 class="text-lg font-semibold text-cyan-400 mb-2">📑 Quick Links</h3>
+        <h3 class="text-lg font-semibold mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">📑
+          Quick Links</h3>
         <ul class="space-y-1">
-          <li><a href="#about" class="hover:text-cyan-300 transition-colors">About</a></li>
-          <li><a href="#projects" class="hover:text-cyan-300 transition-colors">Projects</a></li>
-          <li><a href="#skills" class="hover:text-cyan-300 transition-colors">Skills</a></li>
-          <li><a href="#contact" class="hover:text-cyan-300 transition-colors">Contact</a></li>
+          <li><a href="#about"
+              class="hover:text-cyan-300 transition-colors hover:underline hover:underline-offset-2">About</a></li>
+          <li><a href="#projects"
+              class="hover:text-cyan-300 transition-colors hover:underline hover:underline-offset-2">Projects</a></li>
+          <li><a href="#skills"
+              class="hover:text-cyan-300 transition-colors hover:underline hover:underline-offset-2">Skills</a></li>
+          <li><a href="#contact"
+              class="hover:text-cyan-300 transition-colors hover:underline hover:underline-offset-2">Contact</a></li>
         </ul>
       </div>
   
       <!-- Built With -->
       <div>
-        <h3 class="text-lg font-semibold text-cyan-400 mb-2">🔧 Built With</h3>
-        <div class="flex flex-wrap justify-center md:justify-start gap-2">
+        <h3 class="text-lg font-semibold mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">🔧
+          Built With</h3>
+        <div class="flex flex-wrap justify-center md:justify-start gap-2 mt-1">
           <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=flat&logo=html5&logoColor=white"
-            alt="HTML5 Badge">
+            alt="HTML5 Badge" class="rounded hover:shadow-[0_0_10px_rgba(56,178,172,0.6)] transition-shadow">
           <img src="https://img.shields.io/badge/Tailwind-%2338B2AC.svg?&style=flat&logo=tailwind-css&logoColor=white"
-            alt="Tailwind Badge">
+            alt="Tailwind Badge" class="rounded hover:shadow-[0_0_10px_rgba(56,178,172,0.6)] transition-shadow">
           <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=flat&logo=javascript&logoColor=black"
-            alt="JS Badge">
+            alt="JS Badge" class="rounded hover:shadow-[0_0_10px_rgba(247,223,30,0.6)] transition-shadow">
           <img src="https://img.shields.io/badge/Node.js-%23339933.svg?&style=flat&logo=node.js&logoColor=white"
-            alt="Node.js Badge">
+            alt="Node.js Badge" class="rounded hover:shadow-[0_0_10px_rgba(51,153,51,0.6)] transition-shadow">
           <img src="https://img.shields.io/badge/Express.js-%23000000.svg?&style=flat&logo=express&logoColor=white"
-            alt="Express Badge">
+            alt="Express Badge" class="rounded hover:shadow-[0_0_10px_rgba(0,0,0,0.6)] transition-shadow">
         </div>
       </div>
   
       <!-- Socials -->
       <div>
-        <h3 class="text-lg font-semibold text-cyan-400 mb-2">🌐 Connect</h3>
-        <div class="flex justify-center md:justify-start space-x-4 text-xl">
-          <a href="https://github.com/dhruvht612" target="_blank" class="hover:text-cyan-300 transition-colors"><i
+        <h3 class="text-lg font-semibold mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">🌐
+          Connect</h3>
+        <div class="flex justify-center md:justify-start space-x-4 text-xl mt-1">
+          <a href="https://github.com/dhruvht612" target="_blank"
+            class="hover:text-cyan-300 transition-colors hover:drop-shadow-[0_0_6px_rgba(56,178,172,0.7)]"><i
               class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/dhruv-thakar" target="_blank" class="hover:text-cyan-300 transition-colors"><i
+          <a href="https://linkedin.com/in/dhruv-thakar" target="_blank"
+            class="hover:text-cyan-300 transition-colors hover:drop-shadow-[0_0_6px_rgba(56,178,172,0.7)]"><i
               class="fab fa-linkedin"></i></a>
-          <a href="mailto:thakardhruvh@gmail.com" class="hover:text-cyan-300 transition-colors"><i
+          <a href="mailto:thakardhruvh@gmail.com"
+            class="hover:text-cyan-300 transition-colors hover:drop-shadow-[0_0_6px_rgba(56,178,172,0.7)]"><i
               class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-xs text-gray-500 mt-3">Last updated: Sept 2025</p>
+        <p class="text-xs text-gray-500 mt-3">Last updated: Oct 2025</p>
       </div>
   
     </div>
   
     <!-- Back to Top -->
     <div class="text-center mt-6">
-      <a href="#top" class="text-cyan-400 hover:text-cyan-300 transition-colors">
+      <a href="#top"
+        class="text-cyan-400 hover:text-cyan-300 transition-colors hover:drop-shadow-[0_0_6px_rgba(56,178,172,0.7)]">
         <i class="fas fa-arrow-up"></i> Back to Top
       </a>
     </div>
   </footer>
+
   
   <!-- Chatbot Widget -->
   <div id="chat-widget" class="fixed bottom-6 right-6 z-50">

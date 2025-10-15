@@ -14,6 +14,7 @@ html {
 a {
   color: #22d3ee;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 a:hover {
@@ -24,6 +25,24 @@ a:hover {
 i {
   margin-right: 8px;
   color: #22d3ee;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0e1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #10b981;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #059669;
 }
 
 /* Header & Navigation */
@@ -105,9 +124,20 @@ nav ul li a.active::after {
   margin: 0 auto;
 }
 
+/* Gradient animated hero name */
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+
+  /* Gradient text setup */
+  background: linear-gradient(270deg, #10b981, #14b8a6, #22d3ee);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Apply animation */
+  animation: gradient 8s ease infinite;
 }
 
 .hero p {
@@ -247,56 +277,48 @@ footer {
   color: #f9fafb;
 }
 
-/* Extra Utilities */
+/* Extra Animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-  @keyframes gradient-x {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  .animate-gradient-x {
-    background-size: 200% 200%;
-    animation: gradient-x 10s ease infinite;
-  }
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 10s ease infinite;
+}
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fade-in {
-    animation: fadeIn 1.2s ease-out;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out;
+}
 
-  /* Animate bars growing */
-    @keyframes grow {
-      0% { width: 0; }
-      100% { width: var(--width); }
-    }
-    .animate-grow {
-      animation: grow 1.2s forwards ease-out;
-      width: 0; /* initial */
-    }
-    .animate-grow.delay-200 {
-      animation-delay: 0.2s;
-    }
-    .animate-grow.delay-400 {
-      animation-delay: 0.4s;
-    }
-    .animate-grow.delay-600 {
-      animation-delay: 0.6s;
-    }
+@keyframes grow {
+  0% { width: 0; }
+  100% { width: var(--width); }
+}
+.animate-grow {
+  animation: grow 1.2s forwards ease-out;
+  width: 0;
+}
+.animate-grow.delay-200 { animation-delay: 0.2s; }
+.animate-grow.delay-400 { animation-delay: 0.4s; }
+.animate-grow.delay-600 { animation-delay: 0.6s; }

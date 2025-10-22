@@ -1,100 +1,70 @@
-# 🧑‍💻 Dhruv Thakar -- Personal Portfolio Website
-
-[![Made with
-HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)\
-[![Tailwind
-CSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)\
-[![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)\
-[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)\
-[![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](https://expressjs.com/)\
-[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)  
-[![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge)](https://mongoosejs.com/)  
-[![dotenv](https://img.shields.io/badge/dotenv-000000?style=for-the-badge)](https://github.com/motdotla/dotenv)  
-[![Nodemailer](https://img.shields.io/badge/Nodemailer-009B77?style=for-the-badge)](https://nodemailer.com/)  
-[![node-fetch](https://img.shields.io/badge/node--fetch-333333?style=for-the-badge)](https://github.com/node-fetch/node-fetch)  
-[![body-parser](https://img.shields.io/badge/body--parser-6DB33F?style=for-the-badge)](https://github.com/expressjs/body-parser)  
 
 
-> A modern, responsive portfolio website to showcase my work, skills,
-> and academic background as a Computer Science student at Ontario Tech
-> University.
+# Personal Portfolio Website
 
-------------------------------------------------------------------------
 
-## 📑 Table of Contents
+[![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 
--   [About](#-about)\
--   [Features](#-features)\
--   [Technologies Used](#-technologies-used)\
--   [Sections](#-sections)\
--   [Getting Started](#-getting-started)\
--   [Backend Setup](#-backend-setup)\
--   [API](#-api)\
--   [Contact](#-contact)
+> A modern, responsive portfolio built with HTML, Tailwind CSS, and JavaScript — featuring interactive UI components, smooth animations, and backend-ready structure for contact form integration.
 
-------------------------------------------------------------------------
+---
 
-## 📌 About
+## 📖 Overview
 
-This portfolio serves as a comprehensive online resume and project
-showcase for **Dhruv Thakar**. It highlights my passion for
-technology---ranging from software development to electronics---through
-a clean, professional design.
+This website showcases **Dhruv Thakar** — a Computer Science student at **Ontario Tech University** — highlighting his **projects, technical skills, education, and leadership experiences**.  
+It blends professional presentation with interactive design and includes a chatbot widget for engagement.
 
-------------------------------------------------------------------------
+---
 
-## ✨ Features
+## ✨ Key Features
 
--   ✅ **Responsive Design** -- Works smoothly across all screen sizes\
--   🎯 **Interactive UI** -- Smooth scrolling, filterable project and
-    course cards\
--   🧠 **Dynamic Content** -- Active navbar highlighting, preloader
-    animation\
--   🧾 **Backend Integration** -- Contact form powered by Express API
+- ⚡ **Responsive Design:** Optimized for all devices  
+- 🎨 **Modern UI:** Gradient accents, preloader animation, and smooth scrolling  
+- 🧭 **Dynamic Navigation:** Active highlighting and collapsible mobile menu  
+- 🧩 **Filterable Projects:** Easily browse by technology or category  
+- 👥 **Beyond the Classroom:** Volunteering, leadership, and event roles  
+- 💬 **Chatbot Widget:** Built-in minimal chat interface for interactivity  
+- 📧 **Contact Form:** Connect via email directly from the site  
 
-------------------------------------------------------------------------
+---
 
 ## 🛠️ Technologies Used
 
-  Tech               Purpose
-  ------------------ -------------------------------
-  **HTML5**          Structure and semantic layout
-  **Tailwind CSS**   Styling and responsive design
-  **JavaScript**     Interactivity and logic
-  **Node.js**        Backend runtime environment
-  **Express.js**     Server framework
-  **Font Awesome**   Icons and visual elements
+| Technology | Purpose |
+|-------------|----------|
+| **HTML5** | Page structure & semantic layout |
+| **Tailwind CSS** | Styling & responsive design |
+| **JavaScript** | Interactivity & animations |
+| **Font Awesome** | Icons & visuals |
+| **Node.js + Express.js** | (Optional) Backend for form handling |
 
-------------------------------------------------------------------------
+---
 
 ## 📂 Sections
 
--   **🏠 Home** -- Introduction with name and social links\
--   **👨‍💻 About Me** -- Background summary\
--   **🎓 Education** -- Academic history\
--   **🤝 Volunteering** -- Community contributions\
--   **📣 Clubs** -- University organizations involvement\
--   **💼 Projects** -- Featured projects with filters\
--   **💼 Certifications** -- Certification credentials/certificates\
--   **💼 Extracurriculars** -- Job sims/internships\
--   **🧠 Skills** -- Technical and soft skills\
--   **📘 Courses** -- Completed and relevant coursework\
--   **📆 Timeline** -- Academic and personal milestones\
--   **🌱 Learning & Growth** -- Ongoing learning goals\
--   **📝 Blog** -- Portfolio development write-up\
--   **📬 Contact** -- Contact form + links
+- 🏠 **Home** — Introduction, photo, and social links  
+- 👨‍💻 **About Me** — Background, resume link, and core skills  
+- 💼 **Projects** — Filterable gallery featuring software and hardware builds  
+- 🧠 **Skills** — Technical & soft skills grouped by category  
+- 🎓 **Education** — Degree details and focus areas  
+- 🌍 **Beyond the Classroom** — Volunteering, leadership, and community roles  
+- 📬 **Contact** — Functional form and direct email links  
+- 💬 **Chatbot** — Lightweight floating chat box for quick interaction  
 
-------------------------------------------------------------------------
+---
 
 ## 🚀 Getting Started (Frontend Only)
 
-To view the static portfolio locally without backend:
+Run the static version locally:
 
-``` bash
-git clone https://github.com/dhruvthakar/portfolio.git
+```bash
+git clone https://github.com/dhruvht612/portfolio.git
 cd portfolio
-open public/index.html
-```
+open index.html
 
 ------------------------------------------------------------------------
 

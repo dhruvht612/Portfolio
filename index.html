@@ -4,110 +4,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhruv's | Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Dhruv Thakar | Computer Science Student & Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Dhruv Thakar, Computer Science student at Ontario Tech University. Showcasing projects in Java, Python, JavaScript, web development, and embedded systems." />
+  <meta name="keywords" content="Dhruv Thakar, Computer Science, Ontario Tech University, Java, Python, JavaScript, Web Development, Portfolio, Software Developer" />
+  <meta name="author" content="Dhruv Thakar" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Dhruv Thakar | Computer Science Student & Developer" />
+  <meta property="og:description" content="Portfolio showcasing projects in software development, web technologies, and embedded systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dhruvthakar.dev" />
+  <meta property="og:image" content="https://dhruvthakar.dev/profile.png" />
+  <meta property="og:site_name" content="Dhruv Thakar Portfolio" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dhruv Thakar | Computer Science Student & Developer" />
+  <meta name="twitter:description" content="Portfolio showcasing projects in software development, web technologies, and embedded systems." />
+  <meta name="twitter:image" content="https://dhruvthakar.dev/profile.png" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" />
+  <link rel="preload" href="profile.png" as="image" />
+  
+  <!-- Stylesheets -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dhruv Thakar",
+    "jobTitle": "Computer Science Student",
+    "description": "Computer Science student at Ontario Tech University passionate about software development and technology",
+    "url": "https://dhruvthakar.dev",
+    "image": "https://dhruvthakar.dev/profile.png",
+    "email": "thakardhruvh@gmail.com",
+    "sameAs": [
+      "https://github.com/dhruvht612",
+      "https://linkedin.com/in/dhruv-thakar-ba46aa296"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Ontario Tech University"
+    },
+    "knowsAbout": ["Java", "Python", "JavaScript", "Web Development", "C++", "Arduino", "Data Structures", "Algorithms"]
+  }
+  </script>
+  
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.json" />
+  
   <script src="script.js" defer></script>
 </head>
 
 <body class="bg-gray-900 text-gray-100 font-sans">
 
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#22d3ee] text-[#0f172a] px-4 py-2 rounded-lg font-semibold z-50 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900">
+    Skip to main content
+  </a>
+
   <!-- Preloader -->
-  <div id="preloader" class="fixed inset-0 bg-gray-900 flex items-center justify-center z-50">
+  <div id="preloader" class="fixed inset-0 bg-gray-900 flex items-center justify-center z-50" aria-hidden="true">
     <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-400 border-solid"></div>
   </div>
 
   <div id="main-content" class="hidden">
 
   <!-- =========================== HEADER =========================== -->
-  <header class="sticky top-0 z-50 bg-[#0f172a]/80 backdrop-blur-lg border-b border-[#14b8a6] shadow-md text-white">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <header class="sticky top-0 z-50 bg-[#0f172a]/80 backdrop-blur-lg border-b border-[#14b8a6] shadow-md text-white" role="banner">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center" role="navigation" aria-label="Main navigation">
   
       <!-- Logo & Name -->
-      <a href="#home" class="flex items-center gap-2 text-2xl font-bold uppercase tracking-wider">
-        <img src="logo.png" alt="Logo" class="w-8 h-8 rounded-full hidden sm:inline-block" />
+      <a href="#home" class="flex items-center gap-2 text-2xl font-bold uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded" aria-label="Dhruv Thakar - Go to home">
+        <img src="logo.png" alt="Dhruv Thakar Logo" class="w-8 h-8 rounded-full hidden sm:inline-block" loading="eager" />
         Dhruv Thakar
       </a>
   
+      <!-- Dark Mode Toggle -->
+      <button id="theme-toggle" class="hidden md:block text-[#22d3ee] text-xl focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded p-2 mr-4" 
+              aria-label="Toggle dark mode" title="Toggle theme">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+      </button>
+
       <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-[#22d3ee] text-2xl focus:outline-none" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
+      <button id="menu-btn" class="md:hidden text-[#22d3ee] text-2xl focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded p-2" 
+              aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
   
       <!-- Navigation Links -->
-      <ul id="nav-links"
+      <ul id="nav-links" role="menubar"
         class="hidden md:flex flex-col md:flex-row gap-6 text-sm md:text-base font-medium tracking-wide absolute md:static top-full left-0 w-full md:w-auto bg-[#0f172a] md:bg-transparent p-6 md:p-0 transition-all duration-300 z-50 items-center">
   
-        <li><a href="#home" class="hover:text-[#22d3ee] transition-colors">Home</a></li>
-        <li><a href="#about" class="hover:text-[#22d3ee] transition-colors">About</a></li>
-        <li><a href="#projects" class="hover:text-[#22d3ee] transition-colors">Projects</a></li>
-        <li><a href="#skills" class="hover:text-[#22d3ee] transition-colors">Skills</a></li>
-        <li><a href="#education" class="hover:text-[#22d3ee] transition-colors">Education</a></li>
-        <li><a href="#contact" class="hover:text-[#22d3ee] transition-colors">Contact</a></li>
+        <li role="none"><a href="#home" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem" aria-current="page">Home</a></li>
+        <li role="none"><a href="#about" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">About</a></li>
+        <li role="none"><a href="#testimonials" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Testimonials</a></li>
+        <li role="none"><a href="#projects" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#skills" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#education" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Education</a></li>
+        <li role="none"><a href="#blog" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Blog</a></li>
+        <li role="none"><a href="#contact" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Contact</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
 
   <!-- =========================== HOME SECTION =========================== -->
-  <section id="home"
-    class="min-h-screen flex flex-col justify-center items-center bg-[#0f172a] text-white px-6 text-center relative overflow-hidden">
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center bg-[#0f172a] text-white px-6 text-center relative overflow-hidden" 
+           role="banner" aria-labelledby="main-heading">
   
     <!-- Subtle Gradient Accent -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1f2937] to-[#111827] opacity-95"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1f2937] to-[#111827] opacity-95" aria-hidden="true"></div>
   
     <!-- Main Content -->
     <div class="max-w-3xl relative z-10">
       <!-- Profile -->
-      <img src="profile.png" alt="Dhruv Thakar"
-        class="mx-auto w-36 h-36 rounded-full mb-6 shadow-lg border-4 border-[#14b8a6]" />
+      <img src="profile.png" alt="Professional headshot of Dhruv Thakar, Computer Science student"
+        class="mx-auto w-36 h-36 rounded-full mb-6 shadow-lg border-4 border-[#14b8a6] lazy-load" 
+        loading="eager" width="144" height="144" />
   
       <!-- Intro -->
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-3 text-[#22d3ee]">Dhruv Thakar</h1>
-      <p class="text-xl text-[#14b8a6] font-medium mb-4">Computer Science Student · Developer · Innovator</p>
-      <p class="text-gray-300 max-w-xl mx-auto mb-6">
+      <h1 id="main-heading" class="text-5xl md:text-6xl font-extrabold mb-3 text-[#22d3ee] animate-fade-in">Dhruv Thakar</h1>
+      <p class="text-xl text-[#14b8a6] font-medium mb-4 animate-fade-in" style="animation-delay: 0.2s;">Computer Science Student · Developer · Innovator</p>
+      <p class="text-gray-300 max-w-xl mx-auto mb-6 animate-fade-in" style="animation-delay: 0.4s;">
         Passionate about building intelligent, efficient, and meaningful tech solutions.
         Turning ideas into reality through code, creativity, and collaboration.
       </p>
   
       <!-- CTA -->
-      <a href="#projects"
-        class="inline-block bg-[#22d3ee] hover:bg-[#06b6d4] text-[#0f172a] font-semibold px-6 py-3 rounded-lg shadow-md transition-transform hover:scale-105">
-        View My Projects <i class="fas fa-arrow-right ml-2"></i>
+      <a href="#projects" class="inline-block bg-[#22d3ee] hover:bg-[#06b6d4] text-[#0f172a] font-semibold px-6 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 animate-fade-in" 
+         style="animation-delay: 0.6s;" aria-describedby="cta-description">
+        View My Projects <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
       </a>
+      <div id="cta-description" class="sr-only">Navigate to the projects section to view my portfolio of software development work</div>
   
       <!-- Social Links -->
-      <div class="flex justify-center gap-6 mt-8 text-2xl">
-        <a href="https://github.com/dhruvht612" target="_blank" class="text-gray-400 hover:text-[#22d3ee] transition"><i
-            class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/dhruv-thakar-ba46aa296" target="_blank"
-          class="text-gray-400 hover:text-[#14b8a6] transition"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:thakardhruvh@gmail.com" class="text-gray-400 hover:text-[#facc15] transition"><i
-            class="fas fa-envelope"></i></a>
-        <a href="https://www.instagram.com/dhruv_200612/?hl=en" target="_blank"
-          class="text-gray-400 hover:text-[#ec4899] transition"><i class="fab fa-instagram"></i></a>
+      <div class="flex justify-center gap-6 mt-8 text-2xl animate-fade-in" style="animation-delay: 0.8s;" role="list" aria-label="Social media links">
+        <a href="https://github.com/dhruvht612" target="_blank" rel="noopener noreferrer" 
+           class="text-gray-400 hover:text-[#22d3ee] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded p-2" 
+           aria-label="Visit Dhruv's GitHub profile (opens in new tab)" role="listitem">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://linkedin.com/in/dhruv-thakar-ba46aa296" target="_blank" rel="noopener noreferrer"
+          class="text-gray-400 hover:text-[#14b8a6] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900 rounded p-2" 
+          aria-label="Visit Dhruv's LinkedIn profile (opens in new tab)" role="listitem">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:thakardhruvh@gmail.com" 
+           class="text-gray-400 hover:text-[#facc15] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#facc15] focus:ring-offset-2 focus:ring-offset-gray-900 rounded p-2" 
+           aria-label="Send email to thakardhruvh@gmail.com" role="listitem">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/dhruv_200612/?hl=en" target="_blank" rel="noopener noreferrer"
+          class="text-gray-400 hover:text-[#ec4899] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#ec4899] focus:ring-offset-2 focus:ring-offset-gray-900 rounded p-2" 
+          aria-label="Visit Dhruv's Instagram profile (opens in new tab)" role="listitem">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- =========================== ABOUT SECTION =========================== -->
-  <section id="about" class="py-20 px-6 bg-[#0f172a] text-white">
+  <section id="about" class="py-20 px-6 bg-[#0f172a] text-white" aria-labelledby="about-heading">
     <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
   
       <!-- Profile Image -->
       <div class="flex flex-col items-center md:items-start text-center md:text-left">
-        <img src="profile.png" alt="Dhruv Thakar"
-          class="w-56 h-56 rounded-2xl object-cover shadow-lg border-4 border-[#14b8a6] mb-6 transition-transform duration-300 hover:scale-105" />
-        <a href="resume.pdf" target="_blank"
-          class="bg-[#22d3ee] hover:bg-[#06b6d4] text-[#0f172a] font-semibold px-6 py-3 rounded-lg shadow-md transition-transform hover:scale-105">
-          <i class="fas fa-file-pdf mr-2"></i> Resume
+        <img src="profile.png" alt="Professional headshot of Dhruv Thakar in a casual setting"
+          class="w-56 h-56 rounded-2xl object-cover shadow-lg border-4 border-[#14b8a6] mb-6 transition-transform duration-300 hover:scale-105 lazy-load" 
+          loading="lazy" width="224" height="224" />
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer"
+          class="bg-[#22d3ee] hover:bg-[#06b6d4] text-[#0f172a] font-semibold px-6 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
+          aria-label="Download Dhruv's resume (PDF, opens in new tab)">
+          <i class="fas fa-file-pdf mr-2" aria-hidden="true"></i> Resume
         </a>
       </div>
   
       <!-- About Text -->
       <div class="space-y-6">
-        <h2 class="text-4xl font-bold text-[#14b8a6] mb-4">About Me</h2>
+        <h2 id="about-heading" class="text-4xl font-bold text-[#14b8a6] mb-4">About Me</h2>
         <p class="text-gray-300 leading-relaxed">
-          I’m <span class="font-semibold text-white">Dhruv Thakar</span>, a Computer Science student at Ontario Tech
+          I'm <span class="font-semibold text-white">Dhruv Thakar</span>, a Computer Science student at Ontario Tech
           University passionate about software development, data-driven projects, and creative problem solving. I enjoy
           building web and hardware solutions that blend functionality with innovation.
         </p>
@@ -118,97 +209,150 @@
   
         <!-- Core Skills Badges -->
         <h3 class="text-xl font-semibold text-[#14b8a6]">Core Skills</h3>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fab fa-html5 text-[#14b8a6] mr-1"></i>HTML</span>
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fab fa-css3-alt text-blue-400 mr-1"></i>CSS</span>
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fab fa-js text-yellow-400 mr-1"></i>JavaScript</span>
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fab fa-python text-green-400 mr-1"></i>Python</span>
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fab fa-java text-orange-400 mr-1"></i>Java</span>
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fas fa-code text-blue-300 mr-1"></i>C++</span>
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fas fa-microchip text-gray-300 mr-1"></i>Arduino</span>
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fab fa-git-alt text-[#14b8a6] mr-1"></i>Git</span>
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fab fa-github text-white mr-1"></i>GitHub</span>
-          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300"><i
-              class="fas fa-wind text-teal-300 mr-1"></i>Tailwind CSS</span>
+        <div class="flex flex-wrap gap-2" role="list" aria-label="Technical skills">
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fab fa-html5 text-[#14b8a6] mr-1" aria-hidden="true"></i>HTML</span>
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fab fa-css3-alt text-blue-400 mr-1" aria-hidden="true"></i>CSS</span>
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fab fa-js text-yellow-400 mr-1" aria-hidden="true"></i>JavaScript</span>
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fab fa-python text-green-400 mr-1" aria-hidden="true"></i>Python</span>
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fab fa-java text-orange-400 mr-1" aria-hidden="true"></i>Java</span>
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fas fa-code text-blue-300 mr-1" aria-hidden="true"></i>C++</span>
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fas fa-microchip text-gray-300 mr-1" aria-hidden="true"></i>Arduino</span>
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fab fa-git-alt text-[#14b8a6] mr-1" aria-hidden="true"></i>Git</span>
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fab fa-github text-white mr-1" aria-hidden="true"></i>GitHub</span>
+          <span class="bg-[#111827] px-3 py-1 rounded-full text-sm text-gray-300" role="listitem"><i
+              class="fas fa-wind text-teal-300 mr-1" aria-hidden="true"></i>Tailwind CSS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== TESTIMONIALS SECTION =========================== -->
+  <section id="testimonials" class="py-20 px-6 bg-gray-900 text-white" aria-labelledby="testimonials-heading">
+    <div class="max-w-6xl mx-auto">
+      <h2 id="testimonials-heading" class="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text">
+        What People Say
+      </h2>
+      
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-teal-400 rounded-full flex items-center justify-center text-white font-bold">
+              JD
+            </div>
+            <div class="ml-3">
+              <h3 class="font-semibold text-white">Dr. Jane Doe</h3>
+              <p class="text-sm text-gray-400">Professor, Computer Science</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic">"Dhruv demonstrates exceptional problem-solving skills and shows great initiative in collaborative projects. His dedication to learning and attention to detail make him a standout student."</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold">
+              MS
+            </div>
+            <div class="ml-3">
+              <h3 class="font-semibold text-white">Mike Smith</h3>
+              <p class="text-sm text-gray-400">Team Lead, GDG Ontario Tech</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic">"Working with Dhruv on hackathon projects has been a pleasure. His technical skills combined with excellent communication make him an invaluable team member."</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-all duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center text-white font-bold">
+              AS
+            </div>
+            <div class="ml-3">
+              <h3 class="font-semibold text-white">Alex Johnson</h3>
+              <p class="text-sm text-gray-400">Classmate & Project Partner</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic">"Dhruv's ability to break down complex problems and explain solutions clearly has helped our entire study group. He's a natural leader and mentor."</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================== PROJECTS SECTION =========================== -->
-  <section id="projects" class="py-16 px-6 bg-[#0f172a]">
-    <h2
+  <section id="projects" class="py-16 px-6 bg-[#0f172a]" aria-labelledby="projects-heading">
+    <h2 id="projects-heading"
       class="text-3xl font-extrabold text-center mb-12 text-[#14b8a6] tracking-wide flex items-center justify-center gap-3">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#22d3ee]" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor">
+        stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
       </svg>
       Projects
     </h2>
   
     <!-- =========================== FILTER BUTTONS =========================== -->
-    <div id="filter-buttons" class="flex flex-wrap justify-center gap-3 mb-12">
+    <div id="filter-buttons" class="flex flex-wrap justify-center gap-3 mb-12" role="group" aria-label="Project filter options">
       <button
-        class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105"
-        data-filter="all">
-        <i class="fas fa-layer-group mr-2"></i> All
+        class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
+        data-filter="all" aria-pressed="true" aria-label="Show all projects">
+        <i class="fas fa-layer-group mr-2" aria-hidden="true"></i> All
       </button>
   
       <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300"
-        data-filter="html">
-        <i class="fab fa-html5 text-[#14b8a6] mr-2"></i> HTML
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
+        data-filter="html" aria-pressed="false" aria-label="Filter projects by HTML">
+        <i class="fab fa-html5 text-[#14b8a6] mr-2" aria-hidden="true"></i> HTML
       </button>
   
       <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300"
-        data-filter="css">
-        <i class="fab fa-css3-alt text-[#22d3ee] mr-2"></i> CSS
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
+        data-filter="css" aria-pressed="false" aria-label="Filter projects by CSS">
+        <i class="fab fa-css3-alt text-[#22d3ee] mr-2" aria-hidden="true"></i> CSS
       </button>
   
       <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-teal-400 hover:text-teal-400 transition-all duration-300"
-        data-filter="javascript">
-        <i class="fab fa-js text-yellow-400 mr-2"></i> JavaScript
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-teal-400 hover:text-teal-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+        data-filter="javascript" aria-pressed="false" aria-label="Filter projects by JavaScript">
+        <i class="fab fa-js text-yellow-400 mr-2" aria-hidden="true"></i> JavaScript
       </button>
   
       <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300"
-        data-filter="java">
-        <i class="fab fa-java text-[#14b8a6] mr-2"></i> Java
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
+        data-filter="java" aria-pressed="false" aria-label="Filter projects by Java">
+        <i class="fab fa-java text-[#14b8a6] mr-2" aria-hidden="true"></i> Java
       </button>
   
       <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300"
-        data-filter="c++">
-        <i class="fas fa-code text-[#22d3ee] mr-2"></i> C++
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
+        data-filter="c++" aria-pressed="false" aria-label="Filter projects by C++">
+        <i class="fas fa-code text-[#22d3ee] mr-2" aria-hidden="true"></i> C++
       </button>
   
       <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300"
-        data-filter="arduino">
-        <i class="fas fa-microchip text-[#14b8a6] mr-2"></i> Arduino
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#14b8a6] hover:text-[#14b8a6] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 focus:ring-offset-gray-900"
+        data-filter="arduino" aria-pressed="false" aria-label="Filter projects by Arduino">
+        <i class="fas fa-microchip text-[#14b8a6] mr-2" aria-hidden="true"></i> Arduino
       </button>
   
       <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300"
-        data-filter="circuit">
-        <i class="fas fa-bolt text-[#22d3ee] mr-2"></i> Circuit
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-[#22d3ee] hover:text-[#22d3ee] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900"
+        data-filter="circuit" aria-pressed="false" aria-label="Filter projects by Circuit">
+        <i class="fas fa-bolt text-[#22d3ee] mr-2" aria-hidden="true"></i> Circuit
       </button>
   
       <button
-        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-teal-400 hover:text-teal-400 transition-all duration-300"
-        data-filter="python">
-        <i class="fab fa-python text-teal-400 mr-2"></i> Python
+        class="filter-btn px-5 py-2.5 rounded-full text-sm font-medium text-gray-300 bg-gray-800 border border-gray-700 hover:border-teal-400 hover:text-teal-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+        data-filter="python" aria-pressed="false" aria-label="Filter projects by Python">
+        <i class="fab fa-python text-teal-400 mr-2" aria-hidden="true"></i> Python
       </button>
     </div>
   
@@ -289,7 +433,7 @@
       <div
         class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="html css javascript">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-user-circle"></i></div>
+        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-user-circle" aria-hidden="true"></i></div>
         <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
           Personal Portfolio Website</h3>
         <p class="text-gray-300 mb-2">Responsive personal portfolio built with HTML, Tailwind CSS, and JavaScript.</p>
@@ -298,10 +442,18 @@
           <li>Uses Tailwind CSS for styling</li>
           <li>Responsive and interactive design</li>
         </ul>
-        <div class="flex flex-wrap gap-2 mb-2">
+        <div class="flex flex-wrap gap-2 mb-4">
           <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">HTML</span>
           <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">CSS</span>
           <span class="bg-[#14b8a6]/10 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
+        </div>
+        <div class="flex gap-2">
+          <a href="#" class="bg-[#22d3ee] hover:bg-[#06b6d4] text-[#0f172a] px-3 py-1 rounded text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900" aria-label="View live demo of portfolio website">
+            <i class="fas fa-external-link-alt mr-1" aria-hidden="true"></i> Live Demo
+          </a>
+          <a href="https://github.com/dhruvht612/Portfolio" target="_blank" rel="noopener noreferrer" class="bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900" aria-label="View source code on GitHub (opens in new tab)">
+            <i class="fab fa-github mr-1" aria-hidden="true"></i> Code
+          </a>
         </div>
       </div>
     
@@ -309,7 +461,7 @@
       <div
         class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
         data-category="javascript css">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-square-root-alt"></i></div>
+        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-square-root-alt" aria-hidden="true"></i></div>
         <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
           Calculator</h3>
         <p class="text-gray-300 mb-2">A feature-rich calculator supporting trigonometric functions, square roots, and input
@@ -320,9 +472,17 @@
           <li>History tracking</li>
           <li>Keyboard input support</li>
         </ul>
-        <div class="flex flex-wrap gap-2 mb-2">
+        <div class="flex flex-wrap gap-2 mb-4">
           <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
           <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">CSS</span>
+        </div>
+        <div class="flex gap-2">
+          <a href="#" class="bg-[#22d3ee] hover:bg-[#06b6d4] text-[#0f172a] px-3 py-1 rounded text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900" aria-label="Try the calculator demo">
+            <i class="fas fa-external-link-alt mr-1" aria-hidden="true"></i> Live Demo
+          </a>
+          <a href="#" class="bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900" aria-label="View calculator source code">
+            <i class="fab fa-github mr-1" aria-hidden="true"></i> Code
+          </a>
         </div>
       </div>
     
@@ -774,56 +934,127 @@
     </div>
   </section>
 
-  <section id="contact" class="py-16 px-6 bg-gray-900 fade-in-up">
+  <!-- =========================== BLOG SECTION =========================== -->
+  <section id="blog" class="py-20 px-6 bg-gray-900 text-white" aria-labelledby="blog-heading">
+    <div class="max-w-6xl mx-auto">
+      <h2 id="blog-heading" class="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text">
+        Latest Blog Posts
+      </h2>
+      
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Blog Post 1 -->
+        <article class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-all duration-300">
+          <div class="h-48 bg-gradient-to-br from-blue-500 to-teal-500 flex items-center justify-center">
+            <i class="fas fa-code text-6xl text-white opacity-80" aria-hidden="true"></i>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-sm text-gray-400 mb-2">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2025-01-15">January 15, 2025</time>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Building My First Portfolio Website</h3>
+            <p class="text-gray-300 mb-4">A deep dive into the process of creating a modern, responsive portfolio website using HTML, CSS, and JavaScript...</p>
+            <a href="#" class="text-[#22d3ee] hover:text-[#06b6d4] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded">
+              Read More <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-all duration-300">
+          <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+            <i class="fas fa-microchip text-6xl text-white opacity-80" aria-hidden="true"></i>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-sm text-gray-400 mb-2">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2025-01-10">January 10, 2025</time>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Arduino Projects: From Beginner to Advanced</h3>
+            <p class="text-gray-300 mb-4">Exploring the journey of learning embedded systems programming and building practical projects with Arduino...</p>
+            <a href="#" class="text-[#22d3ee] hover:text-[#06b6d4] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded">
+              Read More <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-all duration-300">
+          <div class="h-48 bg-gradient-to-br from-green-500 to-blue-500 flex items-center justify-center">
+            <i class="fas fa-graduation-cap text-6xl text-white opacity-80" aria-hidden="true"></i>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-sm text-gray-400 mb-2">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2025-01-05">January 5, 2025</time>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Life as a Computer Science Student</h3>
+            <p class="text-gray-300 mb-4">Reflections on the challenges, opportunities, and experiences of pursuing a Computer Science degree...</p>
+            <a href="#" class="text-[#22d3ee] hover:text-[#06b6d4] font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded">
+              Read More <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 px-6 bg-gray-900 fade-in-up" aria-labelledby="contact-heading">
     <div class="max-w-3xl mx-auto text-center">
   
       <!-- Section Header -->
-      <h2
+      <h2 id="contact-heading"
         class="text-3xl font-extrabold tracking-wide bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text mb-12">
         Contact
       </h2>
   
       <!-- Contact Form -->
-      <form id="contact-form" action="mailto:thakardhruvh@gmail.com" method="POST" class="max-w-lg mx-auto space-y-6">
+      <form id="contact-form" action="mailto:thakardhruvh@gmail.com" method="POST" class="max-w-lg mx-auto space-y-6" aria-label="Contact form">
   
         <!-- Name -->
         <div class="relative z-0 w-full group">
           <input type="text" name="name" id="name" required
             class="block py-3 px-0 w-full text-white bg-gray-800 border-2 border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all peer"
-            placeholder=" " />
+            placeholder=" " aria-describedby="name-error" />
           <label for="name"
             class="absolute left-3 top-3 text-gray-400 duration-300 transform -translate-y-0 scale-100 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-1 peer-focus:scale-90 peer-focus:text-blue-400">
             Name
           </label>
+          <div id="name-error" class="text-red-400 text-sm mt-1 hidden" role="alert"></div>
         </div>
   
         <!-- Email -->
         <div class="relative z-0 w-full group">
           <input type="email" name="email" id="email" required
             class="block py-3 px-0 w-full text-white bg-gray-800 border-2 border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all peer"
-            placeholder=" " />
+            placeholder=" " aria-describedby="email-error" />
           <label for="email"
             class="absolute left-3 top-3 text-gray-400 duration-300 transform -translate-y-0 scale-100 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-1 peer-focus:scale-90 peer-focus:text-blue-400">
             Email
           </label>
+          <div id="email-error" class="text-red-400 text-sm mt-1 hidden" role="alert"></div>
         </div>
   
         <!-- Message -->
         <div class="relative z-0 w-full group">
           <textarea name="message" id="message" rows="5" required
             class="block py-3 px-0 w-full text-white bg-gray-800 border-2 border-gray-700 rounded-lg focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all peer resize-none"
-            placeholder=" "></textarea>
+            placeholder=" " aria-describedby="message-error"></textarea>
           <label for="message"
             class="absolute left-3 top-3 text-gray-400 duration-300 transform -translate-y-0 scale-100 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-focus:-translate-y-1 peer-focus:scale-90 peer-focus:text-blue-400">
             Message
           </label>
+          <div id="message-error" class="text-red-400 text-sm mt-1 hidden" role="alert"></div>
         </div>
   
         <!-- Submit Button -->
-        <button type="submit"
-          class="w-full py-3 bg-gradient-to-r from-blue-400 to-teal-400 hover:from-blue-500 hover:to-teal-500 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-          Send Message
+        <button type="submit" id="submit-btn"
+          class="w-full py-3 bg-gradient-to-r from-blue-400 to-teal-400 hover:from-blue-500 hover:to-teal-500 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+          aria-describedby="submit-status">
+          <span id="submit-text">Send Message</span>
+          <i id="submit-spinner" class="fas fa-spinner fa-spin ml-2 hidden" aria-hidden="true"></i>
         </button>
+        <div id="submit-status" class="text-center mt-2" role="status" aria-live="polite"></div>
       </form>
   
     </div>

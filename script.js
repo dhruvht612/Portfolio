@@ -582,15 +582,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Particle system
   new ParticleSystem('particles-container', 30);
-  
-  // Skill progress bar animation
-  initSkillBars();
-  
-  // About tabs functionality
-  initAboutTabs();
-  
-  // Counter animation
-  initCounters();
+});
+
+// Initialize features after page is fully loaded (after preloader)
+window.addEventListener('load', () => {
+  // Wait for preloader to finish (600ms total)
+  setTimeout(() => {
+    console.log('Initializing about section features...');
+    
+    // Skill progress bar animation
+    initSkillBars();
+    
+    // About tabs functionality
+    initAboutTabs();
+    
+    // Counter animation
+    initCounters();
+  }, 600);
 });
 
 // ================= SKILL PROGRESS BARS =================
@@ -630,10 +638,18 @@ function initAboutTabs() {
   const tabs = document.querySelectorAll('.about-tab');
   const contents = document.querySelectorAll('.tab-content');
   
-  if (!tabs.length) return;
+  console.log('Initializing tabs:', tabs.length, 'tabs found');
+  console.log('Tab contents:', contents.length, 'content sections found');
+  
+  if (!tabs.length) {
+    console.warn('No tabs found!');
+    return;
+  }
   
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
+      console.log('Tab clicked:', tab.getAttribute('data-tab'));
+      
       // Remove active class from all tabs
       tabs.forEach(t => {
         t.classList.remove('active');
@@ -655,6 +671,8 @@ function initAboutTabs() {
       // Show selected content
       const targetTab = tab.getAttribute('data-tab');
       const targetContent = document.getElementById(`${targetTab}-tab`);
+      console.log('Looking for content:', `${targetTab}-tab`, 'Found:', !!targetContent);
+      
       if (targetContent) {
         targetContent.classList.remove('hidden');
         targetContent.classList.add('active');
@@ -667,7 +685,12 @@ function initAboutTabs() {
 function initCounters() {
   const counters = document.querySelectorAll('.counter');
   
-  if (!counters.length) return;
+  console.log('Initializing counters:', counters.length, 'counters found');
+  
+  if (!counters.length) {
+    console.warn('No counters found!');
+    return;
+  }
   
   const observerOptions = {
     threshold: 0.5,
@@ -676,6 +699,7 @@ function initCounters() {
   
   const animateCounter = (counter) => {
     const target = parseInt(counter.getAttribute('data-target'));
+    console.log('Animating counter to:', target);
     const duration = 2000; // 2 seconds
     const increment = target / (duration / 16); // 60 FPS
     let current = 0;
@@ -696,6 +720,7 @@ function initCounters() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        console.log('Counter in view, starting animation');
         animateCounter(entry.target);
         observer.unobserve(entry.target);
       }

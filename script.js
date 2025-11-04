@@ -474,3 +474,112 @@ function getLocationAndWeather() {
 }
 
 document.addEventListener("DOMContentLoaded", getLocationAndWeather);
+
+// ================= TYPING EFFECT =================
+class TypingEffect {
+  constructor(element, words, typeSpeed = 100, deleteSpeed = 50, delayBetweenWords = 2000) {
+    this.element = element;
+    this.words = words;
+    this.typeSpeed = typeSpeed;
+    this.deleteSpeed = deleteSpeed;
+    this.delayBetweenWords = delayBetweenWords;
+    this.currentWordIndex = 0;
+    this.currentText = '';
+    this.isDeleting = false;
+    this.init();
+  }
+
+  init() {
+    this.type();
+  }
+
+  type() {
+    const currentWord = this.words[this.currentWordIndex];
+    
+    if (this.isDeleting) {
+      this.currentText = currentWord.substring(0, this.currentText.length - 1);
+    } else {
+      this.currentText = currentWord.substring(0, this.currentText.length + 1);
+    }
+
+    this.element.textContent = this.currentText;
+
+    let speed = this.isDeleting ? this.deleteSpeed : this.typeSpeed;
+
+    if (!this.isDeleting && this.currentText === currentWord) {
+      speed = this.delayBetweenWords;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.currentText === '') {
+      this.isDeleting = false;
+      this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length;
+      speed = 500;
+    }
+
+    setTimeout(() => this.type(), speed);
+  }
+}
+
+// ================= PARTICLE SYSTEM =================
+class ParticleSystem {
+  constructor(containerId, particleCount = 50) {
+    this.container = document.getElementById(containerId);
+    this.particleCount = particleCount;
+    this.particles = [];
+    this.init();
+  }
+
+  init() {
+    if (!this.container) return;
+    
+    for (let i = 0; i < this.particleCount; i++) {
+      this.createParticle();
+    }
+  }
+
+  createParticle() {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    
+    // Random starting position
+    const startX = Math.random() * 100;
+    const startY = Math.random() * 100;
+    const size = Math.random() * 4 + 2;
+    const duration = Math.random() * 10 + 10;
+    const delay = Math.random() * 5;
+    
+    particle.style.left = `${startX}%`;
+    particle.style.top = `${startY}%`;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.animationDuration = `${duration}s`;
+    particle.style.animationDelay = `${delay}s`;
+    
+    // Random color variation
+    const colors = ['#22d3ee', '#14b8a6', '#06b6d4', '#0d9488'];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    particle.style.background = `radial-gradient(circle, ${color}, transparent)`;
+    
+    this.container.appendChild(particle);
+    this.particles.push(particle);
+  }
+}
+
+// Initialize typing effect and particles when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Typing effect
+  const typedTextElement = document.getElementById('typed-text');
+  if (typedTextElement) {
+    const words = [
+      'Computer Science Student',
+      'Full-Stack Developer',
+      'Problem Solver',
+      'Tech Enthusiast',
+      'Creative Thinker',
+      'Team Player'
+    ];
+    new TypingEffect(typedTextElement, words, 100, 50, 2000);
+  }
+
+  // Particle system
+  new ParticleSystem('particles-container', 30);
+});

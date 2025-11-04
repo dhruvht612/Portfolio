@@ -108,6 +108,33 @@ Handles contact form submissions.
 }
 ```
 
+For complete API documentation, see [API.md](./API.md)
+
+------------------------------------------------------------------------
+
+## 📚 Documentation
+
+Comprehensive documentation is available:
+
+- **[DOCUMENTATION.md](./DOCUMENTATION.md)** - Complete technical documentation, installation, deployment, and troubleshooting
+- **[API.md](./API.md)** - Detailed API reference with examples
+- **[DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md)** - Development guide for contributors and customization
+- **[SECURITY.md](./SECURITY.md)** - Security policy and vulnerability reporting
+
+------------------------------------------------------------------------
+
+## 🎨 Recent Enhancements
+
+### Enhanced Home Page Features:
+- ✨ **Typing Animation** - Dynamic role display with typing effect
+- 🌟 **Particle Background** - Animated particles for visual appeal
+- 💫 **Floating Shapes** - Geometric shapes with smooth animations
+- 🎨 **Gradient Effects** - Animated gradients on name and profile
+- 📊 **Quick Stats** - Projects, technologies, and graduation year
+- 🎯 **Improved CTAs** - Multiple call-to-action buttons with hover effects
+- 🔽 **Scroll Indicator** - Animated scroll-down indicator
+- 🎭 **Enhanced Social Links** - Hover effects with tooltips
+
 ------------------------------------------------------------------------
 
 ## 👤 Contact

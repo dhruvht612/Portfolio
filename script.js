@@ -582,4 +582,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Particle system
   new ParticleSystem('particles-container', 30);
+  
+  // Skill progress bar animation
+  initSkillBars();
 });
+
+// ================= SKILL PROGRESS BARS =================
+function initSkillBars() {
+  const skillBars = document.querySelectorAll('.skill-progress');
+  
+  if (!skillBars.length) return;
+  
+  const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const progressBar = entry.target;
+        const targetWidth = progressBar.getAttribute('data-progress');
+        
+        // Animate the progress bar
+        setTimeout(() => {
+          progressBar.style.width = targetWidth + '%';
+        }, 100);
+        
+        // Stop observing once animated
+        observer.unobserve(progressBar);
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all skill bars
+  skillBars.forEach(bar => observer.observe(bar));
+}

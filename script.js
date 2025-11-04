@@ -588,7 +588,7 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
   // Wait for preloader to finish (600ms total)
   setTimeout(() => {
-    console.log('Initializing about section features...');
+    console.log('Page fully loaded, initializing features...');
     
     // Skill progress bar animation
     initSkillBars();
@@ -598,8 +598,27 @@ window.addEventListener('load', () => {
     
     // Counter animation
     initCounters();
-  }, 600);
+  }, 800);
 });
+
+// Also try to initialize after a longer delay as backup
+setTimeout(() => {
+  console.log('Backup initialization at 2 seconds...');
+  
+  // Only initialize if not already done
+  const tabs = document.querySelectorAll('.about-tab');
+  const counters = document.querySelectorAll('.counter');
+  
+  if (tabs.length > 0 && !tabs[0].hasAttribute('data-initialized')) {
+    console.log('Re-initializing tabs...');
+    initAboutTabs();
+  }
+  
+  if (counters.length > 0) {
+    console.log('Re-initializing counters...');
+    initCounters();
+  }
+}, 2000);
 
 // ================= SKILL PROGRESS BARS =================
 function initSkillBars() {
@@ -646,12 +665,24 @@ function initAboutTabs() {
     return;
   }
   
+  // Mark as initialized
+  tabs[0].setAttribute('data-initialized', 'true');
+  
   tabs.forEach(tab => {
+    // Remove old listeners if any
+    const newTab = tab.cloneNode(true);
+    tab.parentNode.replaceChild(newTab, tab);
+  });
+  
+  // Re-select tabs after cloning
+  const freshTabs = document.querySelectorAll('.about-tab');
+  
+  freshTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       console.log('Tab clicked:', tab.getAttribute('data-tab'));
       
       // Remove active class from all tabs
-      tabs.forEach(t => {
+      freshTabs.forEach(t => {
         t.classList.remove('active');
         t.classList.remove('bg-gradient-to-r', 'from-[#22d3ee]', 'to-[#14b8a6]', 'text-[#0f172a]');
         t.classList.add('text-gray-400', 'hover:text-white');
@@ -679,6 +710,8 @@ function initAboutTabs() {
       }
     });
   });
+  
+  console.log('Tabs initialized successfully!');
 }
 
 // ================= ANIMATED COUNTERS =================
@@ -693,8 +726,8 @@ function initCounters() {
   }
   
   const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px'
+    threshold: 0.1,  // Lowered from 0.5 to trigger earlier
+    rootMargin: '50px'  // Start animation 50px before element comes into view
   };
   
   const animateCounter = (counter) => {
@@ -720,12 +753,17 @@ function initCounters() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        console.log('Counter in view, starting animation');
+        console.log('Counter in view, starting animation for:', entry.target.getAttribute('data-target'));
         animateCounter(entry.target);
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
   
-  counters.forEach(counter => observer.observe(counter));
+  counters.forEach(counter => {
+    console.log('Observing counter with target:', counter.getAttribute('data-target'));
+    observer.observe(counter);
+  });
+  
+  console.log('Counters initialized successfully!');
 }

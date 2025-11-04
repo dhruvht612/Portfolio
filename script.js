@@ -585,6 +585,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Skill progress bar animation
   initSkillBars();
+  
+  // About tabs functionality
+  initAboutTabs();
+  
+  // Counter animation
+  initCounters();
 });
 
 // ================= SKILL PROGRESS BARS =================
@@ -617,4 +623,84 @@ function initSkillBars() {
   
   // Observe all skill bars
   skillBars.forEach(bar => observer.observe(bar));
+}
+
+// ================= ABOUT TABS =================
+function initAboutTabs() {
+  const tabs = document.querySelectorAll('.about-tab');
+  const contents = document.querySelectorAll('.tab-content');
+  
+  if (!tabs.length) return;
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active class from all tabs
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.classList.remove('bg-gradient-to-r', 'from-[#22d3ee]', 'to-[#14b8a6]', 'text-[#0f172a]');
+        t.classList.add('text-gray-400', 'hover:text-white');
+      });
+      
+      // Add active class to clicked tab
+      tab.classList.add('active');
+      tab.classList.add('bg-gradient-to-r', 'from-[#22d3ee]', 'to-[#14b8a6]', 'text-[#0f172a]');
+      tab.classList.remove('text-gray-400', 'hover:text-white');
+      
+      // Hide all content
+      contents.forEach(content => {
+        content.classList.add('hidden');
+        content.classList.remove('active');
+      });
+      
+      // Show selected content
+      const targetTab = tab.getAttribute('data-tab');
+      const targetContent = document.getElementById(`${targetTab}-tab`);
+      if (targetContent) {
+        targetContent.classList.remove('hidden');
+        targetContent.classList.add('active');
+      }
+    });
+  });
+}
+
+// ================= ANIMATED COUNTERS =================
+function initCounters() {
+  const counters = document.querySelectorAll('.counter');
+  
+  if (!counters.length) return;
+  
+  const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px'
+  };
+  
+  const animateCounter = (counter) => {
+    const target = parseInt(counter.getAttribute('data-target'));
+    const duration = 2000; // 2 seconds
+    const increment = target / (duration / 16); // 60 FPS
+    let current = 0;
+    
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        counter.textContent = Math.floor(current);
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = target;
+      }
+    };
+    
+    updateCounter();
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  counters.forEach(counter => observer.observe(counter));
 }

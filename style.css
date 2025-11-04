@@ -448,6 +448,31 @@ footer {
   }
 }
 
+/* About Tab Styles */
+.about-tab {
+  color: #9ca3af;
+  transition: all 0.3s ease;
+}
+
+.about-tab:hover {
+  color: white;
+}
+
+.about-tab.active {
+  background: linear-gradient(to right, #22d3ee, #14b8a6);
+  color: #0f172a;
+  font-weight: bold;
+}
+
+.tab-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Counter animation */
+.counter {
+  font-variant-numeric: tabular-nums;
+}
+
 /* Animation Classes */
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;

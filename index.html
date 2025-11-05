@@ -150,6 +150,123 @@
     .project-card:nth-child(13) { transition-delay: 1.3s; }
     .project-card:nth-child(14) { transition-delay: 1.4s; }
     .project-card:nth-child(15) { transition-delay: 1.5s; }
+    
+    /* ========== HOME PAGE ANIMATED BACKGROUND ========== */
+    
+    /* Blob animation for mesh gradient */
+    @keyframes blob {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      25% {
+        transform: translate(20px, -50px) scale(1.1);
+      }
+      50% {
+        transform: translate(-20px, 20px) scale(0.9);
+      }
+      75% {
+        transform: translate(50px, 50px) scale(1.05);
+      }
+    }
+    
+    .animate-blob {
+      animation: blob 20s infinite;
+    }
+    
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+    
+    /* Starfield animation */
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    
+    .stars, .stars2, .stars3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+    
+    .stars {
+      background-image: 
+        radial-gradient(2px 2px at 20px 30px, #14b8a6, transparent),
+        radial-gradient(2px 2px at 60px 70px, #22d3ee, transparent),
+        radial-gradient(1px 1px at 50px 50px, #06b6d4, transparent),
+        radial-gradient(1px 1px at 130px 80px, #14b8a6, transparent),
+        radial-gradient(2px 2px at 90px 10px, #22d3ee, transparent);
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      animation: twinkle 5s ease-in-out infinite;
+    }
+    
+    .stars2 {
+      background-image: 
+        radial-gradient(1px 1px at 40px 60px, #14b8a6, transparent),
+        radial-gradient(1px 1px at 110px 90px, #22d3ee, transparent),
+        radial-gradient(2px 2px at 150px 30px, #06b6d4, transparent);
+      background-repeat: repeat;
+      background-size: 250px 250px;
+      animation: twinkle 7s ease-in-out infinite;
+      animation-delay: 1s;
+    }
+    
+    .stars3 {
+      background-image: 
+        radial-gradient(1px 1px at 75px 125px, #14b8a6, transparent),
+        radial-gradient(2px 2px at 180px 25px, #22d3ee, transparent),
+        radial-gradient(1px 1px at 170px 120px, #06b6d4, transparent);
+      background-repeat: repeat;
+      background-size: 300px 300px;
+      animation: twinkle 10s ease-in-out infinite;
+      animation-delay: 2s;
+    }
+    
+    /* Floating animation */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+      50% {
+        transform: translateY(-40px) rotate(-5deg);
+      }
+      75% {
+        transform: translateY(-20px) rotate(3deg);
+      }
+    }
+    
+    .animate-float {
+      animation: float 20s ease-in-out infinite;
+    }
+    
+    /* ========== NAVBAR ENHANCEMENTS ========== */
+    
+    /* Active link styling */
+    .nav-link.active-link {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(34, 211, 238, 0.1));
+      color: #14b8a6;
+    }
+    
+    .nav-link.active-link span:last-child {
+      width: 100%;
+    }
+    
+    /* Navbar scroll effect */
+    #main-header.scrolled {
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      border-bottom-color: rgba(20, 184, 166, 0.6);
+    }
   </style>
 </head>
 
@@ -168,50 +285,135 @@
   <div id="main-content" class="hidden">
 
   <!-- =========================== HEADER =========================== -->
-  <header class="sticky top-0 z-50 bg-[#0f172a]/80 backdrop-blur-lg border-b border-[#14b8a6] shadow-md text-white" role="banner">
+  <header id="main-header" class="sticky top-0 z-50 bg-[#0f172a]/95 backdrop-blur-xl border-b border-[#14b8a6]/30 shadow-lg text-white transition-all duration-300" role="banner">
+    <!-- Progress Bar -->
+    <div id="scroll-progress" class="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-[#14b8a6] via-[#22d3ee] to-[#06b6d4] transition-all duration-150" style="width: 0%"></div>
+    
     <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center" role="navigation" aria-label="Main navigation">
   
       <!-- Logo & Name -->
-      <a href="#home" class="flex items-center gap-2 text-2xl font-bold uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded" aria-label="Dhruv Thakar - Go to home">
-        <img src="logo.png" alt="Dhruv Thakar Logo" class="w-8 h-8 rounded-full hidden sm:inline-block" loading="eager" />
-        Dhruv Thakar
+      <a href="#home" class="group flex items-center gap-3 text-2xl font-bold uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-2 py-1 transition-all duration-300 hover:scale-105" aria-label="Dhruv Thakar - Go to home">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] rounded-full blur-md opacity-50 group-hover:opacity-100 transition-opacity"></div>
+          <img src="logo.png" alt="Dhruv Thakar Logo" class="relative w-10 h-10 rounded-full border-2 border-[#14b8a6] group-hover:border-[#22d3ee] transition-all duration-300 sm:inline-block hidden" loading="eager" />
+        </div>
+        <span class="gradient-text group-hover:animate-gradient">Dhruv Thakar</span>
       </a>
   
-      <!-- Dark Mode Toggle -->
-      <button id="theme-toggle" class="hidden md:block text-[#22d3ee] text-xl focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded p-2 mr-4" 
-              aria-label="Toggle dark mode" title="Toggle theme">
-        <i class="fas fa-moon" aria-hidden="true"></i>
-      </button>
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-2">
+        <!-- Navigation Links -->
+        <ul id="nav-links" role="menubar" class="flex items-center gap-1">
+          <li role="none">
+            <a href="#home" class="nav-link group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-[#14b8a6]/10" role="menuitem" aria-current="page">
+              <span class="relative z-10">Home</span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] group-hover:w-full transition-all duration-300"></span>
+            </a>
+          </li>
+          <li role="none">
+            <a href="#about" class="nav-link group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-[#14b8a6]/10" role="menuitem">
+              <span class="relative z-10">About</span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] group-hover:w-full transition-all duration-300"></span>
+            </a>
+          </li>
+          <li role="none">
+            <a href="#projects" class="nav-link group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-[#14b8a6]/10" role="menuitem">
+              <span class="relative z-10">Projects</span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] group-hover:w-full transition-all duration-300"></span>
+            </a>
+          </li>
+          <li role="none">
+            <a href="#skills" class="nav-link group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-[#14b8a6]/10" role="menuitem">
+              <span class="relative z-10">Skills</span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] group-hover:w-full transition-all duration-300"></span>
+            </a>
+          </li>
+          <li role="none">
+            <a href="#education" class="nav-link group relative px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:bg-[#14b8a6]/10" role="menuitem">
+              <span class="relative z-10">Education</span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] group-hover:w-full transition-all duration-300"></span>
+            </a>
+          </li>
+          <li role="none">
+            <a href="#contact" class="px-6 py-2.5 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] rounded-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(20,184,166,0.5)]" role="menuitem">
+              Contact
+            </a>
+          </li>
+        </ul>
+        
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="ml-2 w-10 h-10 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-[#14b8a6] text-[#22d3ee] hover:text-white transition-all duration-300 hover:scale-110 hover:rotate-12 focus:outline-none focus:ring-2 focus:ring-[#22d3ee]" 
+                aria-label="Toggle dark mode" title="Toggle theme">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+      </div>
 
       <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-[#22d3ee] text-2xl focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded p-2" 
-              aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+      <button id="menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-[#14b8a6] text-[#22d3ee] hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#22d3ee]" 
+              aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
-  
-      <!-- Navigation Links -->
-      <ul id="nav-links" role="menubar"
-        class="hidden md:flex flex-col md:flex-row gap-6 text-sm md:text-base font-medium tracking-wide absolute md:static top-full left-0 w-full md:w-auto bg-[#0f172a] md:bg-transparent p-6 md:p-0 transition-all duration-300 z-50 items-center">
-  
-        <li role="none"><a href="#home" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem" aria-current="page">Home</a></li>
-        <li role="none"><a href="#about" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">About</a></li>
-        <li role="none"><a href="#projects" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Projects</a></li>
-        <li role="none"><a href="#skills" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Skills</a></li>
-        <li role="none"><a href="#education" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Education</a></li>
-        <li role="none"><a href="#contact" class="hover:text-[#22d3ee] transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" role="menuitem">Contact</a></li>
-      </ul>
     </nav>
+    
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-nav" class="hidden md:hidden bg-[#0f172a]/98 backdrop-blur-xl border-t border-[#14b8a6]/30">
+      <ul class="px-6 py-4 space-y-2">
+        <li>
+          <a href="#home" class="block px-4 py-3 rounded-lg font-semibold hover:bg-[#14b8a6]/20 hover:text-[#14b8a6] transition-all duration-300 border-l-4 border-transparent hover:border-[#14b8a6]">
+            <i class="fas fa-home w-6"></i> Home
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="block px-4 py-3 rounded-lg font-semibold hover:bg-[#14b8a6]/20 hover:text-[#14b8a6] transition-all duration-300 border-l-4 border-transparent hover:border-[#14b8a6]">
+            <i class="fas fa-user w-6"></i> About
+          </a>
+        </li>
+        <li>
+          <a href="#projects" class="block px-4 py-3 rounded-lg font-semibold hover:bg-[#14b8a6]/20 hover:text-[#14b8a6] transition-all duration-300 border-l-4 border-transparent hover:border-[#14b8a6]">
+            <i class="fas fa-project-diagram w-6"></i> Projects
+          </a>
+        </li>
+        <li>
+          <a href="#skills" class="block px-4 py-3 rounded-lg font-semibold hover:bg-[#14b8a6]/20 hover:text-[#14b8a6] transition-all duration-300 border-l-4 border-transparent hover:border-[#14b8a6]">
+            <i class="fas fa-code w-6"></i> Skills
+          </a>
+        </li>
+        <li>
+          <a href="#education" class="block px-4 py-3 rounded-lg font-semibold hover:bg-[#14b8a6]/20 hover:text-[#14b8a6] transition-all duration-300 border-l-4 border-transparent hover:border-[#14b8a6]">
+            <i class="fas fa-graduation-cap w-6"></i> Education
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="block px-4 py-3 rounded-lg font-bold bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white text-center transition-all duration-300">
+            <i class="fas fa-paper-plane w-6"></i> Contact
+          </a>
+        </li>
+      </ul>
+    </div>
   </header>
 
   <!-- =========================== HOME SECTION =========================== -->
   <section id="home" class="min-h-screen flex flex-col justify-center items-center bg-[#0f172a] text-white px-6 text-center relative overflow-hidden" 
            role="banner" aria-labelledby="main-heading">
   
-    <!-- Animated Gradient Background -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1a1f3a] to-[#111827] opacity-95" aria-hidden="true"></div>
+    <!-- Animated Gradient Background Layer 1 -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1a1f3a] to-[#111827]" aria-hidden="true"></div>
     
-    <!-- Animated Particles Background -->
-    <div id="particles-container" class="absolute inset-0 overflow-hidden opacity-30" aria-hidden="true"></div>
+    <!-- Animated Mesh Gradient Layer -->
+    <div class="absolute inset-0" aria-hidden="true">
+      <div class="absolute top-0 left-0 w-full h-full opacity-30">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#14b8a6] rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-[#22d3ee] rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-[#06b6d4] rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+      </div>
+    </div>
+    
+    <!-- Animated Particles/Stars Background -->
+    <div id="stars-container" class="absolute inset-0 overflow-hidden opacity-40" aria-hidden="true">
+      <div class="stars"></div>
+      <div class="stars2"></div>
+      <div class="stars3"></div>
+    </div>
     
     <!-- Floating Geometric Shapes -->
     <div class="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true">
@@ -219,6 +421,13 @@
       <div class="absolute top-40 right-20 w-16 h-16 border-2 border-[#14b8a6] rotate-45 animate-float" style="animation-delay: 1s;"></div>
       <div class="absolute bottom-40 left-1/4 w-24 h-24 border-2 border-[#22d3ee] rounded-full animate-float" style="animation-delay: 2s;"></div>
       <div class="absolute bottom-20 right-1/3 w-20 h-20 border-2 border-[#14b8a6] animate-float" style="animation-delay: 3s;"></div>
+      <div class="absolute top-1/2 right-10 w-12 h-12 border-2 border-[#06b6d4] rounded-full animate-float" style="animation-delay: 1.5s;"></div>
+      <div class="absolute top-2/3 left-20 w-18 h-18 border-2 border-[#14b8a6] rotate-12 animate-float" style="animation-delay: 2.5s;"></div>
+    </div>
+    
+    <!-- Grid Pattern Overlay -->
+    <div class="absolute inset-0 opacity-5" aria-hidden="true">
+      <div class="absolute inset-0" style="background-image: linear-gradient(#14b8a6 1px, transparent 1px), linear-gradient(90deg, #14b8a6 1px, transparent 1px); background-size: 50px 50px;"></div>
     </div>
   
     <!-- Main Content -->
@@ -3002,6 +3211,88 @@
     </div>
   </div>
   
+  <!-- Navigation Bar Enhancement Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Scroll Progress Bar
+      const scrollProgress = document.getElementById('scroll-progress');
+      const header = document.getElementById('main-header');
+      
+      window.addEventListener('scroll', function() {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / windowHeight) * 100;
+        if (scrollProgress) {
+          scrollProgress.style.width = scrolled + '%';
+        }
+        
+        // Add shadow on scroll
+        if (window.scrollY > 50) {
+          header.classList.add('shadow-2xl');
+          header.style.borderBottomColor = 'rgba(20, 184, 166, 0.5)';
+        } else {
+          header.classList.remove('shadow-2xl');
+          header.style.borderBottomColor = 'rgba(20, 184, 166, 0.3)';
+        }
+      });
+      
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileNav = document.getElementById('mobile-nav');
+      
+      if (menuBtn && mobileNav) {
+        menuBtn.addEventListener('click', function() {
+          mobileNav.classList.toggle('hidden');
+          const isExpanded = !mobileNav.classList.contains('hidden');
+          menuBtn.setAttribute('aria-expanded', isExpanded);
+          
+          // Animate hamburger icon
+          const icon = menuBtn.querySelector('i');
+          if (isExpanded) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileNav.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileNav.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          });
+        });
+      }
+      
+      // Active link highlighting based on scroll position
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      window.addEventListener('scroll', function() {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.scrollY >= sectionTop - 100) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active-link');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active-link');
+          }
+        });
+      });
+    });
+  </script>
+  
   <!-- Enhanced Projects Section Animation Script -->
   <script>
     // Intersection Observer for project cards animation
@@ -3047,6 +3338,134 @@
           statsObserver.observe(stat);
         });
       }
+    });
+  </script>
+  
+  <!-- Animated Background Canvas for Home Section -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Create canvas for animated particles
+      const homeSection = document.getElementById('home');
+      if (!homeSection) return;
+      
+      const canvas = document.createElement('canvas');
+      canvas.style.position = 'absolute';
+      canvas.style.top = '0';
+      canvas.style.left = '0';
+      canvas.style.width = '100%';
+      canvas.style.height = '100%';
+      canvas.style.pointerEvents = 'none';
+      canvas.style.zIndex = '1';
+      canvas.style.opacity = '0.3';
+      
+      // Insert canvas at the beginning of home section
+      homeSection.insertBefore(canvas, homeSection.firstChild);
+      
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let animationId;
+      
+      // Resize canvas
+      function resizeCanvas() {
+        canvas.width = homeSection.offsetWidth;
+        canvas.height = homeSection.offsetHeight;
+      }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+      
+      // Particle class
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 3 + 1;
+          this.speedX = (Math.random() - 0.5) * 0.5;
+          this.speedY = (Math.random() - 0.5) * 0.5;
+          this.color = Math.random() > 0.5 ? '#14b8a6' : '#22d3ee';
+          this.opacity = Math.random() * 0.5 + 0.2;
+        }
+        
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          
+          // Wrap around screen
+          if (this.x > canvas.width) this.x = 0;
+          if (this.x < 0) this.x = canvas.width;
+          if (this.y > canvas.height) this.y = 0;
+          if (this.y < 0) this.y = canvas.height;
+        }
+        
+        draw() {
+          ctx.fillStyle = this.color;
+          ctx.globalAlpha = this.opacity;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.globalAlpha = 1;
+        }
+      }
+      
+      // Create particles
+      function createParticles() {
+        const particleCount = Math.min(Math.floor((canvas.width * canvas.height) / 15000), 100);
+        particles = [];
+        for (let i = 0; i < particleCount; i++) {
+          particles.push(new Particle());
+        }
+      }
+      createParticles();
+      
+      // Connect particles with lines
+      function connectParticles() {
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < 150) {
+              ctx.strokeStyle = '#14b8a6';
+              ctx.globalAlpha = (1 - distance / 150) * 0.2;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+              ctx.globalAlpha = 1;
+            }
+          }
+        }
+      }
+      
+      // Animation loop
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach(particle => {
+          particle.update();
+          particle.draw();
+        });
+        
+        connectParticles();
+        
+        animationId = requestAnimationFrame(animate);
+      }
+      
+      animate();
+      
+      // Cleanup on section leave
+      const homeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting && animationId) {
+            cancelAnimationFrame(animationId);
+          } else if (entry.isIntersecting) {
+            animate();
+          }
+        });
+      });
+      
+      homeObserver.observe(homeSection);
     });
   </script>
 </body>

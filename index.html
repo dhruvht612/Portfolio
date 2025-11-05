@@ -69,6 +69,50 @@
   <link rel="manifest" href="manifest.json" />
   
   <script src="script.js" defer></script>
+  
+  <!-- Custom CSS for Projects Section -->
+  <style>
+    /* Gradient animation for project heading */
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .animate-gradient {
+      background-size: 200% auto;
+      animation: gradient 3s ease infinite;
+    }
+    
+    /* Project card entrance animation */
+    .project-card {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .project-card.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Staggered animation delays */
+    .project-card:nth-child(1) { transition-delay: 0.1s; }
+    .project-card:nth-child(2) { transition-delay: 0.2s; }
+    .project-card:nth-child(3) { transition-delay: 0.3s; }
+    .project-card:nth-child(4) { transition-delay: 0.4s; }
+    .project-card:nth-child(5) { transition-delay: 0.5s; }
+    .project-card:nth-child(6) { transition-delay: 0.6s; }
+    .project-card:nth-child(7) { transition-delay: 0.7s; }
+    .project-card:nth-child(8) { transition-delay: 0.8s; }
+    .project-card:nth-child(9) { transition-delay: 0.9s; }
+    .project-card:nth-child(10) { transition-delay: 1.0s; }
+    .project-card:nth-child(11) { transition-delay: 1.1s; }
+    .project-card:nth-child(12) { transition-delay: 1.2s; }
+    .project-card:nth-child(13) { transition-delay: 1.3s; }
+    .project-card:nth-child(14) { transition-delay: 1.4s; }
+    .project-card:nth-child(15) { transition-delay: 1.5s; }
+  </style>
 </head>
 
 <body class="bg-gray-900 text-gray-100 font-sans">
@@ -538,15 +582,50 @@
   </section>
 
   <!-- =========================== PROJECTS SECTION =========================== -->
-  <section id="projects" class="py-16 px-6 bg-[#0f172a]" aria-labelledby="projects-heading">
-    <h2 id="projects-heading"
-      class="text-3xl font-extrabold text-center mb-12 text-[#14b8a6] tracking-wide flex items-center justify-center gap-3">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#22d3ee]" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
-      </svg>
-      Projects
-    </h2>
+  <section id="projects" class="py-20 px-6 bg-[#0f172a] relative overflow-hidden" aria-labelledby="projects-heading">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#14b8a6]/5 to-transparent pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-3 mb-4">
+          <div class="h-1 w-12 bg-gradient-to-r from-transparent to-[#14b8a6] rounded-full"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#22d3ee] animate-pulse" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          </svg>
+          <div class="h-1 w-12 bg-gradient-to-l from-transparent to-[#22d3ee] rounded-full"></div>
+        </div>
+        <h2 id="projects-heading"
+          class="text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-[#14b8a6] via-[#22d3ee] to-[#14b8a6] bg-clip-text text-transparent animate-gradient">
+          Featured Projects
+        </h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+          Explore my collection of innovative projects spanning web development, algorithms, robotics, and electronics
+        </p>
+      </div>
+      
+      <!-- Project Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
+        <div class="bg-gradient-to-br from-[#14b8a6]/10 to-[#22d3ee]/10 backdrop-blur-sm p-4 rounded-xl border border-[#14b8a6]/20 text-center hover:scale-105 transition-transform duration-300">
+          <div class="text-3xl font-bold text-[#14b8a6] mb-1">15+</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Total Projects</div>
+        </div>
+        <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm p-4 rounded-xl border border-purple-500/20 text-center hover:scale-105 transition-transform duration-300">
+          <div class="text-3xl font-bold text-purple-400 mb-1">8+</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Technologies</div>
+        </div>
+        <div class="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm p-4 rounded-xl border border-yellow-500/20 text-center hover:scale-105 transition-transform duration-300">
+          <div class="text-3xl font-bold text-yellow-400 mb-1">100%</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Open Source</div>
+        </div>
+        <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm p-4 rounded-xl border border-blue-500/20 text-center hover:scale-105 transition-transform duration-300">
+          <div class="text-3xl font-bold text-blue-400 mb-1">2025</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Latest Update</div>
+        </div>
+      </div>
+    </div>
   
     <!-- =========================== FILTER BUTTONS =========================== -->
     <div id="filter-buttons" class="flex flex-wrap justify-center gap-3 mb-12" role="group" aria-label="Project filter options">
@@ -614,254 +693,894 @@
     </style>
   
     <!-- Project Cards Grid -->
-    <!-- Project Cards Grid -->
-    <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
     
       <!-- Project 1: Common Algorithms Library -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="java algorithms">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-cogs"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          Common Algorithms Library</h3>
-        <p class="text-gray-300 mb-2">A Java library of classic array-based algorithms built for reusability and performance
-          testing.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Sorting: Selection, Insertion, Bubble</li>
-          <li>Searching: Linear, Binary</li>
-          <li>Shuffling, Reversing, Merging</li>
+        
+        <!-- Featured Badge -->
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            <i class="fas fa-star mr-1"></i>Featured
+          </span>
+        </div>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-[#14b8a6]/20 to-[#22d3ee]/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-[#22d3ee] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Common Algorithms Library
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">A Java library of classic array-based algorithms built for reusability and performance testing.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Sorting: Selection, Insertion, Bubble</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Searching: Linear, Binary</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Shuffling, Reversing, Merging</span>
+              </li>
         </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">Java</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">Algorithms</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Data Structures</span>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-3 py-1 rounded-full text-xs font-semibold border border-[#14b8a6]/30">Java</span>
+            <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-3 py-1 rounded-full text-xs font-semibold border border-[#22d3ee]/30">Algorithms</span>
+            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">Data Structures</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 2: iPhonePhone – Java OOP -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="java">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-mobile-alt"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          iPhonePhone – Java OOP</h3>
-        <p class="text-gray-300 mb-2">Simulates an iPhone using Java classes showcasing encapsulation and method overriding.
-        </p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>App install/uninstall</li>
-          <li>Battery & flashlight control</li>
-          <li>Airplane mode simulation</li>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            iPhonePhone – Java OOP
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Simulates an iPhone using Java classes showcasing encapsulation and method overriding.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>App install/uninstall</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Battery & flashlight control</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Airplane mode simulation</span>
+              </li>
         </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">Java</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">OOP</span>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-3 py-1 rounded-full text-xs font-semibold border border-[#14b8a6]/30">Java</span>
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">OOP</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 3: Numeric Data GUI -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="java">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-calculator"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          Numeric Data GUI</h3>
-        <p class="text-gray-300 mb-2">Interactive GUI to perform math operations using Java Swing.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Prime & square detection</li>
-          <li>Factorial, sum, reverse digits</li>
-          <li>Trigonometric functions</li>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-purple-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Numeric Data GUI
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Interactive GUI to perform math operations using Java Swing.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Prime & square detection</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Factorial, sum, reverse digits</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Trigonometric functions</span>
+              </li>
         </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">Java</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">Swing</span>
-          <span class="bg-[#14b8a6]/10 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">GUI</span>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-3 py-1 rounded-full text-xs font-semibold border border-[#14b8a6]/30">Java</span>
+            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">Swing</span>
+            <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs font-semibold border border-pink-500/30">GUI</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 4: Personal Portfolio Website -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="html css javascript">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-user-circle" aria-hidden="true"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          Personal Portfolio Website</h3>
-        <p class="text-gray-300 mb-2">Responsive personal portfolio built with HTML, Tailwind CSS, and JavaScript.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Showcases projects, skills, timeline, and contact info</li>
-          <li>Uses Tailwind CSS for styling</li>
-          <li>Responsive and interactive design</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">HTML</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">CSS</span>
-          <span class="bg-[#14b8a6]/10 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
+        
+        <!-- New Badge -->
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-gradient-to-r from-green-400 to-emerald-500 text-gray-900 px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-pulse">
+            <i class="fas fa-fire mr-1"></i>You're Here!
+          </span>
         </div>
-        <div class="flex gap-2">
-          <a href="#" class="bg-[#22d3ee] hover:bg-[#06b6d4] text-[#0f172a] px-3 py-1 rounded text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900" aria-label="View live demo of portfolio website">
-            <i class="fas fa-external-link-alt mr-1" aria-hidden="true"></i> Live Demo
-          </a>
-          <a href="https://github.com/dhruvht612/Portfolio" target="_blank" rel="noopener noreferrer" class="bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900" aria-label="View source code on GitHub (opens in new tab)">
-            <i class="fab fa-github mr-1" aria-hidden="true"></i> Code
-          </a>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-[#14b8a6]/20 to-[#06b6d4]/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-[#22d3ee] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Personal Portfolio Website
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Responsive personal portfolio built with HTML, Tailwind CSS, and JavaScript.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Showcases projects, skills & timeline</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Uses Tailwind CSS for styling</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Responsive and interactive design</span>
+              </li>
+        </ul>
+          </div>
+          
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs font-semibold border border-orange-500/30">HTML</span>
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">CSS</span>
+            <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold border border-yellow-500/30">JavaScript</span>
+        </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+            </a>
+            <a href="https://github.com/dhruvht612/Portfolio" target="_blank" rel="noopener noreferrer" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 5: Calculator -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="javascript css">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-square-root-alt" aria-hidden="true"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          Calculator</h3>
-        <p class="text-gray-300 mb-2">A feature-rich calculator supporting trigonometric functions, square roots, and input
-          history.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Clean Tailwind layout</li>
-          <li>Trigonometry & square root support</li>
-          <li>History tracking</li>
-          <li>Keyboard input support</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">CSS</span>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-yellow-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-square-root-alt"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
         </div>
-        <div class="flex gap-2">
-          <a href="#" class="bg-[#22d3ee] hover:bg-[#06b6d4] text-[#0f172a] px-3 py-1 rounded text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:ring-offset-2 focus:ring-offset-gray-900" aria-label="Try the calculator demo">
-            <i class="fas fa-external-link-alt mr-1" aria-hidden="true"></i> Live Demo
-          </a>
-          <a href="#" class="bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900" aria-label="View calculator source code">
-            <i class="fab fa-github mr-1" aria-hidden="true"></i> Code
-          </a>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Calculator
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">A feature-rich calculator supporting trigonometric functions, square roots, and input history.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Clean Tailwind layout</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Trigonometry & square root support</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>History tracking & keyboard input</span>
+              </li>
+        </ul>
+          </div>
+          
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold border border-yellow-500/30">JavaScript</span>
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">CSS</span>
+        </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 6: Contact Manager App -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="html javascript">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-address-book"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          Contact Manager App</h3>
-        <p class="text-gray-300 mb-2">A CRUD-based web app to manage contacts—create, edit, delete, and search.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Local storage or backend support</li>
-          <li>Responsive UI with form validation</li>
-          <li>Search and filter functionality</li>
-          <li>Clean and intuitive interface</li>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-teal-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-address-book"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Contact Manager App
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">A CRUD-based web app to manage contacts—create, edit, delete, and search.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Local storage or backend support</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Responsive UI with form validation</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Search and filter functionality</span>
+              </li>
         </ul>
-        <div class="flex flex-wrap gap-2 mb-2">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">HTML</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">JavaScript</span>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs font-semibold border border-orange-500/30">HTML</span>
+            <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold border border-yellow-500/30">JavaScript</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 7: Airline Reservation System -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="python oop console">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-plane"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          Airline Reservation System</h3>
-        <p class="text-gray-300 mb-2">Console-based airline reservation system in Python using OOP principles.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Book & cancel tickets with automatic seat assignment</li>
-          <li>Waitlist management</li>
-          <li>Print formatted boarding passes</li>
-          <li>Track available & occupied seats</li>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-plane"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Airline Reservation System
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Console-based airline reservation system in Python using OOP principles.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Book & cancel tickets with seat assignment</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Waitlist management</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Print formatted boarding passes</span>
+              </li>
         </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">Python</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">OOP</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Console App</span>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">Python</span>
+            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">OOP</span>
+            <span class="bg-gray-600/40 text-gray-300 px-3 py-1 rounded-full text-xs font-semibold border border-gray-500/30">Console App</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 8: File Compression Tool -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="java algorithms compression">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-file-archive"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          File Compression Tool (Huffman Coding)</h3>
-        <p class="text-gray-300 mb-2">Java-based file compression & decompression tool using Huffman Coding.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Compress & decompress text files</li>
-          <li>Implements Huffman Coding algorithm</li>
-          <li>Uses binary trees, hash maps & priority queues</li>
-          <li>OOP with clear class structure</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">Java</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">Algorithms</span>
-          <span class="bg-[#14b8a6]/10 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">Huffman Coding</span>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-green-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-file-archive"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            File Compression Tool (Huffman)
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Java-based file compression & decompression tool using Huffman Coding.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Compress & decompress text files</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Implements Huffman Coding algorithm</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Binary trees & priority queues</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-3 py-1 rounded-full text-xs font-semibold border border-[#14b8a6]/30">Java</span>
+            <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold border border-green-500/30">Algorithms</span>
+            <span class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-500/30">Huffman</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 9: Computer Science Quiz -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="python quiz console">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-question-circle"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          Computer Science Quiz</h3>
-        <p class="text-gray-300 mb-2">Interactive multiple-choice quiz in Python testing core CS knowledge.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>5 multiple-choice questions</li>
-          <li>Instant feedback after each answer</li>
-          <li>Final score with performance evaluation</li>
-          <li>Lightweight, console-based, no extra libraries</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">Python</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">Quiz App</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Console</span>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Computer Science Quiz
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Interactive multiple-choice quiz in Python testing core CS knowledge.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>5 multiple-choice questions</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Instant feedback after each answer</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Final score with performance evaluation</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">Python</span>
+            <span class="bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full text-xs font-semibold border border-indigo-500/30">Quiz App</span>
+            <span class="bg-gray-600/40 text-gray-300 px-3 py-1 rounded-full text-xs font-semibold border border-gray-500/30">Console</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 10: Police Strobe-Style LED Flasher -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="electronics circuit">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-lightbulb"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          Police Strobe-Style LED Flasher Circuit</h3>
-        <p class="text-gray-300 mb-2">Electronics project using dual 555 timers to simulate alternating red & blue police
-          strobe lights.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Dual 555 astable multivibrator configuration</li>
-          <li>Alternating red/blue LED strobe effect</li>
-          <li>Hands-on intro to timing control & multivibrators</li>
-          <li>Applications: demos, props, traffic simulations</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">Electronics</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">555 Timer</span>
-          <span class="bg-[#14b8a6]/10 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">LED Control</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Circuit Design</span>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-red-500/20 to-blue-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-red-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Police Strobe LED Circuit
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Electronics project using dual 555 timers to simulate alternating red & blue police strobe lights.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Dual 555 astable multivibrator</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Alternating red/blue LED strobe</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Timing control & multivibrators</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-xs font-semibold border border-red-500/30">Electronics</span>
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">555 Timer</span>
+            <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-semibold border border-yellow-500/30">LED Control</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>View Project
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
         </div>
       </div>
     
       <!-- Project 11: Sumo Bot Development & Competition -->
       <div
-        class="project-card relative bg-[#111827] border border-[#1f2937] rounded-2xl p-6 shadow-lg transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 hover:-translate-y-1"
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
         data-category="robotics embedded">
-        <div class="mb-2 text-3xl text-[#22d3ee]"><i class="fas fa-robot"></i></div>
-        <h3 class="text-xl font-semibold mb-2 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent">
-          Sumo Bot Development & Competition</h3>
-        <p class="text-gray-300 mb-2">Autonomous sumo robot built to detect, track, and push opponents using strategic
-          programming and robust mechanical design.</p>
-        <ul class="list-disc ml-5 text-sm text-gray-400 mb-4">
-          <li>Autonomous opponent detection & tracking</li>
-          <li>Embedded programming with Arduino (C++/Python)</li>
-          <li>Sensor integration & decision-making logic</li>
-          <li>Mechanical design for durability & performance</li>
-        </ul>
-        <div class="flex flex-wrap gap-2">
-          <span class="bg-[#14b8a6]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">Robotics</span>
-          <span class="bg-[#22d3ee]/20 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">Arduino</span>
-          <span class="bg-[#14b8a6]/10 text-[#22d3ee] px-2 py-1 rounded text-xs font-semibold">C++</span>
-          <span class="bg-[#22d3ee]/20 text-[#14b8a6] px-2 py-1 rounded text-xs font-semibold">Python</span>
-          <span class="bg-gray-700 text-gray-200 px-2 py-1 rounded text-xs font-semibold">Embedded Systems</span>
+        
+        <!-- Hot Badge -->
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-gradient-to-r from-red-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            <i class="fas fa-trophy mr-1"></i>Competition
+          </span>
+        </div>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-orange-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Sumo Bot Competition
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Autonomous sumo robot built to detect, track, and push opponents using strategic programming.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Autonomous opponent detection</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Arduino embedded programming</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Sensor integration & decision logic</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs font-semibold border border-orange-500/30">Robotics</span>
+            <span class="bg-teal-500/20 text-teal-400 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Arduino</span>
+            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">C++</span>
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">Python</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
+              <i class="fas fa-external-link-alt mr-2"></i>View Project
+            </a>
+            <a href="#" class="flex-1 bg-gray-700/50 hover:bg-gray-600 text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center border border-gray-600 hover:border-gray-500">
+              <i class="fab fa-github mr-2"></i>Code
+            </a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Project 12: C++ Game Engine (Placeholder) -->
+      <div
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+        data-category="c++">
+        
+        <!-- Coming Soon Badge -->
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            <i class="fas fa-clock mr-1"></i>Coming Soon
+          </span>
+        </div>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-blue-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            2D Game Engine in C++
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Custom 2D game engine built from scratch in C++ with SDL2, featuring physics, collision detection, and sprite rendering.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Planned Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Custom physics engine & collision system</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Sprite rendering & animation system</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Entity component system (ECS)</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">C++</span>
+            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">SDL2</span>
+            <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs font-semibold border border-pink-500/30">Game Dev</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <button disabled class="flex-1 bg-gray-600/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed opacity-60">
+              <i class="fas fa-clock mr-2"></i>In Development
+            </button>
+            <button disabled class="flex-1 bg-gray-700/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed border border-gray-600 opacity-60">
+              <i class="fab fa-github mr-2"></i>Coming Soon
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 13: Arduino Smart Home System (Placeholder) -->
+      <div
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+        data-category="arduino c++">
+        
+        <!-- Coming Soon Badge -->
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            <i class="fas fa-hammer mr-1"></i>In Progress
+          </span>
+        </div>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-cyan-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Arduino Smart Home System
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">IoT-based smart home automation system using Arduino, featuring remote control via mobile app and voice commands.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Planned Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Temperature & humidity monitoring</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Automated lighting control</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Wi-Fi & mobile app integration</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold border border-cyan-500/30">Arduino</span>
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">IoT</span>
+            <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold border border-green-500/30">ESP8266</span>
+            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">C++</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <button disabled class="flex-1 bg-gray-600/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed opacity-60">
+              <i class="fas fa-tools mr-2"></i>In Development
+            </button>
+            <button disabled class="flex-1 bg-gray-700/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed border border-gray-600 opacity-60">
+              <i class="fab fa-github mr-2"></i>Coming Soon
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 14: Arduino Weather Station (Placeholder) -->
+      <div
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+        data-category="arduino circuit c++">
+        
+        <!-- Coming Soon Badge -->
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            <i class="fas fa-lightbulb mr-1"></i>Planned
+          </span>
+        </div>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-green-500/20 to-teal-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-green-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Arduino Weather Station
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Multi-sensor weather monitoring station with Arduino, displaying real-time data on LCD and cloud dashboard.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Planned Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>DHT22 temperature & humidity sensor</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>BMP180 pressure & altitude tracking</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>LCD display & cloud data logging</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-teal-500/20 text-teal-400 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Arduino</span>
+            <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold border border-green-500/30">Sensors</span>
+            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">C++</span>
+            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold border border-cyan-500/30">IoT</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <button disabled class="flex-1 bg-gray-600/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed opacity-60">
+              <i class="fas fa-hourglass-half mr-2"></i>Planning Phase
+            </button>
+            <button disabled class="flex-1 bg-gray-700/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed border border-gray-600 opacity-60">
+              <i class="fab fa-github mr-2"></i>Coming Soon
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 15: C++ Data Structures Library (Placeholder) -->
+      <div
+        class="project-card group relative bg-gradient-to-br from-[#111827] to-[#1a1f35] border border-[#1f2937] rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#14b8a6] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] hover:scale-[1.03] hover:-translate-y-2"
+        data-category="c++">
+        
+        <!-- Coming Soon Badge -->
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            <i class="fas fa-code mr-1"></i>Concept
+          </span>
+        </div>
+        
+        <!-- Project Icon/Thumbnail -->
+        <div class="relative h-40 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center overflow-hidden">
+          <div class="text-6xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] bg-clip-text text-transparent group-hover:from-[#22d3ee] group-hover:to-[#14b8a6] transition-all duration-300">
+            Advanced Data Structures Library
+          </h3>
+          <p class="text-gray-300 mb-4 text-sm leading-relaxed">Custom C++ library implementing advanced data structures with template support and STL-like interface.</p>
+          
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Planned Features</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>AVL Trees, Red-Black Trees, B-Trees</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Hash tables with custom collision handling</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
+                <span>Graph algorithms & advanced heaps</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full text-xs font-semibold border border-indigo-500/30">C++</span>
+            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">Templates</span>
+            <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs font-semibold border border-pink-500/30">Data Structures</span>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex gap-2 pt-4 border-t border-gray-700/50">
+            <button disabled class="flex-1 bg-gray-600/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed opacity-60">
+              <i class="fas fa-pencil-ruler mr-2"></i>Design Phase
+            </button>
+            <button disabled class="flex-1 bg-gray-700/50 text-gray-400 px-4 py-2.5 rounded-lg text-xs font-bold cursor-not-allowed border border-gray-600 opacity-60">
+              <i class="fab fa-github mr-2"></i>Coming Soon
+            </button>
+          </div>
         </div>
       </div>
     
@@ -1644,5 +2363,53 @@
       </div>
     </div>
   </div>
+  
+  <!-- Enhanced Projects Section Animation Script -->
+  <script>
+    // Intersection Observer for project cards animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const projectCards = document.querySelectorAll('.project-card');
+      
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            // Optional: stop observing after animation
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all project cards
+      projectCards.forEach(card => {
+        observer.observe(card);
+      });
+      
+      // Animate project stats on scroll
+      const projectStats = document.querySelectorAll('#projects .text-3xl');
+      if (projectStats.length > 0) {
+        const statsObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.transform = 'scale(1.1)';
+              setTimeout(() => {
+                entry.target.style.transform = 'scale(1)';
+              }, 300);
+            }
+          });
+        }, { threshold: 0.5 });
+        
+        projectStats.forEach(stat => {
+          statsObserver.observe(stat);
+        });
+      }
+    });
+  </script>
 </body>
 </html>

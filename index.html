@@ -70,9 +70,34 @@
   
   <script src="script.js" defer></script>
   
-  <!-- Custom CSS for Projects Section -->
+  <!-- Custom CSS for Portfolio Theme -->
   <style>
-    /* Gradient animation for project heading */
+    /* ========== COMMON GRADIENT THEME ========== */
+    :root {
+      --gradient-primary: linear-gradient(135deg, #14b8a6 0%, #22d3ee 50%, #06b6d4 100%);
+      --gradient-primary-hover: linear-gradient(135deg, #0d9488 0%, #06b6d4 50%, #0891b2 100%);
+      --gradient-text: linear-gradient(to right, #14b8a6, #22d3ee, #06b6d4);
+      --glow-color: rgba(20, 184, 166, 0.5);
+      --glow-color-strong: rgba(20, 184, 166, 0.7);
+    }
+    
+    /* Common gradient backgrounds */
+    .gradient-bg {
+      background: var(--gradient-primary);
+    }
+    
+    .gradient-text {
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .gradient-border {
+      border-image: var(--gradient-primary) 1;
+    }
+    
+    /* Gradient animation for headings */
     @keyframes gradient {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -80,8 +105,21 @@
     }
     
     .animate-gradient {
-      background-size: 200% auto;
-      animation: gradient 3s ease infinite;
+      background: linear-gradient(90deg, #14b8a6, #22d3ee, #06b6d4, #14b8a6);
+      background-size: 300% auto;
+      animation: gradient 4s ease infinite;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Common glow effect */
+    .glow-effect:hover {
+      box-shadow: 0 0 30px var(--glow-color);
+    }
+    
+    .glow-effect-strong:hover {
+      box-shadow: 0 0 40px var(--glow-color-strong);
     }
     
     /* Project card entrance animation */
@@ -302,7 +340,7 @@
       
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 id="about-heading" class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text mb-4">
+        <h2 id="about-heading" class="text-4xl md:text-5xl font-extrabold animate-gradient mb-4">
           About Me
         </h2>
         <p class="text-gray-400 text-lg">Get to know me better</p>
@@ -591,14 +629,14 @@
       <div class="text-center mb-16">
         <div class="inline-flex items-center gap-3 mb-4">
           <div class="h-1 w-12 bg-gradient-to-r from-transparent to-[#14b8a6] rounded-full"></div>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#22d3ee] animate-pulse" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#14b8a6] animate-pulse" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-          </svg>
+      </svg>
           <div class="h-1 w-12 bg-gradient-to-l from-transparent to-[#22d3ee] rounded-full"></div>
         </div>
         <h2 id="projects-heading"
-          class="text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-[#14b8a6] via-[#22d3ee] to-[#14b8a6] bg-clip-text text-transparent animate-gradient">
+          class="text-5xl md:text-6xl font-extrabold mb-4 animate-gradient">
           Featured Projects
         </h2>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
@@ -1133,7 +1171,7 @@
                 <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
                 <span>Binary trees & priority queues</span>
               </li>
-            </ul>
+        </ul>
           </div>
           
           <div class="flex flex-wrap gap-2 mb-4">
@@ -1189,7 +1227,7 @@
                 <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
                 <span>Final score with performance evaluation</span>
               </li>
-            </ul>
+        </ul>
           </div>
           
           <div class="flex flex-wrap gap-2 mb-4">
@@ -1245,7 +1283,7 @@
                 <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
                 <span>Timing control & multivibrators</span>
               </li>
-            </ul>
+        </ul>
           </div>
           
           <div class="flex flex-wrap gap-2 mb-4">
@@ -1308,16 +1346,16 @@
                 <i class="fas fa-check-circle text-[#14b8a6] mr-2 mt-1 text-xs"></i>
                 <span>Sensor integration & decision logic</span>
               </li>
-            </ul>
-          </div>
+        </ul>
+        </div>
           
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs font-semibold border border-orange-500/30">Robotics</span>
             <span class="bg-teal-500/20 text-teal-400 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Arduino</span>
             <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold border border-purple-500/30">C++</span>
             <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold border border-blue-500/30">Python</span>
-          </div>
-          
+      </div>
+    
           <!-- Action Buttons -->
           <div class="flex gap-2 pt-4 border-t border-gray-700/50">
             <a href="#" class="flex-1 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] hover:from-[#22d3ee] hover:to-[#14b8a6] text-white px-4 py-2.5 rounded-lg text-xs font-bold transition-all duration-300 text-center shadow-lg hover:shadow-[0_0_20px_rgba(20,184,166,0.5)] transform hover:scale-105">
@@ -1590,165 +1628,526 @@
   </section>
 
   <!-- =========================== BEYOND THE CLASSROOM SECTION =========================== -->
-  <section id="beyond" class="py-20 px-6 bg-gray-900 text-white">
-    <div class="max-w-6xl mx-auto">
+  <section id="beyond" class="py-20 px-6 bg-gradient-to-b from-gray-900 via-[#0f172a] to-gray-900 text-white relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-20 left-10 w-64 h-64 bg-[#14b8a6] rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-80 h-80 bg-[#22d3ee] rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="max-w-6xl mx-auto relative z-10">
   
       <!-- Section Heading -->
-      <h2
-        class="text-4xl font-extrabold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-400 tracking-wide flex items-center justify-center gap-4">
-        <i class="fas fa-bullseye text-red-400 text-3xl"></i> Beyond the Classroom
-      </h2>
-  
-      <!-- Intro Paragraph -->
-      <p class="text-gray-300 text-center max-w-3xl mx-auto mb-14 leading-relaxed">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-3 mb-4">
+          <div class="h-1 w-12 bg-gradient-to-r from-transparent to-[#14b8a6] rounded-full"></div>
+          <i class="fas fa-bullseye text-5xl text-[#14b8a6] animate-pulse"></i>
+          <div class="h-1 w-12 bg-gradient-to-l from-transparent to-[#22d3ee] rounded-full"></div>
+        </div>
+        <h2 class="text-5xl md:text-6xl font-extrabold mb-4 animate-gradient">
+          Beyond the Classroom
+        </h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
         Outside of academics, I actively participate in student organizations and leadership initiatives that help me grow
         as a communicator, collaborator, and problem solver.
-        I’m passionate about building communities, leading impactful events, and contributing to both the Ontario Tech and
-        broader tech ecosystem.
-      </p>
+        </p>
+      </div>
+
+      <!-- Impact Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <div class="bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-sm p-6 rounded-xl border border-red-500/20 text-center hover:scale-105 transition-transform duration-300">
+          <div class="text-4xl font-bold text-red-400 mb-2">5+</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Leadership Roles</div>
+        </div>
+        <div class="bg-gradient-to-br from-teal-500/10 to-cyan-500/10 backdrop-blur-sm p-6 rounded-xl border border-teal-500/20 text-center hover:scale-105 transition-transform duration-300">
+          <div class="text-4xl font-bold text-teal-400 mb-2">500+</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Students Reached</div>
+        </div>
+        <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm p-6 rounded-xl border border-purple-500/20 text-center hover:scale-105 transition-transform duration-300">
+          <div class="text-4xl font-bold text-purple-400 mb-2">10+</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Events Organized</div>
+        </div>
+        <div class="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm p-6 rounded-xl border border-yellow-500/20 text-center hover:scale-105 transition-transform duration-300">
+          <div class="text-4xl font-bold text-yellow-400 mb-2">100%</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wide">Passion Driven</div>
+        </div>
+      </div>
   
       <!-- Goals Section -->
-      <div class="grid gap-10 md:grid-cols-2 mb-20">
-        <!-- Short-Term Goals -->
-        <div
-          class="bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-transform hover:scale-105 duration-300">
-          <h3 class="text-red-300 text-2xl font-semibold mb-4 flex items-center gap-2">
-            <i class="fas fa-rocket text-red-400"></i> Short-Term Goals
-          </h3>
-          <ul class="list-disc list-inside text-gray-400 space-y-3 text-base leading-relaxed ml-2">
-            <li>Build and contribute to personal projects in web and app development.</li>
-            <li>Stay current with industry trends and emerging technologies.</li>
-            <li>Secure internship experience in software or research by 2026.</li>
-            <li>Continue developing skills in frameworks, design, and data handling.</li>
+      <div class="mb-20">
+        <h3 class="text-3xl font-bold text-center mb-10 flex items-center justify-center gap-3">
+          <i class="fas fa-target text-[#14b8a6]"></i>
+          <span class="animate-gradient">My Goals & Vision</span>
+        </h3>
+        
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- Short-Term Goals -->
+          <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-red-500/20 shadow-xl hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2">
+            <!-- Badge -->
+            <div class="absolute -top-4 left-8">
+              <span class="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                2025-2026
+              </span>
+            </div>
+            
+            <!-- Icon -->
+            <div class="flex items-center gap-4 mb-6 mt-2">
+              <div class="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center border border-red-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-rocket text-3xl text-red-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white">Short-Term Goals</h3>
+            </div>
+            
+            <!-- Goals List -->
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <div class="mt-1.5 w-2 h-2 bg-red-400 rounded-full flex-shrink-0"></div>
+                <span>Build and contribute to personal projects in web and app development</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <div class="mt-1.5 w-2 h-2 bg-red-400 rounded-full flex-shrink-0"></div>
+                <span>Stay current with industry trends and emerging technologies</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <div class="mt-1.5 w-2 h-2 bg-red-400 rounded-full flex-shrink-0"></div>
+                <span>Secure internship experience in software or research by 2026</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <div class="mt-1.5 w-2 h-2 bg-red-400 rounded-full flex-shrink-0"></div>
+                <span>Continue developing skills in frameworks, design, and data handling</span>
+              </li>
           </ul>
+            
+            <!-- Progress Bar -->
+            <div class="mt-6 pt-6 border-t border-gray-700">
+              <div class="flex justify-between text-sm text-gray-400 mb-2">
+                <span>Progress Tracker</span>
+                <span class="text-red-400 font-semibold">In Progress</span>
+              </div>
+              <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-red-500 to-orange-500 rounded-full animate-pulse" style="width: 45%"></div>
+              </div>
+            </div>
         </div>
   
         <!-- Long-Term Goals -->
-        <div
-          class="bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-transform hover:scale-105 duration-300">
-          <h3 class="text-pink-300 text-2xl font-semibold mb-4 flex items-center gap-2">
-            <i class="fas fa-graduation-cap text-pink-400"></i> Long-Term Goals
-          </h3>
-          <ul class="list-disc list-inside text-gray-400 space-y-3 text-base leading-relaxed ml-2">
-            <li>Contribute to innovative research and impactful real-world solutions.</li>
-            <li>Pursue advanced education or leadership roles in technology.</li>
-            <li>Mentor and inspire future computer scientists and developers.</li>
-            <li>Collaborate on projects that bridge technology and social impact.</li>
+          <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-pink-500/20 shadow-xl hover:shadow-[0_0_30px_rgba(236,72,153,0.3)] transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2">
+            <!-- Badge -->
+            <div class="absolute -top-4 left-8">
+              <span class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                2026-2030
+              </span>
+            </div>
+            
+            <!-- Icon -->
+            <div class="flex items-center gap-4 mb-6 mt-2">
+              <div class="w-16 h-16 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-xl flex items-center justify-center border border-pink-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-graduation-cap text-3xl text-pink-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white">Long-Term Goals</h3>
+            </div>
+            
+            <!-- Goals List -->
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <div class="mt-1.5 w-2 h-2 bg-pink-400 rounded-full flex-shrink-0"></div>
+                <span>Contribute to innovative research and impactful real-world solutions</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <div class="mt-1.5 w-2 h-2 bg-pink-400 rounded-full flex-shrink-0"></div>
+                <span>Pursue advanced education or leadership roles in technology</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <div class="mt-1.5 w-2 h-2 bg-pink-400 rounded-full flex-shrink-0"></div>
+                <span>Mentor and inspire future computer scientists and developers</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <div class="mt-1.5 w-2 h-2 bg-pink-400 rounded-full flex-shrink-0"></div>
+                <span>Collaborate on projects that bridge technology and social impact</span>
+              </li>
           </ul>
+            
+            <!-- Vision Badge -->
+            <div class="mt-6 pt-6 border-t border-gray-700">
+              <div class="flex items-center gap-2 text-sm">
+                <i class="fas fa-star text-yellow-400"></i>
+                <span class="text-gray-400">Vision: <span class="text-pink-400 font-semibold">Future Tech Leader</span></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
   
       <!-- Volunteering & Community Involvement -->
       <div>
-        <h3
-          class="text-3xl font-extrabold text-center mb-12 text-teal-400 tracking-wide flex items-center justify-center gap-3">
-          <i class="fas fa-hands-helping text-red-500"></i> Volunteering & Leadership
-        </h3>
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center gap-3 mb-4">
+            <i class="fas fa-hands-helping text-5xl text-teal-400 animate-pulse"></i>
+          </div>
+          <h3 class="text-4xl font-extrabold mb-4 animate-gradient">
+            Volunteering & Leadership
+          </h3>
+          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+            Making a difference through active community involvement and student leadership
+          </p>
+        </div>
   
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
   
           <!-- Ontario Tech Media Pass - Events Executive -->
-          <div
-            class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-transform hover:scale-105 duration-300 flex flex-col items-center text-center">
-            <div class="mb-3 text-4xl text-blue-400"><i class="fas fa-camera"></i></div>
+          <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 shadow-xl border border-blue-500/20 hover:border-blue-400/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2">
+            <!-- Active Badge -->
+            <div class="absolute -top-3 -right-3">
+              <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                Active
+              </span>
+            </div>
+            
+            <!-- Icon with background -->
+            <div class="relative mb-4">
+              <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl flex items-center justify-center border border-blue-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-camera text-4xl text-blue-400"></i>
+              </div>
+            </div>
+            
+            <!-- Logo -->
             <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
-              class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-            <h3 class="text-xl font-bold text-white mb-1">Events Executive — Ontario Tech Media Pass</h3>
-            <p class="text-gray-400 italic mb-1">Ontario Tech University — Sep 2025 · Present</p>
-            <ul class="list-disc list-inside text-gray-400 text-left text-sm">
-              <li>Collaborate with a media and events team to organize on-campus activities.</li>
-              <li>Coordinate event logistics, promotion, and student engagement.</li>
-              <li>Support photography, videography, and social media coverage.</li>
+              class="w-16 h-16 mx-auto rounded-lg object-contain border-2 border-gray-700 bg-white p-2 mb-4 shadow-lg" loading="lazy" />
+            
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+              Events Executive
+            </h3>
+            <p class="text-blue-400 font-semibold text-sm mb-1">Ontario Tech Media Pass</p>
+            <p class="text-gray-500 text-xs mb-4 flex items-center justify-center gap-1">
+              <i class="fas fa-calendar-alt"></i>
+              Sep 2025 - Present
+            </p>
+            
+            <!-- Divider -->
+            <div class="w-16 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mb-4"></div>
+            
+            <!-- Responsibilities -->
+            <ul class="text-left text-sm text-gray-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-blue-400 mt-1 flex-shrink-0"></i>
+                <span>Organize on-campus activities and events</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-blue-400 mt-1 flex-shrink-0"></i>
+                <span>Coordinate logistics and promotions</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-blue-400 mt-1 flex-shrink-0"></i>
+                <span>Manage media and social coverage</span>
+              </li>
             </ul>
           </div>
   
           <!-- VP of Events - GDG Ontario Tech -->
-          <div
-            class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-transform hover:scale-105 duration-300 flex flex-col items-center text-center">
-            <div class="mb-3 text-4xl text-yellow-400"><i class="fab fa-google"></i></div>
+          <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 shadow-xl border border-yellow-500/20 hover:border-yellow-400/50 hover:shadow-[0_0_30px_rgba(234,179,8,0.3)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2">
+            <!-- Active Badge -->
+            <div class="absolute -top-3 -right-3">
+              <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                Active
+              </span>
+            </div>
+            
+            <!-- Icon with background -->
+            <div class="relative mb-4">
+              <div class="w-20 h-20 mx-auto bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-2xl flex items-center justify-center border border-yellow-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="fab fa-google text-4xl text-yellow-400"></i>
+              </div>
+            </div>
+            
+            <!-- Logo -->
             <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
-              class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-            <h3 class="text-xl font-bold text-white mb-1">Vice President of Events — GDG Ontario Tech</h3>
-            <p class="text-gray-400 italic mb-1">Ontario Tech University — Jun 2025 · Present</p>
-            <ul class="list-disc list-inside text-gray-400 text-left text-sm">
-              <li>Organize workshops and hackathons on AI, web dev, and cloud computing.</li>
-              <li>Collaborate with industry professionals and student developers.</li>
-              <li>Promote community engagement and inclusive tech learning opportunities.</li>
+              class="w-16 h-16 mx-auto rounded-lg object-contain border-2 border-gray-700 bg-white p-2 mb-4 shadow-lg" loading="lazy" />
+            
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">
+              Vice President of Events
+            </h3>
+            <p class="text-yellow-400 font-semibold text-sm mb-1">GDG Ontario Tech</p>
+            <p class="text-gray-500 text-xs mb-4 flex items-center justify-center gap-1">
+              <i class="fas fa-calendar-alt"></i>
+              Jun 2025 - Present
+            </p>
+            
+            <!-- Divider -->
+            <div class="w-16 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mx-auto mb-4"></div>
+            
+            <!-- Responsibilities -->
+            <ul class="text-left text-sm text-gray-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 flex-shrink-0"></i>
+                <span>Organize AI and tech workshops</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 flex-shrink-0"></i>
+                <span>Collaborate with industry professionals</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 flex-shrink-0"></i>
+                <span>Promote inclusive tech learning</span>
+              </li>
             </ul>
           </div>
   
           <!-- Indian Student Association - External Affairs Executive -->
-          <div
-            class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-transform hover:scale-105 duration-300 flex flex-col items-center text-center">
-            <div class="mb-3 text-4xl text-orange-400"><i class="fas fa-users"></i></div>
+          <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 shadow-xl border border-orange-500/20 hover:border-orange-400/50 hover:shadow-[0_0_30px_rgba(251,146,60,0.3)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2">
+            <!-- Active Badge -->
+            <div class="absolute -top-3 -right-3">
+              <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                Active
+              </span>
+            </div>
+            
+            <!-- Icon -->
+            <div class="relative mb-4">
+              <div class="w-20 h-20 mx-auto bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-2xl flex items-center justify-center border border-orange-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-users text-4xl text-orange-400"></i>
+              </div>
+            </div>
+            
+            <!-- Logo -->
             <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
-              class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-            <h3 class="text-xl font-bold text-white mb-1">External Affairs Executive — Indian Student Association</h3>
-            <p class="text-gray-400 italic mb-1">Ontario Tech University — Mar 2025 · Present</p>
-            <ul class="list-disc list-inside text-gray-400 text-left text-sm">
-              <li>Represent the association in cross-cultural collaborations and events.</li>
-              <li>Coordinate partnerships and external communications for ISA activities.</li>
-              <li>Contribute to promoting cultural inclusivity and student engagement.</li>
+              class="w-16 h-16 mx-auto rounded-lg object-contain border-2 border-gray-700 bg-white p-2 mb-4 shadow-lg" loading="lazy" />
+            
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
+              External Affairs Executive
+            </h3>
+            <p class="text-orange-400 font-semibold text-sm mb-1">Indian Student Association</p>
+            <p class="text-gray-500 text-xs mb-4 flex items-center justify-center gap-1">
+              <i class="fas fa-calendar-alt"></i>
+              Mar 2025 - Present
+            </p>
+            
+            <!-- Divider -->
+            <div class="w-16 h-1 bg-gradient-to-r from-transparent via-orange-400 to-transparent mx-auto mb-4"></div>
+            
+            <!-- Responsibilities -->
+            <ul class="text-left text-sm text-gray-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-orange-400 mt-1 flex-shrink-0"></i>
+                <span>Cross-cultural collaborations</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-orange-400 mt-1 flex-shrink-0"></i>
+                <span>Partnership coordination</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-orange-400 mt-1 flex-shrink-0"></i>
+                <span>Promote cultural inclusivity</span>
+              </li>
             </ul>
           </div>
   
           <!-- University Representative - Atrangi Eventz -->
-          <div
-            class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-transform hover:scale-105 duration-300 flex flex-col items-center text-center">
-            <div class="mb-3 text-4xl text-pink-400"><i class="fas fa-music"></i></div>
+          <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 shadow-xl border border-pink-500/20 hover:border-pink-400/50 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2">
+            <!-- Active Badge -->
+            <div class="absolute -top-3 -right-3">
+              <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                Active
+              </span>
+            </div>
+            
+            <!-- Icon -->
+            <div class="relative mb-4">
+              <div class="w-20 h-20 mx-auto bg-gradient-to-br from-pink-500/20 to-pink-600/20 rounded-2xl flex items-center justify-center border border-pink-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-music text-4xl text-pink-400"></i>
+              </div>
+            </div>
+            
+            <!-- Logo -->
             <img src="atrangi_logo.png" alt="Atrangi Eventz Logo"
-              class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-            <h3 class="text-xl font-bold text-white mb-1">University Representative — Atrangi Eventz</h3>
-            <p class="text-gray-400 italic mb-1">Brampton, Ontario · Sep 2025 · Present</p>
-            <ul class="list-disc list-inside text-gray-400 text-left text-sm">
-              <li>Promote cultural and social events within the university community.</li>
-              <li>Lead student engagement and marketing initiatives.</li>
-              <li>Assist in event coordination and creative campaigns.</li>
+              class="w-16 h-16 mx-auto rounded-lg object-contain border-2 border-gray-700 bg-white p-2 mb-4 shadow-lg" loading="lazy" />
+            
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">
+              University Representative
+            </h3>
+            <p class="text-pink-400 font-semibold text-sm mb-1">Atrangi Eventz</p>
+            <p class="text-gray-500 text-xs mb-4 flex items-center justify-center gap-1">
+              <i class="fas fa-calendar-alt"></i>
+              Sep 2025 - Present
+            </p>
+            
+            <!-- Divider -->
+            <div class="w-16 h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent mx-auto mb-4"></div>
+            
+            <!-- Responsibilities -->
+            <ul class="text-left text-sm text-gray-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-pink-400 mt-1 flex-shrink-0"></i>
+                <span>Promote cultural events</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-pink-400 mt-1 flex-shrink-0"></i>
+                <span>Lead engagement initiatives</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-pink-400 mt-1 flex-shrink-0"></i>
+                <span>Creative campaign coordination</span>
+              </li>
             </ul>
           </div>
   
           <!-- OTSUFest Influencer -->
-          <div
-            class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-transform hover:scale-105 duration-300 flex flex-col items-center text-center">
-            <div class="mb-3 text-4xl text-purple-400"><i class="fas fa-bullhorn"></i></div>
+          <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 shadow-xl border border-purple-500/20 hover:border-purple-400/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2">
+            <!-- Active Badge -->
+            <div class="absolute -top-3 -right-3">
+              <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                Active
+              </span>
+            </div>
+            
+            <!-- Icon -->
+            <div class="relative mb-4">
+              <div class="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center border border-purple-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-bullhorn text-4xl text-purple-400"></i>
+              </div>
+            </div>
+            
+            <!-- Logo -->
             <img src="ontariotechu_logo.png" alt="Ontario Tech Student Union Logo"
-              class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-            <h3 class="text-xl font-bold text-white mb-1">OTSUFest Influencer</h3>
-            <p class="text-gray-400 italic mb-1">Ontario Tech Student Union — Aug 2025 · Present</p>
-            <ul class="list-disc list-inside text-gray-400 text-left text-sm">
-              <li>Promote OTSUFest through campus outreach and digital engagement.</li>
-              <li>Encourage student participation through social media and networking.</li>
-              <li>Support event visibility and community engagement efforts.</li>
+              class="w-16 h-16 mx-auto rounded-lg object-contain border-2 border-gray-700 bg-white p-2 mb-4 shadow-lg" loading="lazy" />
+            
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+              OTSUFest Influencer
+            </h3>
+            <p class="text-purple-400 font-semibold text-sm mb-1">Ontario Tech Student Union</p>
+            <p class="text-gray-500 text-xs mb-4 flex items-center justify-center gap-1">
+              <i class="fas fa-calendar-alt"></i>
+              Aug 2025 - Present
+            </p>
+            
+            <!-- Divider -->
+            <div class="w-16 h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent mx-auto mb-4"></div>
+            
+            <!-- Responsibilities -->
+            <ul class="text-left text-sm text-gray-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-purple-400 mt-1 flex-shrink-0"></i>
+                <span>Campus outreach & promotion</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-purple-400 mt-1 flex-shrink-0"></i>
+                <span>Social media engagement</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-purple-400 mt-1 flex-shrink-0"></i>
+                <span>Community visibility support</span>
+              </li>
             </ul>
           </div>
   
           <!-- HackHive Participant -->
-          <div
-            class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-transform hover:scale-105 duration-300 flex flex-col items-center text-center">
-            <div class="mb-3 text-4xl text-yellow-400"><i class="fas fa-lightbulb"></i></div>
+          <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 shadow-xl border border-teal-500/20 hover:border-teal-400/50 hover:shadow-[0_0_30px_rgba(20,184,166,0.3)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2">
+            <!-- Completed Badge -->
+            <div class="absolute -top-3 -right-3">
+              <span class="bg-gradient-to-r from-gray-600 to-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                <i class="fas fa-check"></i>
+                Completed
+              </span>
+            </div>
+            
+            <!-- Icon -->
+            <div class="relative mb-4">
+              <div class="w-20 h-20 mx-auto bg-gradient-to-br from-teal-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center border border-teal-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-lightbulb text-4xl text-teal-400"></i>
+              </div>
+            </div>
+            
+            <!-- Logo -->
             <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
-              class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-            <h3 class="text-xl font-bold text-white mb-1">HackHive Participant</h3>
-            <p class="text-gray-400 italic mb-1">Ontario Tech University — Feb 2025</p>
-            <ul class="list-disc list-inside text-gray-400 text-left text-sm">
-              <li>Developed an AI-based drone system for precision agriculture.</li>
-              <li>Collaborated on real-time monitoring and analytics solutions.</li>
-              <li>Enhanced teamwork and creative problem-solving skills.</li>
+              class="w-16 h-16 mx-auto rounded-lg object-contain border-2 border-gray-700 bg-white p-2 mb-4 shadow-lg" loading="lazy" />
+            
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">
+              HackHive Participant
+            </h3>
+            <p class="text-teal-400 font-semibold text-sm mb-1">Ontario Tech University</p>
+            <p class="text-gray-500 text-xs mb-4 flex items-center justify-center gap-1">
+              <i class="fas fa-calendar-alt"></i>
+              Feb 2025
+            </p>
+            
+            <!-- Divider -->
+            <div class="w-16 h-1 bg-gradient-to-r from-transparent via-teal-400 to-transparent mx-auto mb-4"></div>
+            
+            <!-- Responsibilities -->
+            <ul class="text-left text-sm text-gray-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-teal-400 mt-1 flex-shrink-0"></i>
+                <span>AI drone system development</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-teal-400 mt-1 flex-shrink-0"></i>
+                <span>Real-time monitoring solutions</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-teal-400 mt-1 flex-shrink-0"></i>
+                <span>Team collaboration & problem-solving</span>
+              </li>
             </ul>
           </div>
   
-          <!-- Panelist at Fletcher’s Meadow -->
-          <div
-            class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] transition-transform hover:scale-105 duration-300 flex flex-col items-center text-center">
-            <div class="mb-3 text-4xl text-green-400"><i class="fas fa-chalkboard-teacher"></i></div>
+          <!-- Panelist at Fletcher's Meadow -->
+          <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 shadow-xl border border-green-500/20 hover:border-green-400/50 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2">
+            <!-- Completed Badge -->
+            <div class="absolute -top-3 -right-3">
+              <span class="bg-gradient-to-r from-gray-600 to-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                <i class="fas fa-check"></i>
+                Completed
+              </span>
+            </div>
+            
+            <!-- Icon -->
+            <div class="relative mb-4">
+              <div class="w-20 h-20 mx-auto bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-2xl flex items-center justify-center border border-green-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-chalkboard-teacher text-4xl text-green-400"></i>
+              </div>
+            </div>
+            
+            <!-- Logo -->
             <img src="fletcher's_meadow.png" alt="Fletcher's Meadow Secondary School Logo"
-              class="w-16 h-16 rounded-lg object-contain border border-gray-700 bg-white p-2 mb-3" loading="lazy" />
-            <h3 class="text-xl font-bold text-white mb-1">Panelist — Life After FMSS</h3>
-            <p class="text-gray-400 italic mb-1">Fletcher’s Meadow Secondary School — May 2025</p>
-            <ul class="list-disc list-inside text-gray-400 text-left text-sm">
-              <li>Spoke to high school students about transitioning to post-secondary life.</li>
-              <li>Shared insights on study habits, time management, and academic planning.</li>
-              <li>Strengthened mentorship and public speaking experience.</li>
+              class="w-16 h-16 mx-auto rounded-lg object-contain border-2 border-gray-700 bg-white p-2 mb-4 shadow-lg" loading="lazy" />
+            
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
+              Life After FMSS Panelist
+            </h3>
+            <p class="text-green-400 font-semibold text-sm mb-1">Fletcher's Meadow SS</p>
+            <p class="text-gray-500 text-xs mb-4 flex items-center justify-center gap-1">
+              <i class="fas fa-calendar-alt"></i>
+              May 2025
+            </p>
+            
+            <!-- Divider -->
+            <div class="w-16 h-1 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto mb-4"></div>
+            
+            <!-- Responsibilities -->
+            <ul class="text-left text-sm text-gray-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-400 mt-1 flex-shrink-0"></i>
+                <span>Post-secondary transition guidance</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-400 mt-1 flex-shrink-0"></i>
+                <span>Study habits & time management</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check-circle text-green-400 mt-1 flex-shrink-0"></i>
+                <span>Mentorship & public speaking</span>
+              </li>
             </ul>
           </div>
   
@@ -1760,58 +2159,196 @@
 
 
   <!-- =========================== EDUCATION SECTION =========================== -->
-  <!-- =========================== EDUCATION SECTION =========================== -->
-  <section id="education" class="py-20 px-6 bg-gray-900 text-white">
-    <div class="max-w-5xl mx-auto text-center">
+  <section id="education" class="py-20 px-6 bg-[#0f172a] text-white relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-[#14b8a6] rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#22d3ee] rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="max-w-6xl mx-auto relative z-10">
   
       <!-- Section Heading -->
-      <h2
-        class="text-4xl font-extrabold mb-12 flex items-center justify-center gap-3 bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text">
-        <i class="fas fa-university text-blue-400 text-3xl"></i> Education
-      </h2>
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-3 mb-4">
+          <div class="h-1 w-12 bg-gradient-to-r from-transparent to-[#14b8a6] rounded-full"></div>
+          <i class="fas fa-graduation-cap text-5xl text-[#14b8a6] animate-pulse"></i>
+          <div class="h-1 w-12 bg-gradient-to-l from-transparent to-[#22d3ee] rounded-full"></div>
+        </div>
+        <h2 class="text-5xl md:text-6xl font-extrabold mb-4 animate-gradient">
+          Education
+        </h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Building expertise through academic excellence and hands-on learning
+        </p>
+      </div>
   
       <!-- Education Card -->
-      <div
-        class="bg-gray-800/90 p-10 rounded-2xl shadow-xl border border-gray-700 hover:border-blue-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition duration-300">
-        <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+      <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-8 md:p-12 rounded-3xl shadow-2xl border border-blue-500/20 hover:border-blue-400/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] transition-all duration-500 hover:scale-[1.01] mb-12">
+        
+        <!-- Current Student Badge -->
+        <div class="absolute -top-4 left-8">
+          <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
+            <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+            Currently Enrolled
+          </span>
+        </div>
+        
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
   
-          <!-- Logo -->
+          <!-- Logo with enhanced styling -->
+          <div class="relative flex-shrink-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-teal-500/20 rounded-2xl blur-xl"></div>
           <img src="ontariotechu_logo.png" alt="Ontario Tech University Logo"
-            class="w-24 h-24 rounded-xl object-contain border border-gray-600 bg-white p-2 shadow-md" loading="lazy" />
+              class="relative w-32 h-32 rounded-2xl object-contain border-2 border-blue-500/30 bg-white p-3 shadow-2xl group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+          </div>
   
           <!-- Content -->
-          <div class="text-left space-y-3">
-            <h3 class="text-2xl font-bold text-white">Ontario Tech University</h3>
-            <p class="text-lg font-medium text-gray-300">Bachelor of Science in Computer Science</p>
-            <p class="text-sm text-gray-400 italic">Oshawa, Ontario, Canada</p>
-            <p class="text-sm text-gray-300"><strong>Expected Graduation:</strong> April 2028</p>
+          <div class="flex-1 text-center md:text-left space-y-4">
+            <!-- University Name -->
+            <div>
+              <h3 class="text-3xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Ontario Tech University
+              </h3>
+              <p class="text-xl font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Bachelor of Science in Computer Science
+              </p>
+            </div>
+            
+            <!-- Location & Timeline -->
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-gray-400">
+              <span class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-blue-400"></i>
+                Oshawa, Ontario, Canada
+              </span>
+              <span class="flex items-center gap-2">
+                <i class="fas fa-calendar-alt text-teal-400"></i>
+                Sep 2024 - Apr 2028
+              </span>
+            </div>
   
-            <p class="text-gray-400 leading-relaxed pt-2">
+            <!-- Progress Bar -->
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm">
+                <span class="text-gray-400">Academic Progress</span>
+                <span class="text-blue-400 font-semibold">Year 2 of 4</span>
+              </div>
+              <div class="h-3 bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 rounded-full animate-pulse" style="width: 50%"></div>
+              </div>
+            </div>
+            
+            <!-- Description -->
+            <p class="text-gray-300 leading-relaxed">
               Building a strong foundation in software development, data structures, and computational problem-solving.
               Gaining hands-on experience through coding projects, hackathons, and collaborative coursework focused on
               real-world applications.
             </p>
   
-            <!-- Tags -->
-            <div class="mt-4 flex flex-wrap gap-2 text-sm">
-              <span
-                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-blue-400 hover:text-white transition">Software
-                Development</span>
-              <span
-                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-blue-400 hover:text-white transition">Data
-                Structures</span>
-              <span
-                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-blue-400 hover:text-white transition">Statistics</span>
-              <span
-                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-blue-400 hover:text-white transition">OOP
-                (C++, Python)</span>
-              <span
-                class="bg-gray-700/70 px-3 py-1.5 rounded-full text-gray-300 hover:bg-blue-400 hover:text-white transition">Web
-                Development</span>
+            <!-- Key Focus Areas -->
+            <div class="pt-4">
+              <h4 class="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Focus Areas</h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold border border-blue-500/30 hover:bg-blue-500/30 transition-colors cursor-default">
+                  Software Development
+                </span>
+                <span class="bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold border border-cyan-500/30 hover:bg-cyan-500/30 transition-colors cursor-default">
+                  Data Structures
+                </span>
+                <span class="bg-teal-500/20 text-teal-400 px-4 py-2 rounded-full text-sm font-semibold border border-teal-500/30 hover:bg-teal-500/30 transition-colors cursor-default">
+                  Algorithms
+                </span>
+                <span class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-semibold border border-purple-500/30 hover:bg-purple-500/30 transition-colors cursor-default">
+                  OOP (C++, Python, Java)
+                </span>
+                <span class="bg-pink-500/20 text-pink-400 px-4 py-2 rounded-full text-sm font-semibold border border-pink-500/30 hover:bg-pink-500/30 transition-colors cursor-default">
+                  Web Development
+                </span>
+                <span class="bg-indigo-500/20 text-indigo-400 px-4 py-2 rounded-full text-sm font-semibold border border-indigo-500/30 hover:bg-indigo-500/30 transition-colors cursor-default">
+                  Statistics & Mathematics
+                </span>
+              </div>
             </div>
           </div>
   
         </div>
+      </div>
+
+      <!-- Academic Highlights Grid -->
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- Core Coursework -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-blue-500/20 hover:border-blue-400/50 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300 hover:scale-105">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-xl flex items-center justify-center border border-blue-500/30">
+              <i class="fas fa-book-open text-2xl text-blue-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Core Coursework</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check-circle text-blue-400 mt-1 flex-shrink-0"></i>
+              <span>Data Structures & Algorithms</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check-circle text-blue-400 mt-1 flex-shrink-0"></i>
+              <span>Object-Oriented Programming</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check-circle text-blue-400 mt-1 flex-shrink-0"></i>
+              <span>Database Systems & Web Dev</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Practical Experience -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-teal-500/20 hover:border-teal-400/50 hover:shadow-[0_0_20px_rgba(20,184,166,0.3)] transition-all duration-300 hover:scale-105">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-teal-500/20 to-teal-600/20 rounded-xl flex items-center justify-center border border-teal-500/30">
+              <i class="fas fa-laptop-code text-2xl text-teal-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Hands-On Learning</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check-circle text-teal-400 mt-1 flex-shrink-0"></i>
+              <span>15+ course projects completed</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check-circle text-teal-400 mt-1 flex-shrink-0"></i>
+              <span>Hackathon participation</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check-circle text-teal-400 mt-1 flex-shrink-0"></i>
+              <span>Collaborative team projects</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-purple-500/20 hover:border-purple-400/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-300 hover:scale-105">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-xl flex items-center justify-center border border-purple-500/30">
+              <i class="fas fa-code text-2xl text-purple-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Technical Growth</h3>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check-circle text-purple-400 mt-1 flex-shrink-0"></i>
+              <span>8+ programming languages</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check-circle text-purple-400 mt-1 flex-shrink-0"></i>
+              <span>Modern frameworks & tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fa-check-circle text-purple-400 mt-1 flex-shrink-0"></i>
+              <span>Version control & DevOps basics</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
   
     </div>
@@ -1822,12 +2359,12 @@
 
 
   <!-- =========================== SKILLS SECTION =========================== -->
-  <section id="skills" class="py-20 px-6 bg-gray-900">
+  <section id="skills" class="py-20 px-6 bg-[#0f172a]">
     <div class="max-w-6xl mx-auto">
   
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text mb-4 flex items-center justify-center gap-3">
+        <h2 class="text-4xl font-extrabold animate-gradient mb-4 flex items-center justify-center gap-3">
           <i class="fas fa-code text-[#22d3ee]"></i>
           Technical Skills
         </h2>
@@ -2218,12 +2755,12 @@
     </div>
   </section>
 
-  <section id="contact" class="py-16 px-6 bg-gray-900 fade-in-up" aria-labelledby="contact-heading">
+  <section id="contact" class="py-16 px-6 bg-[#0f172a] fade-in-up" aria-labelledby="contact-heading">
     <div class="max-w-3xl mx-auto text-center">
   
       <!-- Section Header -->
       <h2 id="contact-heading"
-        class="text-3xl font-extrabold tracking-wide bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text mb-12">
+        class="text-3xl font-extrabold tracking-wide animate-gradient mb-12">
         Contact
       </h2>
   
@@ -2280,75 +2817,176 @@
   </section>
 
   <!-- =========================== FOOTER =========================== -->
-   <footer class="bg-gray-900 text-gray-300 py-10 mt-12">
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-
-    <!-- Brand & Motto -->
-    <div>
-      <h3 class="text-lg font-semibold mb-2 bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-        Dhruv Thakar</h3>
-      <p class="italic text-sm text-gray-400">"Building solutions, one line of code at a time."</p>
-      <p class="text-xs text-gray-500 mt-2">© 2025 All Rights Reserved</p>
+  <footer class="relative bg-[#0f172a] text-gray-300 pt-16 pb-8 mt-0 overflow-hidden border-t border-gray-800">
+    
+    <!-- Background Decoration -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-96 h-96 bg-[#14b8a6] rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#22d3ee] rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-b from-transparent via-[#14b8a6]/5 to-transparent pointer-events-none"></div>
     </div>
-
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-lg font-semibold mb-2 bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">📑 Quick Links</h3>
-      <ul class="space-y-1">
-        <li><a href="#about"
-            class="hover:text-cyan-300 transition-colors hover:underline hover:underline-offset-2">About</a></li>
-        <li><a href="#projects"
-            class="hover:text-cyan-300 transition-colors hover:underline hover:underline-offset-2">Projects</a></li>
-        <li><a href="#skills"
-            class="hover:text-cyan-300 transition-colors hover:underline hover:underline-offset-2">Skills</a></li>
-        <li><a href="#contact"
-            class="hover:text-cyan-300 transition-colors hover:underline hover:underline-offset-2">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Built With -->
-    <div>
-      <h3 class="text-lg font-semibold mb-2 bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">🔧 Built With</h3>
-      <div class="flex flex-wrap justify-center md:justify-start gap-2 mt-1">
-        <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=flat&logo=html5&logoColor=white"
-          alt="HTML5 Badge" class="rounded hover:shadow-[0_0_10px_rgba(56,178,172,0.6)] transition-shadow">
-        <img src="https://img.shields.io/badge/Tailwind-%2338B2AC.svg?&style=flat&logo=tailwind-css&logoColor=white"
-          alt="Tailwind Badge" class="rounded hover:shadow-[0_0_10px_rgba(56,178,172,0.6)] transition-shadow">
-        <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=flat&logo=javascript&logoColor=black"
-          alt="JS Badge" class="rounded hover:shadow-[0_0_10px_rgba(247,223,30,0.6)] transition-shadow">
-        <img src="https://img.shields.io/badge/Node.js-%23339933.svg?&style=flat&logo=node.js&logoColor=white"
-          alt="Node.js Badge" class="rounded hover:shadow-[0_0_10px_rgba(51,153,51,0.6)] transition-shadow">
-        <img src="https://img.shields.io/badge/Express.js-%23000000.svg?&style=flat&logo=express&logoColor=white"
-          alt="Express Badge" class="rounded hover:shadow-[0_0_10px_rgba(0,0,0,0.6)] transition-shadow">
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      
+      <!-- Top Section with CTA -->
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold animate-gradient mb-4">Let's Build Something Amazing Together</h3>
+        <p class="text-gray-400 text-lg mb-8">Have a project in mind? Let's connect and make it happen!</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#contact" class="group relative px-8 py-4 bg-gradient-to-r from-[#14b8a6] to-[#22d3ee] rounded-xl font-bold text-white shadow-lg hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] transition-all duration-300 hover:scale-105">
+            <i class="fas fa-paper-plane mr-2"></i>
+            Get In Touch
+            <span class="absolute inset-0 bg-gradient-to-r from-[#22d3ee] to-[#14b8a6] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></span>
+          </a>
+          <a href="resume.pdf" download class="px-8 py-4 border-2 border-[#14b8a6] text-[#14b8a6] rounded-xl font-bold hover:bg-[#14b8a6] hover:text-white transition-all duration-300 hover:scale-105">
+            <i class="fas fa-download mr-2"></i>
+            Download Resume
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Socials -->
-    <div>
-      <h3 class="text-lg font-semibold mb-2 bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">🌐 Connect</h3>
-      <div class="flex justify-center md:justify-start space-x-4 text-xl mt-1">
-        <a href="https://github.com/dhruvht612" target="_blank"
-          class="hover:text-cyan-300 transition-colors hover:drop-shadow-[0_0_6px_rgba(56,178,172,0.7)]"><i
-            class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/dhruv-thakar" target="_blank"
-          class="hover:text-cyan-300 transition-colors hover:drop-shadow-[0_0_6px_rgba(56,178,172,0.7)]"><i
-            class="fab fa-linkedin"></i></a>
-        <a href="mailto:thakardhruvh@gmail.com"
-          class="hover:text-cyan-300 transition-colors hover:drop-shadow-[0_0_6px_rgba(56,178,172,0.7)]"><i
-            class="fas fa-envelope"></i></a>
+      <!-- Main Footer Content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+        <!-- Brand & About -->
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <img src="logo.png" alt="Dhruv Thakar Logo" class="w-12 h-12 rounded-full border-2 border-[#14b8a6]" />
+            <h3 class="text-2xl font-bold animate-gradient">Dhruv Thakar</h3>
+          </div>
+          <p class="text-gray-400 mb-4 leading-relaxed">
+            Computer Science student passionate about building innovative solutions and contributing to the tech community.
+          </p>
+          <p class="italic text-sm text-[#14b8a6] font-semibold">
+            "Building solutions, one line of code at a time."
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="text-center md:text-left">
+          <h4 class="text-lg font-bold text-white mb-4 flex items-center justify-center md:justify-start gap-2">
+            <i class="fas fa-link text-[#14b8a6]"></i>
+            Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#about" class="text-gray-400 hover:text-[#14b8a6] transition-colors flex items-center justify-center md:justify-start gap-2 group">
+                <i class="fas fa-chevron-right text-xs text-[#14b8a6] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                About Me
+              </a>
+            </li>
+            <li>
+              <a href="#projects" class="text-gray-400 hover:text-[#14b8a6] transition-colors flex items-center justify-center md:justify-start gap-2 group">
+                <i class="fas fa-chevron-right text-xs text-[#14b8a6] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#skills" class="text-gray-400 hover:text-[#14b8a6] transition-colors flex items-center justify-center md:justify-start gap-2 group">
+                <i class="fas fa-chevron-right text-xs text-[#14b8a6] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                Skills
+              </a>
+            </li>
+            <li>
+              <a href="#education" class="text-gray-400 hover:text-[#14b8a6] transition-colors flex items-center justify-center md:justify-start gap-2 group">
+                <i class="fas fa-chevron-right text-xs text-[#14b8a6] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                Education
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="text-gray-400 hover:text-[#14b8a6] transition-colors flex items-center justify-center md:justify-start gap-2 group">
+                <i class="fas fa-chevron-right text-xs text-[#14b8a6] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Built With -->
+        <div class="text-center md:text-left">
+          <h4 class="text-lg font-bold text-white mb-4 flex items-center justify-center md:justify-start gap-2">
+            <i class="fas fa-tools text-[#14b8a6]"></i>
+            Built With
+          </h4>
+          <div class="flex flex-wrap justify-center md:justify-start gap-3">
+            <div class="group relative">
+              <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=flat&logo=html5&logoColor=white"
+                alt="HTML5" class="rounded hover:scale-110 transition-transform" />
+            </div>
+            <div class="group relative">
+              <img src="https://img.shields.io/badge/Tailwind-%2306B6D4.svg?&style=flat&logo=tailwind-css&logoColor=white"
+                alt="Tailwind CSS" class="rounded hover:scale-110 transition-transform" />
+            </div>
+            <div class="group relative">
+              <img src="https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?&style=flat&logo=javascript&logoColor=black"
+                alt="JavaScript" class="rounded hover:scale-110 transition-transform" />
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 mt-4">
+            <i class="fas fa-code text-[#14b8a6]"></i> Designed & Built by Dhruv Thakar
+          </p>
+          <p class="text-xs text-gray-500 mt-1">
+            <i class="fas fa-calendar-alt text-[#22d3ee]"></i> Last updated: November 2025
+          </p>
+        </div>
+
+        <!-- Connect & Social -->
+        <div class="text-center md:text-left">
+          <h4 class="text-lg font-bold text-white mb-4 flex items-center justify-center md:justify-start gap-2">
+            <i class="fas fa-share-alt text-[#14b8a6]"></i>
+            Connect With Me
+          </h4>
+          <div class="flex justify-center md:justify-start gap-4 mb-6">
+            <a href="https://github.com/dhruvht612" target="_blank" rel="noopener noreferrer"
+              class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-xl text-gray-400 hover:bg-[#14b8a6] hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(20,184,166,0.5)]"
+              aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/dhruv-thakar" target="_blank" rel="noopener noreferrer"
+              class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-xl text-gray-400 hover:bg-[#0077b5] hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(0,119,181,0.5)]"
+              aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:thakardhruvh@gmail.com"
+              class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-xl text-gray-400 hover:bg-[#22d3ee] hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]"
+              aria-label="Email Me">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+          
+          <!-- Quick Stats -->
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 border border-gray-700">
+            <div class="flex items-center justify-center md:justify-start gap-2 text-sm text-gray-400 mb-2">
+              <i class="fas fa-map-marker-alt text-[#14b8a6]"></i>
+              <span>Oshawa, ON, Canada</span>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-2 text-sm text-gray-400">
+              <i class="fas fa-briefcase text-[#22d3ee]"></i>
+              <span>Open to Opportunities</span>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <p class="text-xs text-gray-500 mt-3">Last updated: Oct 2025</p>
+
+      <!-- Divider -->
+      <div class="h-px bg-gradient-to-r from-transparent via-[#14b8a6] to-transparent mb-8"></div>
+
+      <!-- Bottom Bar -->
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-sm text-gray-500 text-center md:text-left">
+          <p>© 2025 Dhruv Thakar. All rights reserved.</p>
+          <p class="text-xs mt-1">Made with <i class="fas fa-heart text-red-500 animate-pulse"></i> and <i class="fas fa-coffee text-[#14b8a6]"></i></p>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <a href="#top" class="group flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gradient-to-r hover:from-[#14b8a6] hover:to-[#22d3ee] rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(20,184,166,0.3)]">
+          <i class="fas fa-arrow-up group-hover:animate-bounce"></i>
+          <span class="font-semibold">Back to Top</span>
+        </a>
+      </div>
+
     </div>
-
-  </div>
-
-  <!-- Back to Top -->
-  <div class="text-center mt-6">
-    <a href="#top"
-      class="text-cyan-400 hover:text-cyan-300 transition-colors hover:drop-shadow-[0_0_6px_rgba(56,178,172,0.7)]">
-      <i class="fas fa-arrow-up"></i> Back to Top
-    </a>
-  </div>
   </footer>
 
   <!-- Chatbot Widget -->

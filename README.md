@@ -408,21 +408,73 @@ Handles contact form submissions and sends email notifications.
 
 ```
 Portfolio/
-├── index.html              # Main HTML file
-├── script.js               # Main JavaScript file
-├── index.js                # Backend server (Node.js/Express)
-├── logo.png                # Portfolio logo
-├── profile.png             # Profile picture
-├── ontariotechu_logo.png   # University logo
-├── atrangi_logo.png        # Organization logo
-├── fletcher's_meadow.png   # School logo
-├── resume.pdf              # Downloadable resume
-├── manifest.json           # PWA manifest
-├── .env.example            # Environment variables template
-├── package.json            # Node.js dependencies
-├── API.md                  # API documentation
-└── README.md               # This file
+│
+├── 📁 Documentation/               # Project documentation
+│   ├── 📖 API.md                  # API endpoints and examples
+│   ├── 📖 DEVELOPER_GUIDE.md      # Development guide
+│   └── 📖 DOCUMENTATION.md        # Technical documentation
+│
+├── 📁 models/                     # Backend data models
+│   └── 📄 Message.js              # Message schema for contact form
+│
+├── 🌐 index.html                  # Main portfolio page (3,472 lines)
+│   ├── ✨ Enhanced home with animated background
+│   ├── 🎨 15+ project cards with filters
+│   ├── 🧭 Advanced navigation with scroll progress
+│   ├── 🌟 Beyond the Classroom section
+│   ├── 🎓 Education with progress tracking
+│   └── 📬 Contact form integration
+│
+├── 📄 script.js                   # Frontend JavaScript (769 lines)
+│   ├── Navigation & menu logic
+│   ├── Project filtering
+│   ├── Chatbot functionality
+│   ├── Tab switching
+│   └── Form validation
+│
+├── 📄 index.js                    # Backend server (256 lines)
+│   ├── Express.js setup
+│   ├── Contact API routes
+│   ├── Security middleware
+│   └── Static file serving
+│
+├── 🎨 style.css                   # Additional custom styles
+├── 📄 sw.js                       # Service Worker (PWA)
+├── 📄 testContact.js              # API testing script
+│
+├── 📁 assets/                     # All images, logos, and files (~1.1 MB)
+│   ├── logo.png                   # Portfolio logo
+│   ├── profile.png                # Profile picture
+│   ├── resume.pdf                 # Downloadable resume
+│   ├── ontariotechu_logo.png      # Ontario Tech University logo
+│   ├── ontariotechu_logo.jpeg     # Ontario Tech logo (alternate)
+│   ├── fletcher's_meadow.png      # Fletcher's Meadow SS logo
+│   ├── fletcher's_meadow_logo.png # Fletcher's Meadow (alternate)
+│   ├── google_logo.jpg            # Google Developer Groups logo
+│   ├── Forage_logo.jpeg           # Forage logo
+│   ├── HackerRank_logo.png        # HackerRank logo
+│   ├── oneroadmap_logo.jpeg       # OneRoadmap logo
+│   └── README.md                  # Assets documentation
+│
+├── 📄 Configuration/
+│   ├── package.json               # Node.js dependencies
+│   ├── package-lock.json          # Locked versions
+│   ├── manifest.json              # PWA manifest
+│   ├── robots.txt                 # SEO crawler rules
+│   ├── sitemap.xml                # Site structure
+│   └── .env                       # Environment variables (gitignored)
+│
+├── 📝 Documentation/
+│   ├── README.md                  # Main documentation (this file)
+│   ├── File_Tree.md               # Project structure overview
+│   ├── SECURITY.md                # Security policy
+│   └── .gitignore                 # Git ignore rules (306 lines)
+│
+└── 📁 node_modules/               # Dependencies (~150 packages, gitignored)
+
 ```
+
+**📊 See [File_Tree.md](./File_Tree.md) for detailed file structure**
 
 ---
 

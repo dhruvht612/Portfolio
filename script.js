@@ -188,26 +188,24 @@ class FormValidator {
 
     try {
       const formData = new FormData(this.form);
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message')
-      };
+      const formAction = this.form.getAttribute('action');
 
-      const response = await fetch('/api/contact', {
+      // Submit to Formspree using AJAX
+      const response = await fetch(formAction, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
 
-      const result = await response.json();
-
-      if (result.success) {
-        submitStatus.textContent = 'Message sent successfully!';
+      if (response.ok) {
+        submitStatus.textContent = 'Message sent successfully! I\'ll get back to you soon.';
         submitStatus.className = 'text-green-400 text-center mt-2';
         this.form.reset();
       } else {
-        throw new Error(result.message || 'Failed to send message');
+        const result = await response.json();
+        throw new Error(result.error || 'Failed to send message');
       }
     } catch (error) {
       console.error('Form submission error:', error);

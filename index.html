@@ -3090,7 +3090,7 @@
               Send Me a Message
             </h3>
 
-            <form id="contact-form" class="space-y-6" aria-label="Contact form">
+            <form id="contact-form" action="https://formspree.io/f/xrbonqka" method="POST" class="space-y-6" aria-label="Contact form">
   
               <!-- Name -->
               <div class="relative">
@@ -3109,7 +3109,7 @@
                 <label for="email" class="block text-sm font-semibold text-gray-300 mb-2">
                   <i class="fas fa-envelope text-[#22d3ee] mr-2"></i>Your Email
                 </label>
-                <input type="email" name="email" id="email" required
+                <input type="email" name="_replyto" id="email" required
                   class="w-full px-4 py-3 text-white bg-gray-700/50 border-2 border-gray-600 rounded-xl focus:border-[#22d3ee] focus:ring-2 focus:ring-[#22d3ee]/50 transition-all outline-none"
                   placeholder="john@example.com"
                   aria-describedby="email-error" />
@@ -3127,6 +3127,9 @@
                   aria-describedby="message-error"></textarea>
                 <div id="message-error" class="text-red-400 text-sm mt-1 hidden" role="alert"></div>
               </div>
+              
+              <!-- Honeypot field for spam protection -->
+              <input type="text" name="_gotcha" style="display:none" />
   
               <!-- Submit Button -->
               <button type="submit" id="submit-btn"
